@@ -1,0 +1,2539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRHH_V2Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RRHH_V2Entities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(RRHH_V2Model1.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(RRHH_V2Model1.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spAluMatriculaByOrgByAñoDetallada" ReturnType="Collection(RRHH_V2Model1.spAluMatriculaByOrgByAñoDetallada_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoAluFamSinDNI" ReturnType="Collection(RRHH_V2Model1.spAlumnoAluFamSinDNI_Result)">
+      <Parameter Name="consulta" Mode="In" Type="String" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoByDivision" ReturnType="Collection(RRHH_V2Model1.spAlumnoByDivision_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="activos" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoByDivisionV2" ReturnType="Collection(RRHH_V2Model1.spAlumnoByDivisionV2_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="enCurso" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoByOrgByAlu" ReturnType="Collection(RRHH_V2Model1.spAlumnoByOrgByAlu_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoCambiaUsuario">
+      <Parameter Name="usuario_old" Mode="In" Type="String" />
+      <Parameter Name="usuario_new" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoControlExiste" ReturnType="Collection(Int32)">
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDEL">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionControlExiste" ReturnType="Collection(Int32)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionDEL">
+      <Parameter Name="idAlumnoDivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionHistorialByOrgByAlu" ReturnType="Collection(RRHH_V2Model1.spAlumnoDivisionHistorialByOrgByAlu_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionHistorialSEL" ReturnType="Collection(RRHH_V2Model1.spAlumnoDivisionHistorialSEL_Result)">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionNovedadesINSUPD">
+      <Parameter Name="idAlumnoDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoNovedad" Mode="In" Type="Int32" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionNovedadesSEL" ReturnType="Collection(RRHH_V2Model1.spAlumnoDivisionNovedadesSEL_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoNovedad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionSEL" ReturnType="Collection(RRHH_V2Model1.spAlumnoDivisionSEL_Result)">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoDivisionSEL2" ReturnType="Collection(RRHH_V2Model1.spAlumnoDivisionSEL2_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoFamiliaControlExiste" ReturnType="Collection(Int32)">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoFamiliaDEL">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoFamiliaINS">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="idParentesco" Mode="In" Type="Int32" />
+      <Parameter Name="esTutor" Mode="In" Type="Boolean" />
+      <Parameter Name="cuidaAlumno" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoFamiliaUPD">
+      <Parameter Name="idAlumnoFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="idParentesco" Mode="In" Type="Int32" />
+      <Parameter Name="esTutor" Mode="In" Type="Boolean" />
+      <Parameter Name="cuidaAlumno" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoInasistenciaByDivision" ReturnType="Collection(RRHH_V2Model1.spAlumnoInasistenciaByDivision_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoInasistenciaINSUPDDEL">
+      <Parameter Name="idAlumnoInasistencia" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoInasistencia" Mode="In" Type="Int32" />
+      <Parameter Name="justificada" Mode="In" Type="Boolean" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoINS" ReturnType="Collection(Decimal)">
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="preCuil" Mode="In" Type="Int32" />
+      <Parameter Name="sufCuil" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+      <Parameter Name="idEstadoCivil" Mode="In" Type="Int32" />
+      <Parameter Name="fechaNac" Mode="In" Type="DateTime" />
+      <Parameter Name="idLocalidadLugarNac" Mode="In" Type="Int32" />
+      <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="fechaFallecimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="calle" Mode="In" Type="String" />
+      <Parameter Name="numero" Mode="In" Type="Int32" />
+      <Parameter Name="piso" Mode="In" Type="String" />
+      <Parameter Name="dpto" Mode="In" Type="String" />
+      <Parameter Name="lote" Mode="In" Type="String" />
+      <Parameter Name="manzana" Mode="In" Type="String" />
+      <Parameter Name="barrio" Mode="In" Type="String" />
+      <Parameter Name="idLocalidad" Mode="In" Type="Int32" />
+      <Parameter Name="personasACargo" Mode="In" Type="Int32" />
+      <Parameter Name="trabaja" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoNotaByDivision" ReturnType="Collection(RRHH_V2Model1.spAlumnoNotaByDivision_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idPeriodoEscolar" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoNotaINSUPDDEL">
+      <Parameter Name="idAlumnoNota" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idPeriodoEscolar" Mode="In" Type="Int32" />
+      <Parameter Name="nota" Mode="In" Type="Int32" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoNovedadesByDivision" ReturnType="Collection(RRHH_V2Model1.spAlumnoNovedadesByDivision_Result)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoOrganizacionActivoControlExiste" ReturnType="Collection(RRHH_V2Model1.spAlumnoOrganizacionActivoControlExiste_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoOrganizacionByUsuarioSEL" ReturnType="Collection(RRHH_V2Model1.spAlumnoOrganizacionByUsuarioSEL_Result)">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoOrganizacionControlExiste" ReturnType="Collection(RRHH_V2Model1.spAlumnoOrganizacionControlExiste_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUPD">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="preCuil" Mode="In" Type="Int32" />
+      <Parameter Name="sufCuil" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+      <Parameter Name="idEstadoCivil" Mode="In" Type="Int32" />
+      <Parameter Name="fechaNac" Mode="In" Type="DateTime" />
+      <Parameter Name="idLocalidadLugarNac" Mode="In" Type="Int32" />
+      <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="fechaFallecimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="calle" Mode="In" Type="String" />
+      <Parameter Name="numero" Mode="In" Type="Int32" />
+      <Parameter Name="piso" Mode="In" Type="String" />
+      <Parameter Name="dpto" Mode="In" Type="String" />
+      <Parameter Name="lote" Mode="In" Type="String" />
+      <Parameter Name="manzana" Mode="In" Type="String" />
+      <Parameter Name="barrio" Mode="In" Type="String" />
+      <Parameter Name="idLocalidad" Mode="In" Type="Int32" />
+      <Parameter Name="personasACargo" Mode="In" Type="Int32" />
+      <Parameter Name="trabaja" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUsuarioControlCambiaUsuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUsuarioDEL">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUsuarioINS" ReturnType="Collection(Int32)">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="dni" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idMembership" Mode="In" Type="String" />
+      <Parameter Name="TelCelular" Mode="In" Type="String" />
+      <Parameter Name="TelFijo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUsuarioOrganizacionINS">
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAlumnoUsuarioSEL">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoFuncionalByCargoSalByNomSEL" ReturnType="Collection(RRHH_V2Model1.spCargoFuncionalByCargoSalByNomSEL_Result)">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="CargoFuncional" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoFuncionalByCargoSalSEL" ReturnType="Collection(RRHH_V2Model1.spCargoFuncionalByCargoSalSEL_Result)">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoSalarialByNombreSEL" ReturnType="Collection(RRHH_V2Model1.spCargoSalarialByNombreSEL_Result)">
+      <Parameter Name="CargoSalarial" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoSalarialDEL">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoSalarialINS">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSalarial" Mode="In" Type="String" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+      <Parameter Name="equivalenciaHoraria" Mode="In" Type="Int32" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spCargoSalarialSEL" ReturnType="Collection(RRHH_V2Model1.spCargoSalarialSEL_Result)" />
+    <FunctionImport Name="spCargoSalarialUPD">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSalarial" Mode="In" Type="String" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+      <Parameter Name="equivalenciaHoraria" Mode="In" Type="Int32" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresByUdeoByCateSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresByUdeoByCateSEL_Result)">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresByUdeoSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresByUdeoSEL_Result)">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresSEL_Result)">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="CargoSalarial" Mode="In" Type="String" />
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoByCargoSalarialSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoByCargoSalarialSEL_Result)">
+      <Parameter Name="CargoSalarial" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoByEscalafonByNomSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoByEscalafonByNomSEL_Result)">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSalarial" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoByEscalafonSecSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoByEscalafonSecSEL_Result)">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoByEscalafonSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoByEscalafonSEL_Result)">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoByIdSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoByIdSEL_Result)">
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoDEL">
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoINS">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="ultimoId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spCategoriaPresupuestoSEL" ReturnType="Collection(RRHH_V2Model1.spCategoriaPresupuestoSEL_Result)" />
+    <FunctionImport Name="spCategoriaPresupuestoUPD">
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAdicional">
+      <Parameter Name="idAdicional" Mode="In" Type="Int32" />
+      <Parameter Name="adicional" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAluFamExisteFamiliar">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAluFamExisteMadre">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idParentesco" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAluFamExistePadre">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idParentesco" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAluFamExisteTutor">
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumnoFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAlumnoAsignaturaExisteAsignatura">
+      <Parameter Name="idAlumnoAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idAlumno" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="anioLectivo" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAlumnoExisteAlumno">
+      <Parameter Name="idalumno" Mode="In" Type="Int32" />
+      <Parameter Name="dni" Mode="In" Type="Int32" />
+      <Parameter Name="sexo" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlAlumnoExisteUsuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlCalendarioFeriado">
+      <Parameter Name="idCalendarioFeriado" Mode="In" Type="Int32" />
+      <Parameter Name="fechaFeriado" Mode="In" Type="DateTime" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlCargoSalarial">
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSalarial" Mode="In" Type="String" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+      <Parameter Name="equivalenciaHoraria" Mode="In" Type="Int32" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlCategoriaPresupuesto">
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoSalarial" Mode="In" Type="Int32" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlCupofEnPaquetePlaza">
+      <Parameter Name="idPaquete" Mode="In" Type="Int32" />
+      <Parameter Name="idPlazaCabecera" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlDivision">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="curso" Mode="In" Type="String" />
+      <Parameter Name="division" Mode="In" Type="String" />
+      <Parameter Name="esGrupo" Mode="In" Type="Boolean" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+      <Parameter Name="esAgregado" Mode="In" Type="Boolean" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlEscalafon">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="escalafon" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlEspacioAsignatura">
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlFamiliaExisteFamilia">
+      <Parameter Name="idfamilia" Mode="In" Type="Int32" />
+      <Parameter Name="dni" Mode="In" Type="Int32" />
+      <Parameter Name="sexo" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlFamiliaVinculos" ReturnType="Collection(RRHH_V2Model1.spControlFamiliaVinculos_Result)">
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spControlFinalidad">
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="finalidad" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlFuncion">
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="funcion" Mode="In" Type="String" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlOrganizacionTurno">
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idTurno" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlPartida">
+      <Parameter Name="idPartida" Mode="In" Type="Int32" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idEscalafon" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlPlanEspacio">
+      <Parameter Name="idPlanEspacio" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="anio" Mode="In" Type="Int32" />
+      <Parameter Name="cargaHoraria" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spControlPlanUnidad">
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="existe" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spDetalleTablaSEL">
+      <Parameter Name="Tabla" Mode="In" Type="String" />
+      <Parameter Name="Valor" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionByIdSEL" ReturnType="Collection(String)">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionByOrgByNEByPE" ReturnType="Collection(RRHH_V2Model1.spDivisionByOrgByNEByPE_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionDEL">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionExisteSEL" ReturnType="Collection(RRHH_V2Model1.spDivisionExisteSEL_Result)">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="curso" Mode="In" Type="String" />
+      <Parameter Name="division" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionINS">
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="curso" Mode="In" Type="String" />
+      <Parameter Name="division" Mode="In" Type="String" />
+      <Parameter Name="esGrupo" Mode="In" Type="Boolean" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+      <Parameter Name="esAgregado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionSEL" ReturnType="Collection(RRHH_V2Model1.spDivisionSEL_Result)">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spDivisionUPD">
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="curso" Mode="In" Type="String" />
+      <Parameter Name="division" Mode="In" Type="String" />
+      <Parameter Name="esGrupo" Mode="In" Type="Boolean" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+      <Parameter Name="esAgregado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioAsignaturaByECSEL" ReturnType="Collection(RRHH_V2Model1.spEspacioAsignaturaByECSEL_Result)">
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioAsignaturaDEL">
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioAsignaturaINS">
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioAsignaturaSEL" ReturnType="Collection(RRHH_V2Model1.spEspacioAsignaturaSEL_Result)">
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioAsignaturaUPD">
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioCurricularDEL">
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioCurricularINS">
+      <Parameter Name="espacioCurricular" Mode="In" Type="String" />
+      <Parameter Name="idTipoEspacioCurricular" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioCurricularSEL" ReturnType="Collection(RRHH_V2Model1.spEspacioCurricularSEL_Result)" />
+    <FunctionImport Name="spEspacioCurricularSELByTECByPE" ReturnType="Collection(RRHH_V2Model1.spEspacioCurricularSELByTECByPE_Result)">
+      <Parameter Name="idTipoEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEspacioCurricularUPD">
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="espacioCurricular" Mode="In" Type="String" />
+      <Parameter Name="idTipoEspacioCurricular" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spFamiliaControlExiste" ReturnType="Collection(Int32)">
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spFamiliaDEL">
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spFamiliaINS" ReturnType="Collection(Decimal)">
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="preCuil" Mode="In" Type="Int32" />
+      <Parameter Name="sufCuil" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+      <Parameter Name="idEstadoCivil" Mode="In" Type="Int32" />
+      <Parameter Name="fechaNac" Mode="In" Type="DateTime" />
+      <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="vive" Mode="In" Type="Boolean" />
+      <Parameter Name="trabaja" Mode="In" Type="Boolean" />
+      <Parameter Name="jubilado" Mode="In" Type="Boolean" />
+      <Parameter Name="pensionado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spFamiliaSEL" ReturnType="Collection(RRHH_V2Model1.spFamiliaSEL_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spFamiliaUPD">
+      <Parameter Name="idFamilia" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="nroDocumento" Mode="In" Type="Int32" />
+      <Parameter Name="preCuil" Mode="In" Type="Int32" />
+      <Parameter Name="sufCuil" Mode="In" Type="Int32" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+      <Parameter Name="idEstadoCivil" Mode="In" Type="Int32" />
+      <Parameter Name="fechaNac" Mode="In" Type="DateTime" />
+      <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="vive" Mode="In" Type="Boolean" />
+      <Parameter Name="trabaja" Mode="In" Type="Boolean" />
+      <Parameter Name="jubilado" Mode="In" Type="Boolean" />
+      <Parameter Name="pensionado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spGrupoDEL">
+      <Parameter Name="idGrupo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGrupoDivisionSEL" ReturnType="Collection(RRHH_V2Model1.spGrupoDivisionSEL_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGrupoINS" ReturnType="Collection(Decimal)">
+      <Parameter Name="grupo" Mode="In" Type="String" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spGrupoUPD">
+      <Parameter Name="idGrupo" Mode="In" Type="Int32" />
+      <Parameter Name="grupo" Mode="In" Type="String" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spInstrumentoLegalDEL">
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInstrumentoLegalINS">
+      <Parameter Name="instrumentoLegal" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spInstrumentoLegalUPD">
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="instrumentoLegal" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spMenuPlazaDEL">
+      <Parameter Name="idMenu" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spMenuPlazaINS">
+      <Parameter Name="idMenuPadre" Mode="In" Type="Int32" />
+      <Parameter Name="menuOrden" Mode="In" Type="Int32" />
+      <Parameter Name="menuSeleccionable" Mode="In" Type="Boolean" />
+      <Parameter Name="menuUrl" Mode="In" Type="String" />
+      <Parameter Name="menuTabla" Mode="In" Type="String" />
+      <Parameter Name="menuImagen" Mode="In" Type="String" />
+      <Parameter Name="menuNombre" Mode="In" Type="String" />
+      <Parameter Name="menuPersonalizado" Mode="In" Type="Boolean" />
+      <Parameter Name="idDetalleTabla" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spMenuPlazaUPD">
+      <Parameter Name="idMenu" Mode="In" Type="Int32" />
+      <Parameter Name="idMenuPadre" Mode="In" Type="Int32" />
+      <Parameter Name="menuOrden" Mode="In" Type="Int32" />
+      <Parameter Name="menuSeleccionable" Mode="In" Type="Boolean" />
+      <Parameter Name="menuUrl" Mode="In" Type="String" />
+      <Parameter Name="menuTabla" Mode="In" Type="String" />
+      <Parameter Name="menuImagen" Mode="In" Type="String" />
+      <Parameter Name="menuNombre" Mode="In" Type="String" />
+      <Parameter Name="menuPersonalizado" Mode="In" Type="Boolean" />
+      <Parameter Name="idDetalleTabla" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spMovimientosPresupuestoINS">
+      <Parameter Name="idPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="idMotivoMovimientoPres" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int16" />
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spMovimientosPresupuestoSEL" ReturnType="Collection(RRHH_V2Model1.spMovimientosPresupuestoSEL_Result)">
+      <Parameter Name="idPresupuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spOrganizacionByIdDSEL" ReturnType="Collection(String)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spOrganizacionNombreMedia" ReturnType="Collection(RRHH_V2Model1.spOrganizacionNombreMedia_Result)">
+      <Parameter Name="Organizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spOrganizacionNombrePrimaria" ReturnType="Collection(RRHH_V2Model1.spOrganizacionNombrePrimaria_Result)">
+      <Parameter Name="Organizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spOrganizacionPrimariaCue" ReturnType="Collection(RRHH_V2Model1.spOrganizacionPrimariaCue_Result)">
+      <Parameter Name="IdOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spOrganizacionTurnoSEL" ReturnType="Collection(RRHH_V2Model1.spOrganizacionTurnoSEL_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPaquetePlazaDEL">
+      <Parameter Name="idPaquete" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPaquetePlazaINS">
+      <Parameter Name="idPlazaCabecera" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoPaquetePlaza" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPaquetePlazaUPD">
+      <Parameter Name="idPaquete" Mode="In" Type="Int32" />
+      <Parameter Name="idPlazaCabecera" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoPaquetePlaza" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPartidaDEL">
+      <Parameter Name="idPartida" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPartidaINS">
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idEscalafon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPartidaUPD">
+      <Parameter Name="idPartida" Mode="In" Type="Int32" />
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="idEscalafon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPeriodoEscolarDEL">
+      <Parameter Name="idPeriodoEscolar" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPeriodoEscolarINS">
+      <Parameter Name="idTipoPeriodo" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spPeriodoEscolarlUPD">
+      <Parameter Name="idPeriodoEscolar" Mode="In" Type="Int32" />
+      <Parameter Name="idTipoPeriodo" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEspacioDEL">
+      <Parameter Name="idPlanEspacio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEspacioINS">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="anio" Mode="In" Type="Int32" />
+      <Parameter Name="cargaHoraria" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEspacioUPD">
+      <Parameter Name="idPlanEspacio" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="anio" Mode="In" Type="Int32" />
+      <Parameter Name="cargaHoraria" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEstudioByIdSEL" ReturnType="Collection(String)">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEstudioByOrgByNE" ReturnType="Collection(RRHH_V2Model1.spPlanEstudioByOrgByNE_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEstudioDEL">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEstudioINS">
+      <Parameter Name="idEspecialidad" Mode="In" Type="Int32" />
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="planEstudio" Mode="In" Type="String" />
+      <Parameter Name="fechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="duracion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanEstudioUPD">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idEspecialidad" Mode="In" Type="Int32" />
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="planEstudio" Mode="In" Type="String" />
+      <Parameter Name="fechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="duracion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanUnidadDEL">
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanUnidadINS">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanUnidadSEL" ReturnType="Collection(RRHH_V2Model1.spPlanUnidadSEL_Result)">
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPlanUnidadUPD">
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPresupuestoDEL">
+      <Parameter Name="idPresupuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPresupuestoINS">
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idAdicional" Mode="In" Type="Int32" />
+      <Parameter Name="cantPresupuestada" Mode="In" Type="Int32" />
+      <Parameter Name="cantOcupada" Mode="In" Type="Int32" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="esFormal" Mode="In" Type="Boolean" />
+      <Parameter Name="cantTitulares" Mode="In" Type="Int32" />
+      <Parameter Name="cantInterinos" Mode="In" Type="Int32" />
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="ultimoId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spPresupuestoUPD">
+      <Parameter Name="idPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idAdicional" Mode="In" Type="Int32" />
+      <Parameter Name="cantPresupuestada" Mode="In" Type="Int32" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="esFormal" Mode="In" Type="Boolean" />
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="modificado" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spRefAdicionalDEL">
+      <Parameter Name="idAdicional" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefAdicionalINS">
+      <Parameter Name="adicional" Mode="In" Type="String" />
+      <Parameter Name="porcentaje" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefAdicionalUPD">
+      <Parameter Name="idAdicional" Mode="In" Type="Int32" />
+      <Parameter Name="adicional" Mode="In" Type="String" />
+      <Parameter Name="porcentaje" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefAsignaturaByIdSEL" ReturnType="Collection(String)">
+      <Parameter Name="idAsignatura" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefAsignaturaByPlanEstudioSEL" ReturnType="Collection(RRHH_V2Model1.spRefAsignaturaByPlanEstudioSEL_Result)">
+      <Parameter Name="idPlanEstudio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCalendarioFeriadoDEL">
+      <Parameter Name="idCalendarioFeriado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCalendarioFeriadoINS">
+      <Parameter Name="fechaFeriado" Mode="In" Type="DateTime" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCalendarioFeriadoUPD">
+      <Parameter Name="idCalendarioFeriado" Mode="In" Type="Int32" />
+      <Parameter Name="fechaFeriado" Mode="In" Type="DateTime" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaLicenciaDEL">
+      <Parameter Name="idCategoriaLicencia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaLicenciaINS">
+      <Parameter Name="categoriaLicencia" Mode="In" Type="String" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaLicenciaUPD">
+      <Parameter Name="idCategoriaLicencia" Mode="In" Type="Int32" />
+      <Parameter Name="categoriaLicencia" Mode="In" Type="String" />
+      <Parameter Name="fechaAlta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaOrganizacionDEL">
+      <Parameter Name="idCategoriaOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaOrganizacionINS">
+      <Parameter Name="categoriaOrganizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefCategoriaOrganizacionUPD">
+      <Parameter Name="idCategoriaOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="categoriaOrganizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefDiaDescansoAnualDEL">
+      <Parameter Name="idDiaDescansoAnual" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefDiaDescansoAnualINS">
+      <Parameter Name="anioDesde" Mode="In" Type="Int32" />
+      <Parameter Name="anioHasta" Mode="In" Type="Int32" />
+      <Parameter Name="diaDescanso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefDiaDescansoAnualUPD">
+      <Parameter Name="idDiaDescansoAnual" Mode="In" Type="Int32" />
+      <Parameter Name="anioDesde" Mode="In" Type="Int32" />
+      <Parameter Name="anioHasta" Mode="In" Type="Int32" />
+      <Parameter Name="diaDescanso" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEscalafonDEL">
+      <Parameter Name="idEscalafon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEscalafonINS">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="escalafon" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEscalafonUPD">
+      <Parameter Name="idEscalafon" Mode="In" Type="String" />
+      <Parameter Name="escalafon" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEspecialidadDEL">
+      <Parameter Name="idEspecialidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEspecialidadINS">
+      <Parameter Name="especialidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEspecialidadUPD">
+      <Parameter Name="idEspecialidad" Mode="In" Type="Int32" />
+      <Parameter Name="especialidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefEstadoSolicitudSEL" ReturnType="Collection(RRHH_V2Model1.spRefEstadoSolicitudSEL_Result)" />
+    <FunctionImport Name="spRefFinalidadDEL">
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefFinalidadINS">
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="finalidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefFinalidadUPD">
+      <Parameter Name="idFinalidad" Mode="In" Type="Int32" />
+      <Parameter Name="finalidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefFuncionDEL">
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefFuncionINS">
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="funcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefFuncionUPD">
+      <Parameter Name="idFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="funcion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoAltaDEL">
+      <Parameter Name="idMotivoAlta" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoAltaINS">
+      <Parameter Name="motivoAlta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoAltaUPD">
+      <Parameter Name="idMotivoAlta" Mode="In" Type="Int32" />
+      <Parameter Name="motivoAlta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoBajaDEL">
+      <Parameter Name="idMotivoBaja" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoBajaINS">
+      <Parameter Name="motivoBaja" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefMotivoBajaUPD">
+      <Parameter Name="idMotivoBaja" Mode="In" Type="Int32" />
+      <Parameter Name="motivoBaja" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefNivelEducativoByIdSEL" ReturnType="Collection(String)">
+      <Parameter Name="idNivelEducativo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefNivelEducativoByOrg" ReturnType="Collection(RRHH_V2Model1.spRefNivelEducativoByOrg_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSexoByIdSEL" ReturnType="Collection(RRHH_V2Model1.spRefSexoByIdSEL_Result)">
+      <Parameter Name="idSexo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSexoSEL" ReturnType="Collection(RRHH_V2Model1.spRefSexoSEL_Result)" />
+    <FunctionImport Name="spRefSistemaEducativoDEL">
+      <Parameter Name="idSistemaEducativo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSistemaEducativoINS">
+      <Parameter Name="sistemaEducativo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSistemaEducativoUPD">
+      <Parameter Name="idSistemaEducativo" Mode="In" Type="Int32" />
+      <Parameter Name="sistemaEducativo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionExtraordinariaDEL">
+      <Parameter Name="idSituacionExtraordinaria" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionExtraordinariaINS">
+      <Parameter Name="situacionExtraordinaria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionExtraordinariaUPD">
+      <Parameter Name="idSituacionExtraordinaria" Mode="In" Type="Int32" />
+      <Parameter Name="situacionExtraordinaria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionLaboralDEL">
+      <Parameter Name="idSituacionLaboral" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionLaboralINS">
+      <Parameter Name="situacionLaboral" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefSituacionLaboralUPD">
+      <Parameter Name="idSituacionLaboral" Mode="In" Type="Int32" />
+      <Parameter Name="situacionLaboral" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoDocumentoByIdSEL" ReturnType="Collection(RRHH_V2Model1.spRefTipoDocumentoByIdSEL_Result)">
+      <Parameter Name="idTipodocumento" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoDocumentoSEL" ReturnType="Collection(RRHH_V2Model1.spRefTipoDocumentoSEL_Result)" />
+    <FunctionImport Name="spRefTipoEspacioCurricularDEL">
+      <Parameter Name="idTipoEspacioCurricular" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoEspacioCurricularINS">
+      <Parameter Name="tipoEspacioCurricular" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoEspacioCurricularSEL" ReturnType="Collection(RRHH_V2Model1.spRefTipoEspacioCurricularSEL_Result)" />
+    <FunctionImport Name="spRefTipoEspacioCurricularUPD">
+      <Parameter Name="idtipoEspacioCurricular" Mode="In" Type="Int32" />
+      <Parameter Name="tipoEspacioCurricular" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoFuncionDEL">
+      <Parameter Name="idTipoFuncion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoFuncionINS">
+      <Parameter Name="tipoFuncion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoFuncionUPD">
+      <Parameter Name="idTipoFuncion" Mode="In" Type="Int32" />
+      <Parameter Name="tipoFuncion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoInasistenciaSEL" ReturnType="Collection(RRHH_V2Model1.spRefTipoInasistenciaSEL_Result)" />
+    <FunctionImport Name="spRefTipoNovedadSEL" ReturnType="Collection(RRHH_V2Model1.spRefTipoNovedadSEL_Result)" />
+    <FunctionImport Name="spRefTipoOrganizacionDEL">
+      <Parameter Name="idTipoOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoOrganizacionINS">
+      <Parameter Name="tipoOrganizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoOrganizacionUPD">
+      <Parameter Name="idTipoOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="tipoOrganizacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoPaquetePlazaDEL">
+      <Parameter Name="idTipoPaquetePlaza" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoPaquetePlazaINS">
+      <Parameter Name="tipoPaquetePlaza" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoPaquetePlazaUPD">
+      <Parameter Name="idTipoPaquetePlaza" Mode="In" Type="Int32" />
+      <Parameter Name="tipoPaquetePlaza" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoServicioDEL">
+      <Parameter Name="idTipoServicio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoServicioINS">
+      <Parameter Name="tipoServicio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTipoServicioUPD">
+      <Parameter Name="idTipoServicio" Mode="In" Type="Int32" />
+      <Parameter Name="tipoServicio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTurnoDEL">
+      <Parameter Name="idTurno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTurnoINS">
+      <Parameter Name="turno" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefTurnoUPD">
+      <Parameter Name="idTurno" Mode="In" Type="Int32" />
+      <Parameter Name="turno" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefUdeODEL">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefUdeOINS">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+      <Parameter Name="udeo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefUdeOUPD">
+      <Parameter Name="idUdeO" Mode="In" Type="Int32" />
+      <Parameter Name="codigo" Mode="In" Type="String" />
+      <Parameter Name="udeo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefZonaDEL">
+      <Parameter Name="idZona" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spRefZonaINS">
+      <Parameter Name="porcentaje" Mode="In" Type="Int32" />
+      <Parameter Name="zona" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefZonaUPD">
+      <Parameter Name="idZona" Mode="In" Type="Int32" />
+      <Parameter Name="porcentaje" Mode="In" Type="Int32" />
+      <Parameter Name="zona" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spReqPrimariaINS">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="idRequerimiento" Mode="In" Type="Int32" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoFuncional" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idGrupo" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="idOrganizacionTurno" Mode="In" Type="Int32" />
+      <Parameter Name="idOrgCompartida" Mode="In" Type="Int32" />
+      <Parameter Name="idJornada" Mode="In" Type="Int32" />
+      <Parameter Name="cargaMateria" Mode="In" Type="Boolean" />
+      <Parameter Name="caracter" Mode="In" Type="String" />
+      <Parameter Name="fechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="idEstadoRequerimiento" Mode="In" Type="Int32" />
+      <Parameter Name="obsEstado" Mode="In" Type="String" />
+      <Parameter Name="cupof" Mode="In" Type="Int32" />
+      <Parameter Name="pCupof" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spReqPrimariaSEL" ReturnType="Collection(RRHH_V2Model1.spReqPrimariaSEL_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spReqSecundariaINS">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="idRequerimiento" Mode="In" Type="Int32" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="idCategoriaPresupuesto" Mode="In" Type="Int32" />
+      <Parameter Name="idCargoFuncional" Mode="In" Type="Int32" />
+      <Parameter Name="idPlanUnidad" Mode="In" Type="Int32" />
+      <Parameter Name="idDivision" Mode="In" Type="Int32" />
+      <Parameter Name="idGrupo" Mode="In" Type="Int32" />
+      <Parameter Name="idEspacioAsignatura" Mode="In" Type="Int32" />
+      <Parameter Name="caracter" Mode="In" Type="String" />
+      <Parameter Name="fechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaHasta" Mode="In" Type="DateTime" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="idEstadoRequerimiento" Mode="In" Type="Int32" />
+      <Parameter Name="obsEstado" Mode="In" Type="String" />
+      <Parameter Name="esCargo" Mode="In" Type="Boolean" />
+      <Parameter Name="cupof" Mode="In" Type="Int32" />
+      <Parameter Name="pCupof" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByFechaByNivelSEL" ReturnType="Collection(RRHH_V2Model1.spSolicitudByFechaByNivelSEL_Result)">
+      <Parameter Name="pFecha" Mode="In" Type="DateTime" />
+      <Parameter Name="pIdNivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByFiltro" ReturnType="Collection(RRHH_V2Model1.spSolicitudByFiltro_Result)">
+      <Parameter Name="pFiltro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByIdByFiltro" ReturnType="Collection(RRHH_V2Model1.spSolicitudByIdByFiltro_Result)">
+      <Parameter Name="pIdSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pFiltro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByIdByNivelSEL" ReturnType="Collection(RRHH_V2Model1.spSolicitudByIdByNivelSEL_Result)">
+      <Parameter Name="pIdSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdGrupoNivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByMultiFiltro" ReturnType="Collection(RRHH_V2Model1.spSolicitudByMultiFiltro_Result)">
+      <Parameter Name="pOrganizacion" Mode="In" Type="String" />
+      <Parameter Name="pEstado" Mode="In" Type="Int32" />
+      <Parameter Name="pGrupoNivel" Mode="In" Type="Int32" />
+      <Parameter Name="pTipoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pFiltro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByNivelByEstadoSEL" ReturnType="Collection(RRHH_V2Model1.spSolicitudByNivelByEstadoSEL_Result)">
+      <Parameter Name="idNivel" Mode="In" Type="Int32" />
+      <Parameter Name="idEstado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudByOrganismoByNivelSEL" ReturnType="Collection(RRHH_V2Model1.spSolicitudByOrganismoByNivelSEL_Result)">
+      <Parameter Name="pOrganizacion" Mode="In" Type="String" />
+      <Parameter Name="pIdNivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudEstadoUPD">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdEstadoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pObsEstado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudPrimariaINS">
+      <Parameter Name="pNroExpediente" Mode="In" Type="String" />
+      <Parameter Name="pIdTipoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="pMatriculaTotal" Mode="In" Type="Int32" />
+      <Parameter Name="pCantDivisiones" Mode="In" Type="Int32" />
+      <Parameter Name="pIdGrupoNivel" Mode="In" Type="Int32" />
+      <Parameter Name="pFechaSolicitud" Mode="In" Type="DateTime" />
+      <Parameter Name="pFundamentacion" Mode="In" Type="String" />
+      <Parameter Name="pObservacion" Mode="In" Type="String" />
+      <Parameter Name="pIdEstadoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pObsEstado" Mode="In" Type="String" />
+      <Parameter Name="pNroResolucion" Mode="In" Type="String" />
+      <Parameter Name="pfechaAutorizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pFechaHabilitacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pidUsuarioCreador" Mode="In" Type="Int32" />
+      <Parameter Name="pUltimoId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudPrimariaUPD">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pNroExpediente" Mode="In" Type="String" />
+      <Parameter Name="pIdTipoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="pMatriculaTotal" Mode="In" Type="Int32" />
+      <Parameter Name="pCantDivisiones" Mode="In" Type="Int32" />
+      <Parameter Name="pIdGrupoNivel" Mode="In" Type="Int32" />
+      <Parameter Name="pFechaSolicitud" Mode="In" Type="DateTime" />
+      <Parameter Name="pFundamentacion" Mode="In" Type="String" />
+      <Parameter Name="pObservacion" Mode="In" Type="String" />
+      <Parameter Name="pIdEstadoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pObsEstado" Mode="In" Type="String" />
+      <Parameter Name="pNroResolucion" Mode="In" Type="String" />
+      <Parameter Name="pfechaAutorizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pFechaHabilitacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pidUsuarioCreador" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudPriSEL" ReturnType="Collection(RRHH_V2Model1.spSolicitudPriSEL_Result)">
+      <Parameter Name="idNivel" Mode="In" Type="Int32" />
+      <Parameter Name="idEstado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudSecundariaINS">
+      <Parameter Name="pNroExpediente" Mode="In" Type="String" />
+      <Parameter Name="pIdTipoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="pMatriculaTotal" Mode="In" Type="Int32" />
+      <Parameter Name="pCantDivisiones" Mode="In" Type="Int32" />
+      <Parameter Name="pIdGrupoNivel" Mode="In" Type="Int32" />
+      <Parameter Name="pFechaSolicitud" Mode="In" Type="DateTime" />
+      <Parameter Name="pFundamentacion" Mode="In" Type="String" />
+      <Parameter Name="pObservacion" Mode="In" Type="String" />
+      <Parameter Name="pIdEstadoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pObsEstado" Mode="In" Type="String" />
+      <Parameter Name="pNroResolucion" Mode="In" Type="String" />
+      <Parameter Name="pfechaAutorizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pFechaHabilitacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pidUsuarioCreador" Mode="In" Type="Int32" />
+      <Parameter Name="pUltimoId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spSolicitudSecundariaUPD">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pNroExpediente" Mode="In" Type="String" />
+      <Parameter Name="pIdTipoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pIdOrganizacion" Mode="In" Type="Int32" />
+      <Parameter Name="pMatriculaTotal" Mode="In" Type="Int32" />
+      <Parameter Name="pCantDivisiones" Mode="In" Type="Int32" />
+      <Parameter Name="pIdGrupoNivel" Mode="In" Type="Int32" />
+      <Parameter Name="pFechaSolicitud" Mode="In" Type="DateTime" />
+      <Parameter Name="pFundamentacion" Mode="In" Type="String" />
+      <Parameter Name="pObservacion" Mode="In" Type="String" />
+      <Parameter Name="pIdEstadoSolicitud" Mode="In" Type="Int32" />
+      <Parameter Name="pObsEstado" Mode="In" Type="String" />
+      <Parameter Name="pNroResolucion" Mode="In" Type="String" />
+      <Parameter Name="pfechaAutorizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pFechaHabilitacion" Mode="In" Type="DateTime" />
+      <Parameter Name="pidUsuarioCreador" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwEstructuraEducativa" ReturnType="Collection(RRHH_V2Model1.spvwEstructuraEducativa_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPlanEstudioByIdOrganizacionSEL" ReturnType="Collection(RRHH_V2Model1.spvwPlanEstudioByIdOrganizacionSEL_Result)">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPlanEstudioByOrganismoByNivelMedio" ReturnType="Collection(RRHH_V2Model1.spvwPlanEstudioByOrganismoByNivelMedio_Result)">
+      <Parameter Name="pOrganismo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPOF">
+      <Parameter Name="idOrganizacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoByCargoSalarial" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoByCargoSalarial_Result)">
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoByEjercicio" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoByEjercicio_Result)">
+      <Parameter Name="Ejercicio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoById" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoById_Result)">
+      <Parameter Name="idPresupuesto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoByTipoEducacion" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoByTipoEducacion_Result)">
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="tipo" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoByUdeO" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoByUdeO_Result)">
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="udeo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwPresupuestoSEL" ReturnType="Collection(RRHH_V2Model1.spvwPresupuestoSEL_Result)">
+      <Parameter Name="ejercicio" Mode="In" Type="Int32" />
+      <Parameter Name="udeo" Mode="In" Type="Int32" />
+      <Parameter Name="cargoSal" Mode="In" Type="String" />
+      <Parameter Name="esFormal" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spvwSolicitudPrimariaByIdSolSEL" ReturnType="Collection(RRHH_V2Model1.spvwSolicitudPrimariaByIdSolSEL_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwSolicitudSecundariaByIdSolSEL" ReturnType="Collection(RRHH_V2Model1.spvwSolicitudSecundariaByIdSolSEL_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwSolPriResumenCargos" ReturnType="Collection(RRHH_V2Model1.spvwSolPriResumenCargos_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwSolSecResumenCargos" ReturnType="Collection(RRHH_V2Model1.spvwSolSecResumenCargos_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spvwSolSecResumenHoras" ReturnType="Collection(RRHH_V2Model1.spvwSolSecResumenHoras_Result)">
+      <Parameter Name="idSolicitud" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spAluMatriculaByOrgByAñoDetallada_Result">
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="true" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="true" />
+    <Property Type="String" Name="nivelEducativo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="true" />
+    <Property Type="String" Name="planEstudio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="String" Name="curso" Nullable="true" MaxLength="63" />
+    <Property Type="String" Name="turno" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="matricula" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoAluFamSinDNI_Result">
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="ayn" Nullable="true" MaxLength="102" />
+    <Property Type="DateTime" Name="fechaNac" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoByDivision_Result">
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="false" />
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idSexo" Nullable="false" />
+    <Property Type="String" Name="noAct" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoByDivisionV2_Result">
+    <Property Type="Int64" Name="orden" Nullable="true" />
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="true" />
+    <Property Type="String" Name="tipoDocumento" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idSexo" Nullable="true" />
+    <Property Type="Int32" Name="idTipoNovedad" Nullable="true" />
+    <Property Type="String" Name="tipoNovedad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idEstadoAlumno" Nullable="true" />
+    <Property Type="String" Name="estadoAlumno" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idMotivoBaja" Nullable="true" />
+    <Property Type="String" Name="motivoBaja" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+    <Property Type="String" Name="enCurso" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="cantNovedades" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoByOrgByAlu_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="true" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="true" />
+    <Property Type="String" Name="tipoDocumento" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="idSexo" Nullable="true" />
+    <Property Type="String" Name="sexo" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="enCurso" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoDivisionHistorialByOrgByAlu_Result">
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="true" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="true" />
+    <Property Type="String" Name="nivelEducativo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="true" />
+    <Property Type="String" Name="planEstudio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="String" Name="curso" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="turno" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="true" />
+    <Property Type="String" Name="tipoDocumento" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idSexo" Nullable="true" />
+    <Property Type="Int32" Name="idTipoNovedad" Nullable="true" />
+    <Property Type="String" Name="tipoNovedad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="enCurso" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="roworder" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoDivisionHistorialSEL_Result">
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="planEstudio" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="curso" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="novedad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="baja" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoDivisionNovedadesSEL_Result">
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="tipoNovedad" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoDivisionSEL_Result">
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="planEstudio" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="curso" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="estadoAlumno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="motivoBajaAlumno" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoDivisionSEL2_Result">
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="true" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idEstadoAlumno" Nullable="true" />
+    <Property Type="Int32" Name="idMotivoBaja" Nullable="true" />
+    <Property Type="String" Name="tipoNovedad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idDivision" Nullable="true" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoInasistenciaByDivision_Result">
+    <Property Type="String" Name="mnemo" Nullable="false" MaxLength="3" />
+    <Property Type="Boolean" Name="justificada" Nullable="false" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idAlumnoInasistencia" Nullable="false" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idTipoInasistencia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoNotaByDivision_Result">
+    <Property Type="Int32" Name="idAlumnoNota" Nullable="false" />
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idAsignatura" Nullable="false" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="Int32" Name="nota" Nullable="false" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoNovedadesByDivision_Result">
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="Int32" Name="idEstadoAlumno" Nullable="true" />
+    <Property Type="String" Name="estadoAlumno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="tipoNovedad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="motivoBaja" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoOrganizacionActivoControlExiste_Result">
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="String" Name="curso" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="turno" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="tipoNovedad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="true" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoOrganizacionByUsuarioSEL_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spAlumnoOrganizacionControlExiste_Result">
+    <Property Type="Int32" Name="anioLectivo" Nullable="false" />
+    <Property Type="String" Name="curso" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="tipoNovedad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idAlumnoDivision" Nullable="false" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="false" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCargoFuncionalByCargoSalByNomSEL_Result">
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="Int32" Name="idCargoFuncional" Nullable="false" />
+    <Property Type="String" Name="cargoFuncional" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCargoFuncionalByCargoSalSEL_Result">
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="Int32" Name="idCargoFuncional" Nullable="false" />
+    <Property Type="String" Name="cargoFuncional" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCargoSalarialByNombreSEL_Result">
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spCargoSalarialSEL_Result">
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresByUdeoByCateSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresByUdeoSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoByCargoSalarialSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoByEscalafonByNomSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoByEscalafonSecSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoByEscalafonSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoByIdSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spCategoriaPresupuestoSEL_Result">
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="false" />
+    <Property Type="Int32" Name="idFuncion" Nullable="false" />
+    <Property Type="String" Name="idEscalafon" Nullable="false" MaxLength="4" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spControlFamiliaVinculos_Result">
+    <Property Type="Int32" Name="idAlumno" Nullable="false" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="curso" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spDivisionByOrgByNEByPE_Result">
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="String" Name="division" Nullable="true" MaxLength="86" />
+  </ComplexType>
+  <ComplexType Name="spDivisionExisteSEL_Result">
+    <Property Type="String" Name="curso" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="30" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spDivisionSEL_Result">
+    <Property Type="Int32" Name="idDivision" Nullable="false" />
+    <Property Type="String" Name="division" Nullable="false" MaxLength="63" />
+    <Property Type="Int32" Name="idOrganizacionTurno" Nullable="false" />
+    <Property Type="Int32" Name="idPlanUnidad" Nullable="false" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spEspacioAsignaturaByECSEL_Result">
+    <Property Type="Int32" Name="idEspacioAsignatura" Nullable="false" />
+    <Property Type="String" Name="asignatura" Nullable="false" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="spEspacioAsignaturaSEL_Result">
+    <Property Type="Int32" Name="idEspacioAsignatura" Nullable="false" />
+    <Property Type="Int32" Name="idEspacioCurricular" Nullable="false" />
+    <Property Type="Int32" Name="idTipoEspacioCurricular" Nullable="true" />
+    <Property Type="Int32" Name="idAsignatura" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spEspacioCurricularSEL_Result">
+    <Property Type="Int32" Name="idEspacioCurricular" Nullable="false" />
+    <Property Type="String" Name="espacioCurricular" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="idTipoEspacioCurricular" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spEspacioCurricularSELByTECByPE_Result">
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="Int32" Name="idEspacioCurricular" Nullable="false" />
+    <Property Type="String" Name="espacioCurricular" Nullable="false" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="spFamiliaSEL_Result">
+    <Property Type="Int32" Name="idFamilia" Nullable="false" />
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="nroDocumento" Nullable="true" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaNac" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spGrupoDivisionSEL_Result">
+    <Property Type="Int32" Name="idGrupo" Nullable="false" />
+    <Property Type="String" Name="grupo" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spMovimientosPresupuestoSEL_Result">
+    <Property Type="Int32" Name="idMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="String" Name="fecha" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="motivoMovimiento" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="instrumentoLegal" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="tipoInstrumentoLegal" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="fin" Nullable="true" MaxLength="63" />
+    <Property Type="String" Name="fun" Nullable="true" MaxLength="63" />
+    <Property Type="String" Name="esc" Nullable="true" MaxLength="107" />
+    <Property Type="String" Name="ude" Nullable="true" MaxLength="113" />
+    <Property Type="String" Name="ejer" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spOrganizacionNombreMedia_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spOrganizacionNombrePrimaria_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spOrganizacionPrimariaCue_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idInstrumentoLegalCreacion" Nullable="true" />
+    <Property Type="String" Name="instrumentoLegal" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idInstrumentoLegalBaja" Nullable="true" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaBaja" Nullable="true" Precision="23" />
+    <Property Type="String" Name="observaciones" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idOrganizacionDependencia" Nullable="true" />
+    <Property Type="Int32" Name="idZona" Nullable="true" />
+    <Property Type="String" Name="zona" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idAmbito" Nullable="true" />
+    <Property Type="String" Name="ambito" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="true" />
+    <Property Type="String" Name="tipoEducacion" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spOrganizacionTurnoSEL_Result">
+    <Property Type="Int32" Name="idOrganizacionTurno" Nullable="false" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spPlanEstudioByOrgByNE_Result">
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="String" Name="planEstudio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idPlanUnidad" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spPlanUnidadSEL_Result">
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spRefAsignaturaByPlanEstudioSEL_Result">
+    <Property Type="Int32" Name="idAsignatura" Nullable="false" />
+    <Property Type="String" Name="asignatura" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spRefEstadoSolicitudSEL_Result">
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spRefNivelEducativoByOrg_Result">
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="false" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spRefSexoByIdSEL_Result">
+    <Property Type="Int32" Name="idSexo" Nullable="false" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="mnemo" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spRefSexoSEL_Result">
+    <Property Type="Int32" Name="idSexo" Nullable="false" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="mnemo" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spRefTipoDocumentoByIdSEL_Result">
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="false" />
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spRefTipoDocumentoSEL_Result">
+    <Property Type="Int32" Name="idTipoDocumento" Nullable="false" />
+    <Property Type="String" Name="tipoDocumento" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spRefTipoEspacioCurricularSEL_Result">
+    <Property Type="Int32" Name="idTipoEspacioCurricular" Nullable="false" />
+    <Property Type="String" Name="tipoEspacioCurricular" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spRefTipoInasistenciaSEL_Result">
+    <Property Type="Int32" Name="idTipoInasistencia" Nullable="false" />
+    <Property Type="String" Name="tipoInasistencia" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="valor" Nullable="false" Precision="3" Scale="1" />
+    <Property Type="String" Name="mnemo" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="spRefTipoNovedadSEL_Result">
+    <Property Type="Int32" Name="idTipoNovedad" Nullable="false" />
+    <Property Type="String" Name="tipoNovedad" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spReqPrimariaSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="Int32" Name="idRequerimiento" Nullable="false" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idCargoFuncional" Nullable="false" />
+    <Property Type="Int32" Name="idPlanUnidad" Nullable="true" />
+    <Property Type="Int32" Name="idDivision" Nullable="true" />
+    <Property Type="Int32" Name="idGrupo" Nullable="true" />
+    <Property Type="Int32" Name="idEspacioAsignatura" Nullable="true" />
+    <Property Type="Int32" Name="idOrganizacionTurno" Nullable="true" />
+    <Property Type="Int32" Name="idOrgCompartida" Nullable="true" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="Boolean" Name="cargaMateria" Nullable="true" />
+    <Property Type="String" Name="caracter" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="fechaDesde" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHasta" Nullable="true" Precision="23" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoRequerimiento" Nullable="false" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="partidaTEducacion" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="cupof" Nullable="true" />
+    <Property Type="Int32" Name="pCupof" Nullable="true" />
+    <Property Type="Boolean" Name="admiteSuplente" Nullable="true" />
+    <Property Type="Boolean" Name="cobraIncentivo" Nullable="true" />
+    <Property Type="Int32" Name="idSistemaEducativo" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenLaboral" Nullable="true" />
+    <Property Type="Int32" Name="idFinanciamiento" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenSalarial" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByFechaByNivelSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="true" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idUsuarioCreador" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByFiltro_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="false" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="false" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="false" />
+    <Property Type="String" Name="localidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="false" />
+    <Property Type="String" Name="jornada" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="false" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="false" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idDepartamento" Nullable="true" />
+    <Property Type="String" Name="departamento" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="false" />
+    <Property Type="String" Name="tipoEducacion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByIdByFiltro_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="false" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="false" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="false" />
+    <Property Type="String" Name="localidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="false" />
+    <Property Type="String" Name="jornada" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="false" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="false" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idDepartamento" Nullable="true" />
+    <Property Type="String" Name="departamento" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="false" />
+    <Property Type="String" Name="tipoEducacion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByIdByNivelSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="true" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idUsuarioCreador" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByMultiFiltro_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="false" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="false" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="false" />
+    <Property Type="String" Name="localidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="false" />
+    <Property Type="String" Name="jornada" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="false" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="false" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idDepartamento" Nullable="true" />
+    <Property Type="String" Name="departamento" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="false" />
+    <Property Type="String" Name="tipoEducacion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByNivelByEstadoSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="true" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idUsuarioCreador" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudByOrganismoByNivelSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="true" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idUsuarioCreador" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spSolicitudPriSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="true" />
+    <Property Type="Int32" Name="cue" Nullable="true" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="true" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="true" />
+    <Property Type="String" Name="localidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idJornada" Nullable="true" />
+    <Property Type="String" Name="jornada" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="true" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="true" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="true" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitud" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstado" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="idUsuarioCreador" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spvwEstructuraEducativa_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="planEstudio" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="espacioCurricular" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="asignatura" Nullable="false" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="spvwPlanEstudioByIdOrganizacionSEL_Result">
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="String" Name="planEstudio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="false" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="Int32" Name="idEspecialidad" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spvwPlanEstudioByOrganismoByNivelMedio_Result">
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="false" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="false" />
+    <Property Type="String" Name="nivelEducativo" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoByCargoSalarial_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoByEjercicio_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoById_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoByTipoEducacion_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoByUdeO_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwPresupuestoSEL_Result">
+    <Property Type="Int32" Name="idPresupuesto" Nullable="false" />
+    <Property Type="Int32" Name="idUdeO" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idAdicional" Nullable="false" />
+    <Property Type="String" Name="adicional" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantPresupuestada" Nullable="false" />
+    <Property Type="Int32" Name="cantOcupada" Nullable="true" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="ejercicio" Nullable="false" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="Boolean" Name="esFormal" Nullable="false" />
+    <Property Type="Int32" Name="cantTitulares" Nullable="true" />
+    <Property Type="Int32" Name="cantInterinos" Nullable="true" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="udeo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spvwSolicitudPrimariaByIdSolSEL_Result">
+    <Property Type="Int32" Name="idSolcitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="false" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="false" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="false" />
+    <Property Type="String" Name="localidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idJornadaS" Nullable="false" />
+    <Property Type="String" Name="jornadaS" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="false" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="false" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacionS" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitudS" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstadoS" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idSolicitud" Nullable="true" />
+    <Property Type="Int32" Name="idRequerimiento" Nullable="true" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idCargoFuncional" Nullable="true" />
+    <Property Type="String" Name="cargoFuncional" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idPlanUnidad" Nullable="true" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="true" />
+    <Property Type="String" Name="planEstudio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="true" />
+    <Property Type="String" Name="nivelEducativo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idDivision" Nullable="true" />
+    <Property Type="String" Name="curso" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="idGrupo" Nullable="true" />
+    <Property Type="String" Name="grupo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idEspacioAsignatura" Nullable="true" />
+    <Property Type="Int32" Name="idEspacioCurricular" Nullable="true" />
+    <Property Type="String" Name="espacioCurricular" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idTipoEspacioCurricular" Nullable="true" />
+    <Property Type="String" Name="tipoEspacioCurricular" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idAsignatura" Nullable="true" />
+    <Property Type="String" Name="asignatura" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idJornadaR" Nullable="true" />
+    <Property Type="String" Name="jornadaR" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="cargaMateria" Nullable="true" />
+    <Property Type="String" Name="caracter" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="fechaDesde" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHasta" Nullable="true" Precision="23" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoRequerimientor" Nullable="true" />
+    <Property Type="String" Name="estadoSolicitudr" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstador" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="partidaTEducacion" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="cupof" Nullable="true" />
+    <Property Type="Int32" Name="pCupof" Nullable="true" />
+    <Property Type="Boolean" Name="admiteSuplente" Nullable="true" />
+    <Property Type="Boolean" Name="cobraIncentivo" Nullable="true" />
+    <Property Type="Int32" Name="idSistemaEducativo" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenLaboral" Nullable="true" />
+    <Property Type="Int32" Name="idFinanciamiento" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenSalarial" Nullable="true" />
+    <Property Type="String" Name="departamento" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idDepartamento" Nullable="true" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="false" />
+    <Property Type="String" Name="tipoEducacion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacionTurno" Nullable="true" />
+    <Property Type="String" Name="turno" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="idTurno" Nullable="true" />
+    <Property Type="Int32" Name="idOrgCompartida" Nullable="true" />
+    <Property Type="String" Name="orgCompartida" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spvwSolicitudSecundariaByIdSolSEL_Result">
+    <Property Type="Int32" Name="idSolicitud" Nullable="false" />
+    <Property Type="String" Name="nroExpediente" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idOrganizacion" Nullable="false" />
+    <Property Type="String" Name="organizacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="numeroOrganizacion" Nullable="false" />
+    <Property Type="Int32" Name="cue" Nullable="false" />
+    <Property Type="Int32" Name="idTipoOrganizacion" Nullable="false" />
+    <Property Type="String" Name="tipoOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="domicilio" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="idLocalidad" Nullable="false" />
+    <Property Type="String" Name="localidad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idJornadaS" Nullable="false" />
+    <Property Type="String" Name="jornadaS" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="idTipoSolicitud" Nullable="false" />
+    <Property Type="String" Name="tipoSolicitud" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idCategoriaOrganizacion" Nullable="false" />
+    <Property Type="String" Name="categoriaOrganizacion" Nullable="false" MaxLength="60" />
+    <Property Type="Boolean" Name="estaChequeada" Nullable="false" />
+    <Property Type="Int32" Name="idRegion" Nullable="true" />
+    <Property Type="String" Name="region" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idPeriodoEscolar" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="matriculaTotal" Nullable="true" />
+    <Property Type="Int32" Name="cantDivisiones" Nullable="true" />
+    <Property Type="Int32" Name="idGrupoNivel" Nullable="false" />
+    <Property Type="DateTime" Name="fechaSolicitud" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fundamentacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="observacionS" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="idEstadoSolicitud" Nullable="false" />
+    <Property Type="String" Name="estadoSolicitudS" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstadoS" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="nroResolucion" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaAlta" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaHabilitacion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="idDepartamento" Nullable="true" />
+    <Property Type="String" Name="departamento" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idTipoEducacion" Nullable="false" />
+    <Property Type="String" Name="tipoEducacion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="idSolicitudr" Nullable="true" />
+    <Property Type="Int32" Name="idRequerimiento" Nullable="true" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+    <Property Type="Int32" Name="idCategoriaPresupuesto" Nullable="true" />
+    <Property Type="Int32" Name="idCargoSalarial" Nullable="true" />
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idFinalidad" Nullable="true" />
+    <Property Type="String" Name="finalidad" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idFuncion" Nullable="true" />
+    <Property Type="String" Name="funcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="idEscalafon" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="escalafon" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idCargoFuncional" Nullable="true" />
+    <Property Type="String" Name="cargoFuncional" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idPlanUnidad" Nullable="true" />
+    <Property Type="Int32" Name="idPlanEstudio" Nullable="true" />
+    <Property Type="String" Name="planEstudio" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idNivelEducativo" Nullable="true" />
+    <Property Type="String" Name="nivelEducativo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idDivision" Nullable="true" />
+    <Property Type="String" Name="curso" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="division" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="idGrupo" Nullable="true" />
+    <Property Type="String" Name="grupo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="idEspacioAsignatura" Nullable="true" />
+    <Property Type="Int32" Name="idEspacioCurricular" Nullable="true" />
+    <Property Type="String" Name="espacioCurricular" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="idTipoEspacioCurricular" Nullable="true" />
+    <Property Type="String" Name="tipoEspacioCurricular" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="idAsignatura" Nullable="true" />
+    <Property Type="String" Name="asignatura" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="caracter" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="fechaDesde" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fechaHasta" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="esCargo" Nullable="true" />
+    <Property Type="Int32" Name="idTurno" Nullable="true" />
+    <Property Type="String" Name="turno" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="pCupof" Nullable="true" />
+    <Property Type="Int32" Name="cupof" Nullable="true" />
+    <Property Type="String" Name="partidaTEducacion" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="admiteSuplente" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenSalarial" Nullable="true" />
+    <Property Type="Boolean" Name="cobraIncentivo" Nullable="true" />
+    <Property Type="Int32" Name="idFinanciamiento" Nullable="true" />
+    <Property Type="Int32" Name="idRegimenLaboral" Nullable="true" />
+    <Property Type="Int32" Name="idSistemaEducativo" Nullable="true" />
+    <Property Type="Int32" Name="idEstadoRequerimientor" Nullable="true" />
+    <Property Type="String" Name="estadoSolicitudr" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="obsEstador" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="spvwSolPriResumenCargos_Result">
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spvwSolSecResumenCargos_Result">
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="cantidad" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spvwSolSecResumenHoras_Result">
+    <Property Type="String" Name="cargoSalarial" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="asignatura" Nullable="true" MaxLength="60" />
+    <Property Type="Int32" Name="cantidadHoras" Nullable="true" />
+  </ComplexType>
+</Schema>

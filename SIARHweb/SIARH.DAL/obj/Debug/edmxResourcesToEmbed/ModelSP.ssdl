@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRHH_V2Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spInstrumentoLegalINS_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="instrumentoLegal1" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spInstrumentoLegalSELbyTexto_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="activo" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spInstrumentoLegalUPD_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="instrumentoLegal1" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="estaActivo" Type="bit" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spRefPaisNacionalidadINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pais" Type="nvarchar" Mode="In" />
+    <Parameter Name="nacionalidad" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefPaisNacionalidadSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="activo" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spRefPaisNacionalidadUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+    <Parameter Name="pais" Type="nvarchar" Mode="In" />
+    <Parameter Name="nacionalidad" Type="nvarchar" Mode="In" />
+    <Parameter Name="estaActivo" Type="bit" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="RRHH_V2Model1StoreContainer" />
+</Schema>

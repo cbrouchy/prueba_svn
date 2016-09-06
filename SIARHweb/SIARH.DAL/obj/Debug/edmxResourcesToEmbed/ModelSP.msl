@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RRHH_V2Model1StoreContainer" CdmEntityContainer="RRHH_V2SP">
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalINS_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalINS_">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalINS__Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalSELbyTexto_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalSELbyTexto_">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalSELbyTexto__Result1">
+          <ScalarProperty Name="idInstrumentoLegal" ColumnName="idInstrumentoLegal" />
+          <ScalarProperty Name="instrumentoLegal" ColumnName="instrumentoLegal" />
+          <ScalarProperty Name="tipoInstrumentoLegal" ColumnName="tipoInstrumentoLegal" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalUPD_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalUPD_">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalUPD__Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadINS" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadINS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadINS_Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadSEL" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadSEL_Result1">
+          <ScalarProperty Name="idPaisNacionalidad" ColumnName="idPaisNacionalidad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadUPD" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadUPD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadUPD_Result">
+          <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

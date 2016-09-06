@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RRHH_V2ModelStoreContainer" CdmEntityContainer="RRHH_V2Entities">
+    <EntitySetMapping Name="CargoFuncional">
+      <EntityTypeMapping TypeName="RRHH_V2Model.CargoFuncional">
+        <MappingFragment StoreEntitySet="CargoFuncional">
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="cargoFuncional1" ColumnName="cargoFuncional1" />
+          <ScalarProperty Name="esJerarquico" ColumnName="esJerarquico" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idTipoFuncion" ColumnName="idTipoFuncion" />
+          <ScalarProperty Name="ordenVisual" ColumnName="ordenVisual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargoSalarial">
+      <EntityTypeMapping TypeName="RRHH_V2Model.CargoSalarial">
+        <MappingFragment StoreEntitySet="CargoSalarial">
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial1" ColumnName="cargoSalarial1" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="equivalenciaHoraria" ColumnName="equivalenciaHoraria" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="ordenVisual" ColumnName="ordenVisual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriaPresupuesto">
+      <EntityTypeMapping TypeName="RRHH_V2Model.CategoriaPresupuesto">
+        <MappingFragment StoreEntitySet="CategoriaPresupuesto">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="departamento1" ColumnName="departamento1" />
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleTabla">
+      <EntityTypeMapping TypeName="RRHH_V2Model.DetalleTabla">
+        <MappingFragment StoreEntitySet="DetalleTabla">
+          <ScalarProperty Name="idDetalleTabla" ColumnName="idDetalleTabla" />
+          <ScalarProperty Name="tabla" ColumnName="tabla" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="vinculado" ColumnName="vinculado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Division">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Division">
+        <MappingFragment StoreEntitySet="Division">
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division1" ColumnName="division1" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esGrupo" ColumnName="esGrupo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="esAgregado" ColumnName="esAgregado" />
+          <ScalarProperty Name="pendienteAprobacion" ColumnName="pendienteAprobacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EspacioAsignatura">
+      <EntityTypeMapping TypeName="RRHH_V2Model.EspacioAsignatura">
+        <MappingFragment StoreEntitySet="EspacioAsignatura">
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EspacioCurricular">
+      <EntityTypeMapping TypeName="RRHH_V2Model.EspacioCurricular">
+        <MappingFragment StoreEntitySet="EspacioCurricular">
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="espacioCurricular1" ColumnName="espacioCurricular1" />
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupo">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Grupo">
+        <MappingFragment StoreEntitySet="Grupo">
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="grupo1" ColumnName="grupo1" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoDivision">
+      <EntityTypeMapping TypeName="RRHH_V2Model.GrupoDivision">
+        <MappingFragment StoreEntitySet="GrupoDivision">
+          <ScalarProperty Name="idGrupoDivision" ColumnName="idGrupoDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstrumentoLegal">
+      <EntityTypeMapping TypeName="RRHH_V2Model.InstrumentoLegal">
+        <MappingFragment StoreEntitySet="InstrumentoLegal">
+          <ScalarProperty Name="idInstrumentoLegal" ColumnName="idInstrumentoLegal" />
+          <ScalarProperty Name="instrumentoLegal1" ColumnName="instrumentoLegal1" />
+          <ScalarProperty Name="idTipoInstrumentoLegal" ColumnName="idTipoInstrumentoLegal" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Localidad">
+        <MappingFragment StoreEntitySet="Localidad">
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad1" ColumnName="localidad1" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="codigoPostal" ColumnName="codigoPostal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuPlaza">
+      <EntityTypeMapping TypeName="RRHH_V2Model.MenuPlaza">
+        <MappingFragment StoreEntitySet="MenuPlaza">
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+          <ScalarProperty Name="idMenuPadre" ColumnName="idMenuPadre" />
+          <ScalarProperty Name="menuPersonalizado" ColumnName="menuPersonalizado" />
+          <ScalarProperty Name="menuOrden" ColumnName="menuOrden" />
+          <ScalarProperty Name="menuSeleccionable" ColumnName="menuSeleccionable" />
+          <ScalarProperty Name="menuUrl" ColumnName="menuUrl" />
+          <ScalarProperty Name="menuTabla" ColumnName="menuTabla" />
+          <ScalarProperty Name="menuImagen" ColumnName="menuImagen" />
+          <ScalarProperty Name="menuNombre" ColumnName="menuNombre" />
+          <ScalarProperty Name="idDetalleTabla" ColumnName="idDetalleTabla" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Organizacion">
+        <MappingFragment StoreEntitySet="Organizacion">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion1" ColumnName="organizacion1" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="idInstrumentoLegalCreacion" ColumnName="idInstrumentoLegalCreacion" />
+          <ScalarProperty Name="idInstrumentoLegalBaja" ColumnName="idInstrumentoLegalBaja" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="idOrganizacionDependencia" ColumnName="idOrganizacionDependencia" />
+          <ScalarProperty Name="idZona" ColumnName="idZona" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizacionTurno">
+      <EntityTypeMapping TypeName="RRHH_V2Model.OrganizacionTurno">
+        <MappingFragment StoreEntitySet="OrganizacionTurno">
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaquetePlaza">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PaquetePlaza">
+        <MappingFragment StoreEntitySet="PaquetePlaza">
+          <ScalarProperty Name="idPaquete" ColumnName="idPaquete" />
+          <ScalarProperty Name="idPlazaCabecera" ColumnName="idPlazaCabecera" />
+          <ScalarProperty Name="idTipoPaquetePlaza" ColumnName="idTipoPaquetePlaza" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaquetePlazaHistorica">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PaquetePlazaHistorica">
+        <MappingFragment StoreEntitySet="PaquetePlazaHistorica">
+          <ScalarProperty Name="idPaquetePlazaHistorica" ColumnName="idPaquetePlazaHistorica" />
+          <ScalarProperty Name="idPaquete" ColumnName="idPaquete" />
+          <ScalarProperty Name="idPlazaCabecera" ColumnName="idPlazaCabecera" />
+          <ScalarProperty Name="idTipoPaquetePlaza" ColumnName="idTipoPaquetePlaza" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanEspacio">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PlanEspacio">
+        <MappingFragment StoreEntitySet="PlanEspacio">
+          <ScalarProperty Name="idPlanEspacio" ColumnName="idPlanEspacio" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="cargaHoraria" ColumnName="cargaHoraria" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanEstudio">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PlanEstudio">
+        <MappingFragment StoreEntitySet="PlanEstudio">
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio1" ColumnName="planEstudio1" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="idInstrumentoLegal" ColumnName="idInstrumentoLegal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanUnidad">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PlanUnidad">
+        <MappingFragment StoreEntitySet="PlanUnidad">
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plaza">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Plaza">
+        <MappingFragment StoreEntitySet="Plaza">
+          <ScalarProperty Name="idPlaza" ColumnName="idPlaza" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="horas" ColumnName="horas" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="idInstrumentoLegalCreacion" ColumnName="idInstrumentoLegalCreacion" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="idInstrumentoLegalBaja" ColumnName="idInstrumentoLegalBaja" />
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idMotivoCreacion" ColumnName="idMotivoCreacion" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="esCabeceraDePaquete" ColumnName="esCabeceraDePaquete" />
+          <ScalarProperty Name="idPaquete" ColumnName="idPaquete" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idAfectacion" ColumnName="idAfectacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlazaHistorica">
+      <EntityTypeMapping TypeName="RRHH_V2Model.PlazaHistorica">
+        <MappingFragment StoreEntitySet="PlazaHistorica">
+          <ScalarProperty Name="idPlazaHistorica" ColumnName="idPlazaHistorica" />
+          <ScalarProperty Name="idPlaza" ColumnName="idPlaza" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="horas" ColumnName="horas" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="idInstrumentoLegalCreacion" ColumnName="idInstrumentoLegalCreacion" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="idInstrumentoLegalBaja" ColumnName="idInstrumentoLegalBaja" />
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idMotivoCreacion" ColumnName="idMotivoCreacion" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="esCabeceraDePaquete" ColumnName="esCabeceraDePaquete" />
+          <ScalarProperty Name="idPaquete" ColumnName="idPaquete" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idAfectacion" ColumnName="idAfectacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Presupuesto">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Presupuesto">
+        <MappingFragment StoreEntitySet="Presupuesto">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idInstrumentoLegal" ColumnName="idInstrumentoLegal" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincia">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Provincia">
+        <MappingFragment StoreEntitySet="Provincia">
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+          <ScalarProperty Name="provincia1" ColumnName="provincia1" />
+          <ScalarProperty Name="idPaisNacionalidad" ColumnName="idPaisNacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefAdicional">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefAdicional">
+        <MappingFragment StoreEntitySet="RefAdicional">
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefAfectacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefAfectacion">
+        <MappingFragment StoreEntitySet="RefAfectacion">
+          <ScalarProperty Name="idAfectacion" ColumnName="idAfectacion" />
+          <ScalarProperty Name="afectacion" ColumnName="afectacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefAmbito">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefAmbito">
+        <MappingFragment StoreEntitySet="RefAmbito">
+          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
+          <ScalarProperty Name="ambito" ColumnName="ambito" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefAsignatura">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefAsignatura">
+        <MappingFragment StoreEntitySet="RefAsignatura">
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefCalendarioFeriado">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefCalendarioFeriado">
+        <MappingFragment StoreEntitySet="RefCalendarioFeriado">
+          <ScalarProperty Name="idCalendarioFeriado" ColumnName="idCalendarioFeriado" />
+          <ScalarProperty Name="fechaFeriado" ColumnName="fechaFeriado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefCategoriaLicencia">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefCategoriaLicencia">
+        <MappingFragment StoreEntitySet="RefCategoriaLicencia">
+          <ScalarProperty Name="idCategoriaLicencia" ColumnName="idCategoriaLicencia" />
+          <ScalarProperty Name="categoriaLicencia" ColumnName="categoriaLicencia" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefCategoriaOrganizacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefCategoriaOrganizacion">
+        <MappingFragment StoreEntitySet="RefCategoriaOrganizacion">
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefDiaDescansoAnual">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefDiaDescansoAnual">
+        <MappingFragment StoreEntitySet="RefDiaDescansoAnual">
+          <ScalarProperty Name="idDiaDescansoAnual" ColumnName="idDiaDescansoAnual" />
+          <ScalarProperty Name="anioDesde" ColumnName="anioDesde" />
+          <ScalarProperty Name="anioHasta" ColumnName="anioHasta" />
+          <ScalarProperty Name="diaDescanso" ColumnName="diaDescanso" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEscalafon">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEscalafon">
+        <MappingFragment StoreEntitySet="RefEscalafon">
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEspecialidad">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEspecialidad">
+        <MappingFragment StoreEntitySet="RefEspecialidad">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEstado">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEstado">
+        <MappingFragment StoreEntitySet="RefEstado">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEstadoCivil">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEstadoCivil">
+        <MappingFragment StoreEntitySet="RefEstadoCivil">
+          <ScalarProperty Name="idEstadoCivil" ColumnName="idEstadoCivil" />
+          <ScalarProperty Name="estadoCivil" ColumnName="estadoCivil" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEstadoEdificio">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEstadoEdificio">
+        <MappingFragment StoreEntitySet="RefEstadoEdificio">
+          <ScalarProperty Name="idEstadoEdificio" ColumnName="idEstadoEdificio" />
+          <ScalarProperty Name="estadoEdificio" ColumnName="estadoEdificio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefEstadoSolicitud">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefEstadoSolicitud">
+        <MappingFragment StoreEntitySet="RefEstadoSolicitud">
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefFinalidad">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefFinalidad">
+        <MappingFragment StoreEntitySet="RefFinalidad">
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefFinanciamiento">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefFinanciamiento">
+        <MappingFragment StoreEntitySet="RefFinanciamiento">
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="financiamiento" ColumnName="financiamiento" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefFuncion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefFuncion">
+        <MappingFragment StoreEntitySet="RefFuncion">
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefJornada">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefJornada">
+        <MappingFragment StoreEntitySet="RefJornada">
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="nemotecnico" ColumnName="nemotecnico" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefMotivoAlta">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefMotivoAlta">
+        <MappingFragment StoreEntitySet="RefMotivoAlta">
+          <ScalarProperty Name="idMotivoAlta" ColumnName="idMotivoAlta" />
+          <ScalarProperty Name="motivoAlta" ColumnName="motivoAlta" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefMotivoBaja">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefMotivoBaja">
+        <MappingFragment StoreEntitySet="RefMotivoBaja">
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+          <ScalarProperty Name="motivoBaja" ColumnName="motivoBaja" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefMotivoCreacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefMotivoCreacion">
+        <MappingFragment StoreEntitySet="RefMotivoCreacion">
+          <ScalarProperty Name="idMotivoCreacion" ColumnName="idMotivoCreacion" />
+          <ScalarProperty Name="motivoCreacion" ColumnName="motivoCreacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefMovimiento">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefMovimiento">
+        <MappingFragment StoreEntitySet="RefMovimiento">
+          <ScalarProperty Name="idMovimiento" ColumnName="idMovimiento" />
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefNivelEducativo">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefNivelEducativo">
+        <MappingFragment StoreEntitySet="RefNivelEducativo">
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefPaisNacionalidad">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefPaisNacionalidad">
+        <MappingFragment StoreEntitySet="RefPaisNacionalidad">
+          <ScalarProperty Name="idPaisNacionalidad" ColumnName="idPaisNacionalidad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefParentesco">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefParentesco">
+        <MappingFragment StoreEntitySet="RefParentesco">
+          <ScalarProperty Name="idParentesco" ColumnName="idParentesco" />
+          <ScalarProperty Name="parentesco" ColumnName="parentesco" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefPeriodoEscolar">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefPeriodoEscolar">
+        <MappingFragment StoreEntitySet="RefPeriodoEscolar">
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefRegimenLaboral">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefRegimenLaboral">
+        <MappingFragment StoreEntitySet="RefRegimenLaboral">
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="regimenLaboral" ColumnName="regimenLaboral" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefRegimenSalarial">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefRegimenSalarial">
+        <MappingFragment StoreEntitySet="RefRegimenSalarial">
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+          <ScalarProperty Name="regimenSalarial" ColumnName="regimenSalarial" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefRegion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefRegion">
+        <MappingFragment StoreEntitySet="RefRegion">
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefSexo">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefSexo">
+        <MappingFragment StoreEntitySet="RefSexo">
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="mnemo" ColumnName="mnemo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefSistemaEducativo">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefSistemaEducativo">
+        <MappingFragment StoreEntitySet="RefSistemaEducativo">
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="sistemaEducativo" ColumnName="sistemaEducativo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefSituacionExtraordinaria">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefSituacionExtraordinaria">
+        <MappingFragment StoreEntitySet="RefSituacionExtraordinaria">
+          <ScalarProperty Name="idSituacionExtraordinaria" ColumnName="idSituacionExtraordinaria" />
+          <ScalarProperty Name="situacionExtraordinaria" ColumnName="situacionExtraordinaria" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefSituacionLaboral">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefSituacionLaboral">
+        <MappingFragment StoreEntitySet="RefSituacionLaboral">
+          <ScalarProperty Name="idSituacionLaboral" ColumnName="idSituacionLaboral" />
+          <ScalarProperty Name="situacionLaboral" ColumnName="situacionLaboral" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefSituacionRevista">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefSituacionRevista">
+        <MappingFragment StoreEntitySet="RefSituacionRevista">
+          <ScalarProperty Name="idSituacionRevista" ColumnName="idSituacionRevista" />
+          <ScalarProperty Name="situacionRevista" ColumnName="situacionRevista" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoAsignaturaPrevia">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoAsignaturaPrevia">
+        <MappingFragment StoreEntitySet="RefTipoAsignaturaPrevia">
+          <ScalarProperty Name="idTipoAsignaturaPrevia" ColumnName="idTipoAsignaturaPrevia" />
+          <ScalarProperty Name="tipoAsignaturaPrevia" ColumnName="tipoAsignaturaPrevia" />
+          <ScalarProperty Name="mNemo" ColumnName="mNemo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoDocumento">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoDocumento">
+        <MappingFragment StoreEntitySet="RefTipoDocumento">
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoEdificio">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoEdificio">
+        <MappingFragment StoreEntitySet="RefTipoEdificio">
+          <ScalarProperty Name="idTipoEdificio" ColumnName="idTipoEdificio" />
+          <ScalarProperty Name="tipoEdificio" ColumnName="tipoEdificio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoEducacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoEducacion">
+        <MappingFragment StoreEntitySet="RefTipoEducacion">
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoEspacioCurricular">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoEspacioCurricular">
+        <MappingFragment StoreEntitySet="RefTipoEspacioCurricular">
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="tipoEspacioCurricular" ColumnName="tipoEspacioCurricular" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoFuncion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoFuncion">
+        <MappingFragment StoreEntitySet="RefTipoFuncion">
+          <ScalarProperty Name="idTipoFuncion" ColumnName="idTipoFuncion" />
+          <ScalarProperty Name="tipoFuncion" ColumnName="tipoFuncion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoGoceHaber">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoGoceHaber">
+        <MappingFragment StoreEntitySet="RefTipoGoceHaber">
+          <ScalarProperty Name="idTipoGoceHaber" ColumnName="idTipoGoceHaber" />
+          <ScalarProperty Name="tipoGoceHaber" ColumnName="tipoGoceHaber" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoInstrumentoLegal">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoInstrumentoLegal">
+        <MappingFragment StoreEntitySet="RefTipoInstrumentoLegal">
+          <ScalarProperty Name="idTipoInstrumentoLegal" ColumnName="idTipoInstrumentoLegal" />
+          <ScalarProperty Name="tipoInstrumentoLegal" ColumnName="tipoInstrumentoLegal" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoOrganizacion">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoOrganizacion">
+        <MappingFragment StoreEntitySet="RefTipoOrganizacion">
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoPaquetePlaza">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoPaquetePlaza">
+        <MappingFragment StoreEntitySet="RefTipoPaquetePlaza">
+          <ScalarProperty Name="idTipoPaquetePlaza" ColumnName="idTipoPaquetePlaza" />
+          <ScalarProperty Name="tipoPaquetePlaza" ColumnName="tipoPaquetePlaza" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoServicio">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoServicio">
+        <MappingFragment StoreEntitySet="RefTipoServicio">
+          <ScalarProperty Name="idTipoServicio" ColumnName="idTipoServicio" />
+          <ScalarProperty Name="tipoServicio" ColumnName="tipoServicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoSolicitud">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoSolicitud">
+        <MappingFragment StoreEntitySet="RefTipoSolicitud">
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTipoTenencia">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTipoTenencia">
+        <MappingFragment StoreEntitySet="RefTipoTenencia">
+          <ScalarProperty Name="idTipoTenencia" ColumnName="idTipoTenencia" />
+          <ScalarProperty Name="tipoTenencia" ColumnName="tipoTenencia" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefTurno">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefTurno">
+        <MappingFragment StoreEntitySet="RefTurno">
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefUdeO">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefUdeO">
+        <MappingFragment StoreEntitySet="RefUdeO">
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefUnidadTemporal">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefUnidadTemporal">
+        <MappingFragment StoreEntitySet="RefUnidadTemporal">
+          <ScalarProperty Name="idUnidadTemporal" ColumnName="idUnidadTemporal" />
+          <ScalarProperty Name="unidadTemporal" ColumnName="unidadTemporal" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefUnidadTemporalContexto">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefUnidadTemporalContexto">
+        <MappingFragment StoreEntitySet="RefUnidadTemporalContexto">
+          <ScalarProperty Name="idUnidadTemporalContexto" ColumnName="idUnidadTemporalContexto" />
+          <ScalarProperty Name="unidadTemporalContexto" ColumnName="unidadTemporalContexto" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RefZona">
+      <EntityTypeMapping TypeName="RRHH_V2Model.RefZona">
+        <MappingFragment StoreEntitySet="RefZona">
+          <ScalarProperty Name="idZona" ColumnName="idZona" />
+          <ScalarProperty Name="zona" ColumnName="zona" />
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReqSolicitudPrimaria">
+      <EntityTypeMapping TypeName="RRHH_V2Model.ReqSolicitudPrimaria">
+        <MappingFragment StoreEntitySet="ReqSolicitudPrimaria">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="idRequerimiento" ColumnName="idRequerimiento" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="cargaMateria" ColumnName="cargaMateria" />
+          <ScalarProperty Name="caracter" ColumnName="caracter" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="fechaHasta" ColumnName="fechaHasta" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoRequerimiento" ColumnName="idEstadoRequerimiento" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="partidaTEducacion" ColumnName="partidaTEducacion" />
+          <ScalarProperty Name="cupof" ColumnName="cupof" />
+          <ScalarProperty Name="pCupof" ColumnName="pCupof" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="cobraIncentivo" ColumnName="cobraIncentivo" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReqSolicitudSecundaria">
+      <EntityTypeMapping TypeName="RRHH_V2Model.ReqSolicitudSecundaria">
+        <MappingFragment StoreEntitySet="ReqSolicitudSecundaria">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="idRequerimiento" ColumnName="idRequerimiento" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="caracter" ColumnName="caracter" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="fechaHasta" ColumnName="fechaHasta" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoRequerimiento" ColumnName="idEstadoRequerimiento" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="esCargo" ColumnName="esCargo" />
+          <ScalarProperty Name="partidaTEducacion" ColumnName="partidaTEducacion" />
+          <ScalarProperty Name="cupof" ColumnName="cupof" />
+          <ScalarProperty Name="pCupof" ColumnName="pCupof" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="cobraIncentivo" ColumnName="cobraIncentivo" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud">
+      <EntityTypeMapping TypeName="RRHH_V2Model.Solicitud">
+        <MappingFragment StoreEntitySet="Solicitud">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RRHH_V2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

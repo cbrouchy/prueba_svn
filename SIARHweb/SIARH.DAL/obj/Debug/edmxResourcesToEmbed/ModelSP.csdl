@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRHH_V2Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RRHH_V2SP" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spInstrumentoLegalINS_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalINS__Result)">
+      <Parameter Name="instrumentoLegal1" Mode="In" Type="String" />
+      <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spInstrumentoLegalSELbyTexto_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalSELbyTexto__Result1)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="activo" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spInstrumentoLegalUPD_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalUPD__Result)">
+      <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="instrumentoLegal1" Mode="In" Type="String" />
+      <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="estaActivo" Mode="In" Type="Boolean" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spRefPaisNacionalidadINS" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadINS_Result)">
+      <Parameter Name="pais" Mode="In" Type="String" />
+      <Parameter Name="nacionalidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spRefPaisNacionalidadSEL" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadSEL_Result1)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="activo" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spRefPaisNacionalidadUPD" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadUPD_Result)">
+      <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+      <Parameter Name="pais" Mode="In" Type="String" />
+      <Parameter Name="nacionalidad" Mode="In" Type="String" />
+      <Parameter Name="estaActivo" Mode="In" Type="Boolean" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spInstrumentoLegalSELbyTexto__Result">
+    <Property Type="Int32" Name="idInstrumentoLegal" Nullable="false" />
+    <Property Type="String" Name="instrumentoLegal" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="tipoInstrumentoLegal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spRefPaisNacionalidadSEL_Result">
+    <Property Type="Int32" Name="idPaisNacionalidad" Nullable="false" />
+    <Property Type="String" Name="pais" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="nacionalidad" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spInstrumentoLegalINS__Result">
+    <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spInstrumentoLegalSELbyTexto__Result1">
+    <Property Type="Int32" Name="idInstrumentoLegal" Nullable="false" />
+    <Property Type="String" Name="instrumentoLegal" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="tipoInstrumentoLegal" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spInstrumentoLegalUPD__Result">
+    <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spRefPaisNacionalidadINS_Result">
+    <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spRefPaisNacionalidadSEL_Result1">
+    <Property Type="Int32" Name="idPaisNacionalidad" Nullable="false" />
+    <Property Type="String" Name="pais" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="nacionalidad" Nullable="true" MaxLength="60" />
+    <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spRefPaisNacionalidadUPD_Result">
+    <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+  </ComplexType>
+</Schema>

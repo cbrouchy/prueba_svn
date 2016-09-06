@@ -1,0 +1,9 @@
+﻿body {
+}
+
+.modal
+{
+    background-color: Gray;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}

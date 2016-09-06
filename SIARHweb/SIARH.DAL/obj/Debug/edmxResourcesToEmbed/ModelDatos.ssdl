@@ -1,0 +1,2628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRHH_V2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CargoFuncional">
+    <Key>
+      <PropertyRef Name="idCargoFuncional" />
+    </Key>
+    <Property Name="idCargoFuncional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cargoFuncional1" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="esJerarquico" Type="bit" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="idTipoFuncion" Type="int" />
+    <Property Name="ordenVisual" Type="int" />
+  </EntityType>
+  <EntityType Name="CargoSalarial">
+    <Key>
+      <PropertyRef Name="idCargoSalarial" />
+    </Key>
+    <Property Name="idCargoSalarial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cargoSalarial1" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="idJornada" Type="int" />
+    <Property Name="equivalenciaHoraria" Type="int" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="ordenVisual" Type="int" />
+  </EntityType>
+  <EntityType Name="CategoriaPresupuesto">
+    <Key>
+      <PropertyRef Name="idCategoriaPresupuesto" />
+    </Key>
+    <Property Name="idCategoriaPresupuesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idUdeO" Type="int" Nullable="false" />
+    <Property Name="idCargoSalarial" Type="int" Nullable="false" />
+    <Property Name="idFinalidad" Type="int" Nullable="false" />
+    <Property Name="idFuncion" Type="int" Nullable="false" />
+    <Property Name="idEscalafon" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="idDepartamento" />
+    </Key>
+    <Property Name="idDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="departamento1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idProvincia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleTabla">
+    <Key>
+      <PropertyRef Name="idDetalleTabla" />
+    </Key>
+    <Property Name="idDetalleTabla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tabla" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="vinculado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Division">
+    <Key>
+      <PropertyRef Name="idDivision" />
+    </Key>
+    <Property Name="idDivision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPlanUnidad" Type="int" Nullable="false" />
+    <Property Name="idOrganizacionTurno" Type="int" Nullable="false" />
+    <Property Name="curso" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="division1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="esGrupo" Type="bit" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="esAgregado" Type="bit" Nullable="false" />
+    <Property Name="pendienteAprobacion" Type="bit" />
+  </EntityType>
+  <EntityType Name="EspacioAsignatura">
+    <Key>
+      <PropertyRef Name="idEspacioAsignatura" />
+    </Key>
+    <Property Name="idEspacioAsignatura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEspacioCurricular" Type="int" Nullable="false" />
+    <Property Name="idAsignatura" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EspacioCurricular">
+    <Key>
+      <PropertyRef Name="idEspacioCurricular" />
+    </Key>
+    <Property Name="idEspacioCurricular" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="espacioCurricular1" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="idTipoEspacioCurricular" Type="int" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="idGrupo" />
+    </Key>
+    <Property Name="idGrupo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="grupo1" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="idOrganizacion" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GrupoDivision">
+    <Key>
+      <PropertyRef Name="idGrupoDivision" />
+    </Key>
+    <Property Name="idGrupoDivision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idGrupo" Type="int" Nullable="false" />
+    <Property Name="idDivision" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InstrumentoLegal">
+    <Key>
+      <PropertyRef Name="idInstrumentoLegal" />
+    </Key>
+    <Property Name="idInstrumentoLegal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="instrumentoLegal1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idTipoInstrumentoLegal" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Localidad">
+    <Key>
+      <PropertyRef Name="idLocalidad" />
+    </Key>
+    <Property Name="idLocalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="localidad1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="codigoPostal" Type="int" />
+  </EntityType>
+  <EntityType Name="MenuPlaza">
+    <Key>
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMenuPadre" Type="int" Nullable="false" />
+    <Property Name="menuPersonalizado" Type="bit" />
+    <Property Name="menuOrden" Type="int" />
+    <Property Name="menuSeleccionable" Type="bit" />
+    <Property Name="menuUrl" Type="nvarchar" MaxLength="50" />
+    <Property Name="menuTabla" Type="nvarchar" MaxLength="50" />
+    <Property Name="menuImagen" Type="nvarchar" MaxLength="50" />
+    <Property Name="menuNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="idDetalleTabla" Type="int" />
+    <Property Name="estaActivo" Type="bit" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Organizacion">
+    <Key>
+      <PropertyRef Name="idOrganizacion" />
+    </Key>
+    <Property Name="idOrganizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="organizacion1" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="numeroOrganizacion" Type="nvarchar(max)" />
+    <Property Name="cue" Type="int" />
+    <Property Name="idTipoOrganizacion" Type="int" />
+    <Property Name="domicilio" Type="nvarchar" MaxLength="100" />
+    <Property Name="idLocalidad" Type="int" />
+    <Property Name="idInstrumentoLegalCreacion" Type="int" />
+    <Property Name="idInstrumentoLegalBaja" Type="int" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" />
+    <Property Name="fechaBaja" Type="datetime" />
+    <Property Name="observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="idOrganizacionDependencia" Type="int" />
+    <Property Name="idZona" Type="int" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="idJornada" Type="int" />
+    <Property Name="idCategoriaOrganizacion" Type="int" />
+    <Property Name="estaChequeada" Type="bit" />
+    <Property Name="idAmbito" Type="int" />
+    <Property Name="idTipoEducacion" Type="int" />
+    <Property Name="idRegion" Type="int" />
+    <Property Name="idPeriodoEscolar" Type="int" />
+  </EntityType>
+  <EntityType Name="OrganizacionTurno">
+    <Key>
+      <PropertyRef Name="idOrganizacionTurno" />
+    </Key>
+    <Property Name="idOrganizacionTurno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idOrganizacion" Type="int" Nullable="false" />
+    <Property Name="idTurno" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaquetePlaza">
+    <Key>
+      <PropertyRef Name="idPaquete" />
+    </Key>
+    <Property Name="idPaquete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPlazaCabecera" Type="int" Nullable="false" />
+    <Property Name="idTipoPaquetePlaza" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PaquetePlazaHistorica">
+    <Key>
+      <PropertyRef Name="idPaquetePlazaHistorica" />
+    </Key>
+    <Property Name="idPaquetePlazaHistorica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPaquete" Type="int" Nullable="false" />
+    <Property Name="idPlazaCabecera" Type="int" Nullable="false" />
+    <Property Name="idTipoPaquetePlaza" Type="int" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" />
+    <Property Name="fechaBaja" Type="datetime" />
+    <Property Name="idMotivoBaja" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlanEspacio">
+    <Key>
+      <PropertyRef Name="idPlanEspacio" />
+    </Key>
+    <Property Name="idPlanEspacio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPlanEstudio" Type="int" Nullable="false" />
+    <Property Name="idEspacioCurricular" Type="int" Nullable="false" />
+    <Property Name="anio" Type="int" />
+    <Property Name="cargaHoraria" Type="int" />
+    <Property Name="estaActivo" Type="bit" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PlanEstudio">
+    <Key>
+      <PropertyRef Name="idPlanEstudio" />
+    </Key>
+    <Property Name="idPlanEstudio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="planEstudio1" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="fechaDesde" Type="datetime" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="duracion" Type="int" />
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="idInstrumentoLegal" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanUnidad">
+    <Key>
+      <PropertyRef Name="idPlanUnidad" />
+    </Key>
+    <Property Name="idPlanUnidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idOrganizacion" Type="int" Nullable="false" />
+    <Property Name="idPlanEstudio" Type="int" Nullable="false" />
+    <Property Name="idNivelEducativo" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Plaza">
+    <Key>
+      <PropertyRef Name="idPlaza" />
+    </Key>
+    <Property Name="idPlaza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPlanUnidad" Type="int" Nullable="false" />
+    <Property Name="idCargoFuncional" Type="int" Nullable="false" />
+    <Property Name="idAsignatura" Type="int" Nullable="false" />
+    <Property Name="idDivision" Type="int" />
+    <Property Name="idGrupo" Type="int" />
+    <Property Name="horas" Type="int" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="idInstrumentoLegalCreacion" Type="int" Nullable="false" />
+    <Property Name="fechaBaja" Type="datetime" />
+    <Property Name="idInstrumentoLegalBaja" Type="int" />
+    <Property Name="idMotivoBaja" Type="int" />
+    <Property Name="idSistemaEducativo" Type="int" Nullable="false" />
+    <Property Name="idRegimenLaboral" Type="int" Nullable="false" />
+    <Property Name="idFinanciamiento" Type="int" Nullable="false" />
+    <Property Name="idCategoriaPresupuesto" Type="int" Nullable="false" />
+    <Property Name="idMotivoCreacion" Type="int" Nullable="false" />
+    <Property Name="idRegimenSalarial" Type="int" Nullable="false" />
+    <Property Name="admiteSuplente" Type="bit" Nullable="false" />
+    <Property Name="esCabeceraDePaquete" Type="bit" Nullable="false" />
+    <Property Name="idPaquete" Type="int" />
+    <Property Name="observacion" Type="nvarchar" MaxLength="255" />
+    <Property Name="idAfectacion" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PlazaHistorica">
+    <Key>
+      <PropertyRef Name="idPlazaHistorica" />
+    </Key>
+    <Property Name="idPlazaHistorica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPlaza" Type="int" Nullable="false" />
+    <Property Name="idPlanUnidad" Type="int" Nullable="false" />
+    <Property Name="idCargoFuncional" Type="int" Nullable="false" />
+    <Property Name="idAsignatura" Type="int" Nullable="false" />
+    <Property Name="idDivision" Type="int" />
+    <Property Name="idGrupo" Type="int" />
+    <Property Name="horas" Type="int" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="idInstrumentoLegalCreacion" Type="int" Nullable="false" />
+    <Property Name="fechaBaja" Type="datetime" />
+    <Property Name="idInstrumentoLegalBaja" Type="int" />
+    <Property Name="idMotivoBaja" Type="int" />
+    <Property Name="idSistemaEducativo" Type="int" Nullable="false" />
+    <Property Name="idRegimenLaboral" Type="int" Nullable="false" />
+    <Property Name="idFinanciamiento" Type="int" Nullable="false" />
+    <Property Name="idCategoriaPresupuesto" Type="int" Nullable="false" />
+    <Property Name="idMotivoCreacion" Type="int" Nullable="false" />
+    <Property Name="idRegimenSalarial" Type="int" Nullable="false" />
+    <Property Name="admiteSuplente" Type="bit" Nullable="false" />
+    <Property Name="esCabeceraDePaquete" Type="bit" Nullable="false" />
+    <Property Name="idPaquete" Type="int" />
+    <Property Name="observacion" Type="nvarchar" MaxLength="255" />
+    <Property Name="idAfectacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Presupuesto">
+    <Key>
+      <PropertyRef Name="idPresupuesto" />
+    </Key>
+    <Property Name="idPresupuesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCategoriaPresupuesto" Type="int" Nullable="false" />
+    <Property Name="idAdicional" Type="int" Nullable="false" />
+    <Property Name="cantPresupuestada" Type="int" Nullable="false" />
+    <Property Name="cantOcupada" Type="int" />
+    <Property Name="observacion" Type="char" MaxLength="4" />
+    <Property Name="ejercicio" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="esFormal" Type="bit" Nullable="false" />
+    <Property Name="cantTitulares" Type="int" />
+    <Property Name="cantInterinos" Type="int" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="idInstrumentoLegal" Type="int" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="idProvincia" />
+    </Key>
+    <Property Name="idProvincia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="provincia1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idPaisNacionalidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RefAdicional">
+    <Key>
+      <PropertyRef Name="idAdicional" />
+    </Key>
+    <Property Name="idAdicional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adicional" Type="varchar" MaxLength="100" />
+    <Property Name="porcentaje" Type="int" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefAfectacion">
+    <Key>
+      <PropertyRef Name="idAfectacion" />
+    </Key>
+    <Property Name="idAfectacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="afectacion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RefAmbito">
+    <Key>
+      <PropertyRef Name="idAmbito" />
+    </Key>
+    <Property Name="idAmbito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ambito" Type="nvarchar" MaxLength="60" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefAsignatura">
+    <Key>
+      <PropertyRef Name="idAsignatura" />
+    </Key>
+    <Property Name="idAsignatura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="asignatura" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefCalendarioFeriado">
+    <Key>
+      <PropertyRef Name="idCalendarioFeriado" />
+    </Key>
+    <Property Name="idCalendarioFeriado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaFeriado" Type="datetime" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefCategoriaLicencia">
+    <Key>
+      <PropertyRef Name="idCategoriaLicencia" />
+    </Key>
+    <Property Name="idCategoriaLicencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoriaLicencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaAlta" Type="datetime" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefCategoriaOrganizacion">
+    <Key>
+      <PropertyRef Name="idCategoriaOrganizacion" />
+    </Key>
+    <Property Name="idCategoriaOrganizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoriaOrganizacion" Type="nvarchar" MaxLength="60" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefDiaDescansoAnual">
+    <Key>
+      <PropertyRef Name="idDiaDescansoAnual" />
+    </Key>
+    <Property Name="idDiaDescansoAnual" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="anioDesde" Type="int" Nullable="false" />
+    <Property Name="anioHasta" Type="int" Nullable="false" />
+    <Property Name="diaDescanso" Type="int" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEscalafon">
+    <Key>
+      <PropertyRef Name="idEscalafon" />
+    </Key>
+    <Property Name="idEscalafon" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="escalafon" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEspecialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="especialidad" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEstado">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEstadoCivil">
+    <Key>
+      <PropertyRef Name="idEstadoCivil" />
+    </Key>
+    <Property Name="idEstadoCivil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estadoCivil" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEstadoEdificio">
+    <Key>
+      <PropertyRef Name="idEstadoEdificio" />
+    </Key>
+    <Property Name="idEstadoEdificio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estadoEdificio" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefEstadoSolicitud">
+    <Key>
+      <PropertyRef Name="idEstadoSolicitud" />
+    </Key>
+    <Property Name="idEstadoSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estadoSolicitud" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefFinalidad">
+    <Key>
+      <PropertyRef Name="idFinalidad" />
+    </Key>
+    <Property Name="idFinalidad" Type="int" Nullable="false" />
+    <Property Name="finalidad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefFinanciamiento">
+    <Key>
+      <PropertyRef Name="idFinanciamiento" />
+    </Key>
+    <Property Name="idFinanciamiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="financiamiento" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefFuncion">
+    <Key>
+      <PropertyRef Name="idFuncion" />
+    </Key>
+    <Property Name="idFuncion" Type="int" Nullable="false" />
+    <Property Name="funcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefJornada">
+    <Key>
+      <PropertyRef Name="idJornada" />
+    </Key>
+    <Property Name="idJornada" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jornada" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="nemotecnico" Type="nchar" MaxLength="2" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefMotivoAlta">
+    <Key>
+      <PropertyRef Name="idMotivoAlta" />
+    </Key>
+    <Property Name="idMotivoAlta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="motivoAlta" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefMotivoBaja">
+    <Key>
+      <PropertyRef Name="idMotivoBaja" />
+    </Key>
+    <Property Name="idMotivoBaja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="motivoBaja" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefMotivoCreacion">
+    <Key>
+      <PropertyRef Name="idMotivoCreacion" />
+    </Key>
+    <Property Name="idMotivoCreacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="motivoCreacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefMovimiento">
+    <Key>
+      <PropertyRef Name="idMovimiento" />
+    </Key>
+    <Property Name="idMovimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movimiento" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefNivelEducativo">
+    <Key>
+      <PropertyRef Name="idNivelEducativo" />
+    </Key>
+    <Property Name="idNivelEducativo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nivelEducativo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="idGrupoNivel" Type="int" />
+  </EntityType>
+  <EntityType Name="RefPaisNacionalidad">
+    <Key>
+      <PropertyRef Name="idPaisNacionalidad" />
+    </Key>
+    <Property Name="idPaisNacionalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="60" />
+    <Property Name="nacionalidad" Type="varchar" MaxLength="60" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefParentesco">
+    <Key>
+      <PropertyRef Name="idParentesco" />
+    </Key>
+    <Property Name="idParentesco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="parentesco" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefPeriodoEscolar">
+    <Key>
+      <PropertyRef Name="idPeriodoEscolar" />
+    </Key>
+    <Property Name="idPeriodoEscolar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefRegimenLaboral">
+    <Key>
+      <PropertyRef Name="idRegimenLaboral" />
+    </Key>
+    <Property Name="idRegimenLaboral" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="regimenLaboral" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefRegimenSalarial">
+    <Key>
+      <PropertyRef Name="idRegimenSalarial" />
+    </Key>
+    <Property Name="idRegimenSalarial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="regimenSalarial" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefRegion">
+    <Key>
+      <PropertyRef Name="idRegion" />
+    </Key>
+    <Property Name="idRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="region" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefSexo">
+    <Key>
+      <PropertyRef Name="idSexo" />
+    </Key>
+    <Property Name="idSexo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sexo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="mnemo" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefSistemaEducativo">
+    <Key>
+      <PropertyRef Name="idSistemaEducativo" />
+    </Key>
+    <Property Name="idSistemaEducativo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sistemaEducativo" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefSituacionExtraordinaria">
+    <Key>
+      <PropertyRef Name="idSituacionExtraordinaria" />
+    </Key>
+    <Property Name="idSituacionExtraordinaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="situacionExtraordinaria" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefSituacionLaboral">
+    <Key>
+      <PropertyRef Name="idSituacionLaboral" />
+    </Key>
+    <Property Name="idSituacionLaboral" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="situacionLaboral" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefSituacionRevista">
+    <Key>
+      <PropertyRef Name="idSituacionRevista" />
+    </Key>
+    <Property Name="idSituacionRevista" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="situacionRevista" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoAsignaturaPrevia">
+    <Key>
+      <PropertyRef Name="idTipoAsignaturaPrevia" />
+    </Key>
+    <Property Name="idTipoAsignaturaPrevia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoAsignaturaPrevia" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="mNemo" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoDocumento">
+    <Key>
+      <PropertyRef Name="idTipoDocumento" />
+    </Key>
+    <Property Name="idTipoDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoDocumento" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="35" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoEdificio">
+    <Key>
+      <PropertyRef Name="idTipoEdificio" />
+    </Key>
+    <Property Name="idTipoEdificio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoEdificio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoEducacion">
+    <Key>
+      <PropertyRef Name="idTipoEducacion" />
+    </Key>
+    <Property Name="idTipoEducacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoEducacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoEspacioCurricular">
+    <Key>
+      <PropertyRef Name="idTipoEspacioCurricular" />
+    </Key>
+    <Property Name="idTipoEspacioCurricular" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoEspacioCurricular" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoFuncion">
+    <Key>
+      <PropertyRef Name="idTipoFuncion" />
+    </Key>
+    <Property Name="idTipoFuncion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoFuncion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoGoceHaber">
+    <Key>
+      <PropertyRef Name="idTipoGoceHaber" />
+    </Key>
+    <Property Name="idTipoGoceHaber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoGoceHaber" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="abreviatura" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoInstrumentoLegal">
+    <Key>
+      <PropertyRef Name="idTipoInstrumentoLegal" />
+    </Key>
+    <Property Name="idTipoInstrumentoLegal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoInstrumentoLegal" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoOrganizacion">
+    <Key>
+      <PropertyRef Name="idTipoOrganizacion" />
+    </Key>
+    <Property Name="idTipoOrganizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoOrganizacion" Type="nvarchar" MaxLength="60" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoPaquetePlaza">
+    <Key>
+      <PropertyRef Name="idTipoPaquetePlaza" />
+    </Key>
+    <Property Name="idTipoPaquetePlaza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoPaquetePlaza" Type="nchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoServicio">
+    <Key>
+      <PropertyRef Name="idTipoServicio" />
+    </Key>
+    <Property Name="idTipoServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoServicio" Type="nvarchar" MaxLength="100" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoSolicitud">
+    <Key>
+      <PropertyRef Name="idTipoSolicitud" />
+    </Key>
+    <Property Name="idTipoSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoSolicitud" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTipoTenencia">
+    <Key>
+      <PropertyRef Name="idTipoTenencia" />
+    </Key>
+    <Property Name="idTipoTenencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoTenencia" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefTurno">
+    <Key>
+      <PropertyRef Name="idTurno" />
+    </Key>
+    <Property Name="idTurno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="turno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefUdeO">
+    <Key>
+      <PropertyRef Name="idUdeO" />
+    </Key>
+    <Property Name="idUdeO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="udeo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefUnidadTemporal">
+    <Key>
+      <PropertyRef Name="idUnidadTemporal" />
+    </Key>
+    <Property Name="idUnidadTemporal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unidadTemporal" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefUnidadTemporalContexto">
+    <Key>
+      <PropertyRef Name="idUnidadTemporalContexto" />
+    </Key>
+    <Property Name="idUnidadTemporalContexto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unidadTemporalContexto" Type="nvarchar" MaxLength="50" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RefZona">
+    <Key>
+      <PropertyRef Name="idZona" />
+    </Key>
+    <Property Name="idZona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="zona" Type="nvarchar" MaxLength="20" />
+    <Property Name="porcentaje" Type="int" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ReqSolicitudPrimaria">
+    <Key>
+      <PropertyRef Name="idSolicitud" />
+      <PropertyRef Name="idRequerimiento" />
+    </Key>
+    <Property Name="idSolicitud" Type="int" Nullable="false" />
+    <Property Name="idRequerimiento" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="idCategoriaPresupuesto" Type="int" Nullable="false" />
+    <Property Name="idCargoFuncional" Type="int" Nullable="false" />
+    <Property Name="idPlanUnidad" Type="int" />
+    <Property Name="idDivision" Type="int" />
+    <Property Name="idGrupo" Type="int" />
+    <Property Name="idEspacioAsignatura" Type="int" />
+    <Property Name="idJornada" Type="int" />
+    <Property Name="cargaMateria" Type="bit" />
+    <Property Name="caracter" Type="nchar" MaxLength="15" />
+    <Property Name="fechaDesde" Type="datetime" Nullable="false" />
+    <Property Name="fechaHasta" Type="datetime" />
+    <Property Name="observacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="idEstadoRequerimiento" Type="int" Nullable="false" />
+    <Property Name="obsEstado" Type="nvarchar" MaxLength="300" />
+    <Property Name="partidaTEducacion" Type="nvarchar" MaxLength="10" />
+    <Property Name="cupof" Type="int" />
+    <Property Name="pCupof" Type="int" />
+    <Property Name="admiteSuplente" Type="bit" />
+    <Property Name="cobraIncentivo" Type="bit" />
+    <Property Name="idSistemaEducativo" Type="int" />
+    <Property Name="idRegimenLaboral" Type="int" />
+    <Property Name="idFinanciamiento" Type="int" />
+    <Property Name="idRegimenSalarial" Type="int" />
+  </EntityType>
+  <EntityType Name="ReqSolicitudSecundaria">
+    <Key>
+      <PropertyRef Name="idSolicitud" />
+      <PropertyRef Name="idRequerimiento" />
+    </Key>
+    <Property Name="idSolicitud" Type="int" Nullable="false" />
+    <Property Name="idRequerimiento" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="idCategoriaPresupuesto" Type="int" Nullable="false" />
+    <Property Name="idCargoFuncional" Type="int" Nullable="false" />
+    <Property Name="idPlanUnidad" Type="int" />
+    <Property Name="idDivision" Type="int" />
+    <Property Name="idGrupo" Type="int" />
+    <Property Name="idEspacioAsignatura" Type="int" />
+    <Property Name="caracter" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="fechaDesde" Type="datetime" Nullable="false" />
+    <Property Name="fechaHasta" Type="datetime" Nullable="false" />
+    <Property Name="observacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="idEstadoRequerimiento" Type="int" Nullable="false" />
+    <Property Name="obsEstado" Type="nvarchar" MaxLength="300" />
+    <Property Name="esCargo" Type="bit" Nullable="false" />
+    <Property Name="partidaTEducacion" Type="nvarchar" MaxLength="10" />
+    <Property Name="cupof" Type="int" />
+    <Property Name="pCupof" Type="int" />
+    <Property Name="admiteSuplente" Type="bit" />
+    <Property Name="cobraIncentivo" Type="bit" />
+    <Property Name="idSistemaEducativo" Type="int" />
+    <Property Name="idRegimenLaboral" Type="int" />
+    <Property Name="idFinanciamiento" Type="int" />
+    <Property Name="idRegimenSalarial" Type="int" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="idSolicitud" />
+    </Key>
+    <Property Name="idSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nroExpediente" Type="nvarchar" MaxLength="50" />
+    <Property Name="idTipoSolicitud" Type="int" Nullable="false" />
+    <Property Name="idOrganizacion" Type="int" Nullable="false" />
+    <Property Name="matriculaTotal" Type="int" />
+    <Property Name="cantDivisiones" Type="int" />
+    <Property Name="idGrupoNivel" Type="int" Nullable="false" />
+    <Property Name="fechaSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="fundamentacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="observacion" Type="nvarchar" MaxLength="500" />
+    <Property Name="idEstadoSolicitud" Type="int" Nullable="false" />
+    <Property Name="obsEstado" Type="nvarchar" MaxLength="300" />
+    <Property Name="nroResolucion" Type="nvarchar" MaxLength="50" />
+    <Property Name="fechaAlta" Type="datetime" />
+    <Property Name="fechaAutorizacion" Type="datetime" />
+    <Property Name="fechaHabilitacion" Type="datetime" />
+    <Property Name="estaActivo" Type="bit" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" />
+    <Property Name="idUsuarioCreador" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_CargoFuncional_RefTipoFuncion">
+    <End Role="RefTipoFuncion" Type="Self.RefTipoFuncion" Multiplicity="0..1" />
+    <End Role="CargoFuncional" Type="Self.CargoFuncional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTipoFuncion">
+        <PropertyRef Name="idTipoFuncion" />
+      </Principal>
+      <Dependent Role="CargoFuncional">
+        <PropertyRef Name="idTipoFuncion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CargoSalarial_RefJornada">
+    <End Role="RefJornada" Type="Self.RefJornada" Multiplicity="0..1" />
+    <End Role="CargoSalarial" Type="Self.CargoSalarial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefJornada">
+        <PropertyRef Name="idJornada" />
+      </Principal>
+      <Dependent Role="CargoSalarial">
+        <PropertyRef Name="idJornada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoriaPresupuesto_CargoSalarial">
+    <End Role="CargoSalarial" Type="Self.CargoSalarial" Multiplicity="1" />
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoSalarial">
+        <PropertyRef Name="idCargoSalarial" />
+      </Principal>
+      <Dependent Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCargoSalarial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoriaPresupuesto_RefEscalafon">
+    <End Role="RefEscalafon" Type="Self.RefEscalafon" Multiplicity="1" />
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEscalafon">
+        <PropertyRef Name="idEscalafon" />
+      </Principal>
+      <Dependent Role="CategoriaPresupuesto">
+        <PropertyRef Name="idEscalafon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoriaPresupuesto_RefFinalidad">
+    <End Role="RefFinalidad" Type="Self.RefFinalidad" Multiplicity="1" />
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFinalidad">
+        <PropertyRef Name="idFinalidad" />
+      </Principal>
+      <Dependent Role="CategoriaPresupuesto">
+        <PropertyRef Name="idFinalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoriaPresupuesto_RefFuncion">
+    <End Role="RefFuncion" Type="Self.RefFuncion" Multiplicity="1" />
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFuncion">
+        <PropertyRef Name="idFuncion" />
+      </Principal>
+      <Dependent Role="CategoriaPresupuesto">
+        <PropertyRef Name="idFuncion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoriaPresupuesto_RefUdeO">
+    <End Role="RefUdeO" Type="Self.RefUdeO" Multiplicity="1" />
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefUdeO">
+        <PropertyRef Name="idUdeO" />
+      </Principal>
+      <Dependent Role="CategoriaPresupuesto">
+        <PropertyRef Name="idUdeO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departamento_Provincia">
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="idProvincia" />
+      </Principal>
+      <Dependent Role="Departamento">
+        <PropertyRef Name="idProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_OrganizacionTurno">
+    <End Role="OrganizacionTurno" Type="Self.OrganizacionTurno" Multiplicity="1" />
+    <End Role="Division" Type="Self.Division" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizacionTurno">
+        <PropertyRef Name="idOrganizacionTurno" />
+      </Principal>
+      <Dependent Role="Division">
+        <PropertyRef Name="idOrganizacionTurno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_PlanUnidad">
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="1" />
+    <End Role="Division" Type="Self.Division" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanUnidad">
+        <PropertyRef Name="idPlanUnidad" />
+      </Principal>
+      <Dependent Role="Division">
+        <PropertyRef Name="idPlanUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EspacioAsignatura_EspacioCurricular">
+    <End Role="EspacioCurricular" Type="Self.EspacioCurricular" Multiplicity="1" />
+    <End Role="EspacioAsignatura" Type="Self.EspacioAsignatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EspacioCurricular">
+        <PropertyRef Name="idEspacioCurricular" />
+      </Principal>
+      <Dependent Role="EspacioAsignatura">
+        <PropertyRef Name="idEspacioCurricular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EspacioAsignatura_RefAsignatura">
+    <End Role="RefAsignatura" Type="Self.RefAsignatura" Multiplicity="1" />
+    <End Role="EspacioAsignatura" Type="Self.EspacioAsignatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAsignatura">
+        <PropertyRef Name="idAsignatura" />
+      </Principal>
+      <Dependent Role="EspacioAsignatura">
+        <PropertyRef Name="idAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EspacioCurricular_RefTipoEspacioCurricular">
+    <End Role="RefTipoEspacioCurricular" Type="Self.RefTipoEspacioCurricular" Multiplicity="0..1" />
+    <End Role="EspacioCurricular" Type="Self.EspacioCurricular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTipoEspacioCurricular">
+        <PropertyRef Name="idTipoEspacioCurricular" />
+      </Principal>
+      <Dependent Role="EspacioCurricular">
+        <PropertyRef Name="idTipoEspacioCurricular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupo_Organizacion">
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="1" />
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizacion">
+        <PropertyRef Name="idOrganizacion" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="idOrganizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GrupoDivision_Division">
+    <End Role="Division" Type="Self.Division" Multiplicity="1" />
+    <End Role="GrupoDivision" Type="Self.GrupoDivision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="idDivision" />
+      </Principal>
+      <Dependent Role="GrupoDivision">
+        <PropertyRef Name="idDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GrupoDivision_Grupo">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="1" />
+    <End Role="GrupoDivision" Type="Self.GrupoDivision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="idGrupo" />
+      </Principal>
+      <Dependent Role="GrupoDivision">
+        <PropertyRef Name="idGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstrumentoLegal_RefTipoInstrumentoLegal">
+    <End Role="RefTipoInstrumentoLegal" Type="Self.RefTipoInstrumentoLegal" Multiplicity="1" />
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTipoInstrumentoLegal">
+        <PropertyRef Name="idTipoInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="InstrumentoLegal">
+        <PropertyRef Name="idTipoInstrumentoLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Localidad" Type="Self.Localidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Localidad">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_DetalleTabla">
+    <End Role="DetalleTabla" Type="Self.DetalleTabla" Multiplicity="0..1" />
+    <End Role="MenuPlaza" Type="Self.MenuPlaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleTabla">
+        <PropertyRef Name="idDetalleTabla" />
+      </Principal>
+      <Dependent Role="MenuPlaza">
+        <PropertyRef Name="idDetalleTabla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_Menu">
+    <End Role="MenuPlaza" Type="Self.MenuPlaza" Multiplicity="1" />
+    <End Role="MenuPlaza1" Type="Self.MenuPlaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuPlaza">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="MenuPlaza1">
+        <PropertyRef Name="idMenuPadre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizacion_InstrumentoLegal">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="0..1" />
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="Organizacion">
+        <PropertyRef Name="idInstrumentoLegalBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizacion_InstrumentoLegal1">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="0..1" />
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="Organizacion">
+        <PropertyRef Name="idInstrumentoLegalCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizacion_Localidad">
+    <End Role="Localidad" Type="Self.Localidad" Multiplicity="0..1" />
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad">
+        <PropertyRef Name="idLocalidad" />
+      </Principal>
+      <Dependent Role="Organizacion">
+        <PropertyRef Name="idLocalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizacion_RefJornada">
+    <End Role="RefJornada" Type="Self.RefJornada" Multiplicity="0..1" />
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefJornada">
+        <PropertyRef Name="idJornada" />
+      </Principal>
+      <Dependent Role="Organizacion">
+        <PropertyRef Name="idJornada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizacion_RefPeriodoEscolar">
+    <End Role="RefPeriodoEscolar" Type="Self.RefPeriodoEscolar" Multiplicity="0..1" />
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefPeriodoEscolar">
+        <PropertyRef Name="idPeriodoEscolar" />
+      </Principal>
+      <Dependent Role="Organizacion">
+        <PropertyRef Name="idPeriodoEscolar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizacionTurno_Organizacion">
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="1" />
+    <End Role="OrganizacionTurno" Type="Self.OrganizacionTurno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizacion">
+        <PropertyRef Name="idOrganizacion" />
+      </Principal>
+      <Dependent Role="OrganizacionTurno">
+        <PropertyRef Name="idOrganizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizacionTurno_RefTurno">
+    <End Role="RefTurno" Type="Self.RefTurno" Multiplicity="1" />
+    <End Role="OrganizacionTurno" Type="Self.OrganizacionTurno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTurno">
+        <PropertyRef Name="idTurno" />
+      </Principal>
+      <Dependent Role="OrganizacionTurno">
+        <PropertyRef Name="idTurno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaquetePlaza_Plaza">
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="1" />
+    <End Role="PaquetePlaza" Type="Self.PaquetePlaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plaza">
+        <PropertyRef Name="idPlaza" />
+      </Principal>
+      <Dependent Role="PaquetePlaza">
+        <PropertyRef Name="idPlazaCabecera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaquetePlaza_RefTipoPaquetePlaza">
+    <End Role="RefTipoPaquetePlaza" Type="Self.RefTipoPaquetePlaza" Multiplicity="1" />
+    <End Role="PaquetePlaza" Type="Self.PaquetePlaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTipoPaquetePlaza">
+        <PropertyRef Name="idTipoPaquetePlaza" />
+      </Principal>
+      <Dependent Role="PaquetePlaza">
+        <PropertyRef Name="idTipoPaquetePlaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaquetePlazaHistorica_RefMotivoBaja">
+    <End Role="RefMotivoBaja" Type="Self.RefMotivoBaja" Multiplicity="1" />
+    <End Role="PaquetePlazaHistorica" Type="Self.PaquetePlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoBaja">
+        <PropertyRef Name="idMotivoBaja" />
+      </Principal>
+      <Dependent Role="PaquetePlazaHistorica">
+        <PropertyRef Name="idMotivoBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanEspacio_EspacioCurricular">
+    <End Role="EspacioCurricular" Type="Self.EspacioCurricular" Multiplicity="1" />
+    <End Role="PlanEspacio" Type="Self.PlanEspacio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EspacioCurricular">
+        <PropertyRef Name="idEspacioCurricular" />
+      </Principal>
+      <Dependent Role="PlanEspacio">
+        <PropertyRef Name="idEspacioCurricular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanEspacio_PlanEstudio">
+    <End Role="PlanEstudio" Type="Self.PlanEstudio" Multiplicity="1" />
+    <End Role="PlanEspacio" Type="Self.PlanEspacio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanEstudio">
+        <PropertyRef Name="idPlanEstudio" />
+      </Principal>
+      <Dependent Role="PlanEspacio">
+        <PropertyRef Name="idPlanEstudio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanEstudio_InstrumentoLegal">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="0..1" />
+    <End Role="PlanEstudio" Type="Self.PlanEstudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="PlanEstudio">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanEstudio_RefEspecialidad">
+    <End Role="RefEspecialidad" Type="Self.RefEspecialidad" Multiplicity="1" />
+    <End Role="PlanEstudio" Type="Self.PlanEstudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEspecialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="PlanEstudio">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanUnidad_Organizacion">
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="1" />
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizacion">
+        <PropertyRef Name="idOrganizacion" />
+      </Principal>
+      <Dependent Role="PlanUnidad">
+        <PropertyRef Name="idOrganizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanUnidad_PlanEstudio">
+    <End Role="PlanEstudio" Type="Self.PlanEstudio" Multiplicity="1" />
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanEstudio">
+        <PropertyRef Name="idPlanEstudio" />
+      </Principal>
+      <Dependent Role="PlanUnidad">
+        <PropertyRef Name="idPlanEstudio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanUnidad_RefNivelEducativo">
+    <End Role="RefNivelEducativo" Type="Self.RefNivelEducativo" Multiplicity="1" />
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefNivelEducativo">
+        <PropertyRef Name="idNivelEducativo" />
+      </Principal>
+      <Dependent Role="PlanUnidad">
+        <PropertyRef Name="idNivelEducativo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_CargoFuncional">
+    <End Role="CargoFuncional" Type="Self.CargoFuncional" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoFuncional">
+        <PropertyRef Name="idCargoFuncional" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idCargoFuncional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_CategoriaPresupuesto">
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_Division">
+    <End Role="Division" Type="Self.Division" Multiplicity="0..1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="idDivision" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_Grupo">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="0..1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="idGrupo" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_InstrumentoLegal">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idInstrumentoLegalCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_InstrumentoLegal1">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="0..1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idInstrumentoLegalBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_PaquetePlaza">
+    <End Role="PaquetePlaza" Type="Self.PaquetePlaza" Multiplicity="0..1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaquetePlaza">
+        <PropertyRef Name="idPaquete" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idPaquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_PlanUnidad">
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanUnidad">
+        <PropertyRef Name="idPlanUnidad" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idPlanUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefAfectacion">
+    <End Role="RefAfectacion" Type="Self.RefAfectacion" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAfectacion">
+        <PropertyRef Name="idAfectacion" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idAfectacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefAsignatura">
+    <End Role="RefAsignatura" Type="Self.RefAsignatura" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAsignatura">
+        <PropertyRef Name="idAsignatura" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefFinanciamiento">
+    <End Role="RefFinanciamiento" Type="Self.RefFinanciamiento" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFinanciamiento">
+        <PropertyRef Name="idFinanciamiento" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idFinanciamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefMotivoBaja">
+    <End Role="RefMotivoBaja" Type="Self.RefMotivoBaja" Multiplicity="0..1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoBaja">
+        <PropertyRef Name="idMotivoBaja" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idMotivoBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefMotivoCreacion">
+    <End Role="RefMotivoCreacion" Type="Self.RefMotivoCreacion" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoCreacion">
+        <PropertyRef Name="idMotivoCreacion" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idMotivoCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefRegimenLaboral">
+    <End Role="RefRegimenLaboral" Type="Self.RefRegimenLaboral" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenLaboral">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefRegimenSalarial">
+    <End Role="RefRegimenSalarial" Type="Self.RefRegimenSalarial" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenSalarial">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plaza_RefSistemaEducativo">
+    <End Role="RefSistemaEducativo" Type="Self.RefSistemaEducativo" Multiplicity="1" />
+    <End Role="Plaza" Type="Self.Plaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefSistemaEducativo">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Principal>
+      <Dependent Role="Plaza">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_CargoFuncional">
+    <End Role="CargoFuncional" Type="Self.CargoFuncional" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoFuncional">
+        <PropertyRef Name="idCargoFuncional" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idCargoFuncional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_CategoriaPresupuesto">
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_Division">
+    <End Role="Division" Type="Self.Division" Multiplicity="0..1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="idDivision" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_Grupo">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="0..1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="idGrupo" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_InstrumentoLegal">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idInstrumentoLegalCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_InstrumentoLegal1">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="0..1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idInstrumentoLegalBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_PlanUnidad">
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanUnidad">
+        <PropertyRef Name="idPlanUnidad" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idPlanUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefAfectacion">
+    <End Role="RefAfectacion" Type="Self.RefAfectacion" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAfectacion">
+        <PropertyRef Name="idAfectacion" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idAfectacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefAsignatura">
+    <End Role="RefAsignatura" Type="Self.RefAsignatura" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAsignatura">
+        <PropertyRef Name="idAsignatura" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefFinanciamiento">
+    <End Role="RefFinanciamiento" Type="Self.RefFinanciamiento" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFinanciamiento">
+        <PropertyRef Name="idFinanciamiento" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idFinanciamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefMotivoBaja">
+    <End Role="RefMotivoBaja" Type="Self.RefMotivoBaja" Multiplicity="0..1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoBaja">
+        <PropertyRef Name="idMotivoBaja" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idMotivoBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefMotivoBaja1">
+    <End Role="RefMotivoBaja" Type="Self.RefMotivoBaja" Multiplicity="0..1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoBaja">
+        <PropertyRef Name="idMotivoBaja" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idMotivoBaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefMotivoCreacion">
+    <End Role="RefMotivoCreacion" Type="Self.RefMotivoCreacion" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefMotivoCreacion">
+        <PropertyRef Name="idMotivoCreacion" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idMotivoCreacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefRegimenLaboral">
+    <End Role="RefRegimenLaboral" Type="Self.RefRegimenLaboral" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenLaboral">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefRegimenSalarial">
+    <End Role="RefRegimenSalarial" Type="Self.RefRegimenSalarial" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenSalarial">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlazaHistorica_RefSistemaEducativo">
+    <End Role="RefSistemaEducativo" Type="Self.RefSistemaEducativo" Multiplicity="1" />
+    <End Role="PlazaHistorica" Type="Self.PlazaHistorica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefSistemaEducativo">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Principal>
+      <Dependent Role="PlazaHistorica">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Presupuesto_InstrumentoLegal">
+    <End Role="InstrumentoLegal" Type="Self.InstrumentoLegal" Multiplicity="1" />
+    <End Role="Presupuesto" Type="Self.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstrumentoLegal">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="idInstrumentoLegal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Presupuesto_Presupuesto">
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="1" />
+    <End Role="Presupuesto" Type="Self.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Presupuesto_RefAdicional">
+    <End Role="RefAdicional" Type="Self.RefAdicional" Multiplicity="1" />
+    <End Role="Presupuesto" Type="Self.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefAdicional">
+        <PropertyRef Name="idAdicional" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="idAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Provincia_RefPaisNacionalidad">
+    <End Role="RefPaisNacionalidad" Type="Self.RefPaisNacionalidad" Multiplicity="1" />
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefPaisNacionalidad">
+        <PropertyRef Name="idPaisNacionalidad" />
+      </Principal>
+      <Dependent Role="Provincia">
+        <PropertyRef Name="idPaisNacionalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_CargoFuncional">
+    <End Role="CargoFuncional" Type="Self.CargoFuncional" Multiplicity="1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoFuncional">
+        <PropertyRef Name="idCargoFuncional" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idCargoFuncional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_CategoriaPresupuesto">
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_Division">
+    <End Role="Division" Type="Self.Division" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="idDivision" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_EspacioAsignatura">
+    <End Role="EspacioAsignatura" Type="Self.EspacioAsignatura" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EspacioAsignatura">
+        <PropertyRef Name="idEspacioAsignatura" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idEspacioAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_Grupo">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="idGrupo" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_PlanUnidad">
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanUnidad">
+        <PropertyRef Name="idPlanUnidad" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idPlanUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefEstadoSolicitud">
+    <End Role="RefEstadoSolicitud" Type="Self.RefEstadoSolicitud" Multiplicity="1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEstadoSolicitud">
+        <PropertyRef Name="idEstadoSolicitud" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idEstadoRequerimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefEstadoSolicitud1">
+    <End Role="RefEstadoSolicitud" Type="Self.RefEstadoSolicitud" Multiplicity="1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEstadoSolicitud">
+        <PropertyRef Name="idEstadoSolicitud" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idEstadoRequerimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefFinanciamiento">
+    <End Role="RefFinanciamiento" Type="Self.RefFinanciamiento" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFinanciamiento">
+        <PropertyRef Name="idFinanciamiento" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idFinanciamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefJornada">
+    <End Role="RefJornada" Type="Self.RefJornada" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefJornada">
+        <PropertyRef Name="idJornada" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idJornada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefRegimenLaboral">
+    <End Role="RefRegimenLaboral" Type="Self.RefRegimenLaboral" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenLaboral">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefRegimenSalarial">
+    <End Role="RefRegimenSalarial" Type="Self.RefRegimenSalarial" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenSalarial">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_RefSistemaEducativo">
+    <End Role="RefSistemaEducativo" Type="Self.RefSistemaEducativo" Multiplicity="0..1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefSistemaEducativo">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudPrimaria_Solicitud">
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="1" />
+    <End Role="ReqSolicitudPrimaria" Type="Self.ReqSolicitudPrimaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud">
+        <PropertyRef Name="idSolicitud" />
+      </Principal>
+      <Dependent Role="ReqSolicitudPrimaria">
+        <PropertyRef Name="idSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_CargoFuncional">
+    <End Role="CargoFuncional" Type="Self.CargoFuncional" Multiplicity="1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoFuncional">
+        <PropertyRef Name="idCargoFuncional" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idCargoFuncional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_CategoriaPresupuesto">
+    <End Role="CategoriaPresupuesto" Type="Self.CategoriaPresupuesto" Multiplicity="1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPresupuesto">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idCategoriaPresupuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_Division">
+    <End Role="Division" Type="Self.Division" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="idDivision" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idDivision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_EspacioAsignatura">
+    <End Role="EspacioAsignatura" Type="Self.EspacioAsignatura" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EspacioAsignatura">
+        <PropertyRef Name="idEspacioAsignatura" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idEspacioAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_Grupo">
+    <End Role="Grupo" Type="Self.Grupo" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="idGrupo" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_PlanUnidad">
+    <End Role="PlanUnidad" Type="Self.PlanUnidad" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanUnidad">
+        <PropertyRef Name="idPlanUnidad" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idPlanUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_RefEstadoSolicitud">
+    <End Role="RefEstadoSolicitud" Type="Self.RefEstadoSolicitud" Multiplicity="1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEstadoSolicitud">
+        <PropertyRef Name="idEstadoSolicitud" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idEstadoRequerimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_RefFinanciamiento">
+    <End Role="RefFinanciamiento" Type="Self.RefFinanciamiento" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefFinanciamiento">
+        <PropertyRef Name="idFinanciamiento" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idFinanciamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_RefRegimenLaboral">
+    <End Role="RefRegimenLaboral" Type="Self.RefRegimenLaboral" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenLaboral">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idRegimenLaboral" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_RefRegimenSalarial">
+    <End Role="RefRegimenSalarial" Type="Self.RefRegimenSalarial" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefRegimenSalarial">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idRegimenSalarial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_RefSistemaEducativo">
+    <End Role="RefSistemaEducativo" Type="Self.RefSistemaEducativo" Multiplicity="0..1" />
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefSistemaEducativo">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idSistemaEducativo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReqSolicitudSecundaria_ReqSolicitudSecundaria">
+    <End Role="ReqSolicitudSecundaria" Type="Self.ReqSolicitudSecundaria" Multiplicity="1" />
+    <End Role="ReqSolicitudSecundaria1" Type="Self.ReqSolicitudSecundaria" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ReqSolicitudSecundaria">
+        <PropertyRef Name="idSolicitud" />
+        <PropertyRef Name="idRequerimiento" />
+      </Principal>
+      <Dependent Role="ReqSolicitudSecundaria1">
+        <PropertyRef Name="idSolicitud" />
+        <PropertyRef Name="idRequerimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Organizacion">
+    <End Role="Organizacion" Type="Self.Organizacion" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizacion">
+        <PropertyRef Name="idOrganizacion" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="idOrganizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_RefEstadoSolicitud">
+    <End Role="RefEstadoSolicitud" Type="Self.RefEstadoSolicitud" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefEstadoSolicitud">
+        <PropertyRef Name="idEstadoSolicitud" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="idEstadoSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_RefTipoSolicitud">
+    <End Role="RefTipoSolicitud" Type="Self.RefTipoSolicitud" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RefTipoSolicitud">
+        <PropertyRef Name="idTipoSolicitud" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="idTipoSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RRHH_V2ModelStoreContainer">
+    <EntitySet Name="CargoFuncional" EntityType="Self.CargoFuncional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CargoSalarial" EntityType="Self.CargoSalarial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoriaPresupuesto" EntityType="Self.CategoriaPresupuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleTabla" EntityType="Self.DetalleTabla" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Division" EntityType="Self.Division" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EspacioAsignatura" EntityType="Self.EspacioAsignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EspacioCurricular" EntityType="Self.EspacioCurricular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grupo" EntityType="Self.Grupo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GrupoDivision" EntityType="Self.GrupoDivision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstrumentoLegal" EntityType="Self.InstrumentoLegal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localidad" EntityType="Self.Localidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuPlaza" EntityType="Self.MenuPlaza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizacion" EntityType="Self.Organizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizacionTurno" EntityType="Self.OrganizacionTurno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaquetePlaza" EntityType="Self.PaquetePlaza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaquetePlazaHistorica" EntityType="Self.PaquetePlazaHistorica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanEspacio" EntityType="Self.PlanEspacio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanEstudio" EntityType="Self.PlanEstudio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanUnidad" EntityType="Self.PlanUnidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plaza" EntityType="Self.Plaza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlazaHistorica" EntityType="Self.PlazaHistorica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Presupuesto" EntityType="Self.Presupuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefAdicional" EntityType="Self.RefAdicional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefAfectacion" EntityType="Self.RefAfectacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefAmbito" EntityType="Self.RefAmbito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefAsignatura" EntityType="Self.RefAsignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefCalendarioFeriado" EntityType="Self.RefCalendarioFeriado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefCategoriaLicencia" EntityType="Self.RefCategoriaLicencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefCategoriaOrganizacion" EntityType="Self.RefCategoriaOrganizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefDiaDescansoAnual" EntityType="Self.RefDiaDescansoAnual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEscalafon" EntityType="Self.RefEscalafon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEspecialidad" EntityType="Self.RefEspecialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEstado" EntityType="Self.RefEstado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEstadoCivil" EntityType="Self.RefEstadoCivil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEstadoEdificio" EntityType="Self.RefEstadoEdificio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefEstadoSolicitud" EntityType="Self.RefEstadoSolicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefFinalidad" EntityType="Self.RefFinalidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefFinanciamiento" EntityType="Self.RefFinanciamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefFuncion" EntityType="Self.RefFuncion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefJornada" EntityType="Self.RefJornada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefMotivoAlta" EntityType="Self.RefMotivoAlta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefMotivoBaja" EntityType="Self.RefMotivoBaja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefMotivoCreacion" EntityType="Self.RefMotivoCreacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefMovimiento" EntityType="Self.RefMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefNivelEducativo" EntityType="Self.RefNivelEducativo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefPaisNacionalidad" EntityType="Self.RefPaisNacionalidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefParentesco" EntityType="Self.RefParentesco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefPeriodoEscolar" EntityType="Self.RefPeriodoEscolar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefRegimenLaboral" EntityType="Self.RefRegimenLaboral" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefRegimenSalarial" EntityType="Self.RefRegimenSalarial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefRegion" EntityType="Self.RefRegion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefSexo" EntityType="Self.RefSexo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefSistemaEducativo" EntityType="Self.RefSistemaEducativo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefSituacionExtraordinaria" EntityType="Self.RefSituacionExtraordinaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefSituacionLaboral" EntityType="Self.RefSituacionLaboral" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefSituacionRevista" EntityType="Self.RefSituacionRevista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoAsignaturaPrevia" EntityType="Self.RefTipoAsignaturaPrevia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoDocumento" EntityType="Self.RefTipoDocumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoEdificio" EntityType="Self.RefTipoEdificio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoEducacion" EntityType="Self.RefTipoEducacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoEspacioCurricular" EntityType="Self.RefTipoEspacioCurricular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoFuncion" EntityType="Self.RefTipoFuncion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoGoceHaber" EntityType="Self.RefTipoGoceHaber" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoInstrumentoLegal" EntityType="Self.RefTipoInstrumentoLegal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoOrganizacion" EntityType="Self.RefTipoOrganizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoPaquetePlaza" EntityType="Self.RefTipoPaquetePlaza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoServicio" EntityType="Self.RefTipoServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoSolicitud" EntityType="Self.RefTipoSolicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTipoTenencia" EntityType="Self.RefTipoTenencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefTurno" EntityType="Self.RefTurno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefUdeO" EntityType="Self.RefUdeO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefUnidadTemporal" EntityType="Self.RefUnidadTemporal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefUnidadTemporalContexto" EntityType="Self.RefUnidadTemporalContexto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefZona" EntityType="Self.RefZona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReqSolicitudPrimaria" EntityType="Self.ReqSolicitudPrimaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReqSolicitudSecundaria" EntityType="Self.ReqSolicitudSecundaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CargoFuncional_RefTipoFuncion" Association="Self.FK_CargoFuncional_RefTipoFuncion">
+      <End Role="RefTipoFuncion" EntitySet="RefTipoFuncion" />
+      <End Role="CargoFuncional" EntitySet="CargoFuncional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CargoSalarial_RefJornada" Association="Self.FK_CargoSalarial_RefJornada">
+      <End Role="RefJornada" EntitySet="RefJornada" />
+      <End Role="CargoSalarial" EntitySet="CargoSalarial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoriaPresupuesto_CargoSalarial" Association="Self.FK_CategoriaPresupuesto_CargoSalarial">
+      <End Role="CargoSalarial" EntitySet="CargoSalarial" />
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoriaPresupuesto_RefEscalafon" Association="Self.FK_CategoriaPresupuesto_RefEscalafon">
+      <End Role="RefEscalafon" EntitySet="RefEscalafon" />
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoriaPresupuesto_RefFinalidad" Association="Self.FK_CategoriaPresupuesto_RefFinalidad">
+      <End Role="RefFinalidad" EntitySet="RefFinalidad" />
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoriaPresupuesto_RefFuncion" Association="Self.FK_CategoriaPresupuesto_RefFuncion">
+      <End Role="RefFuncion" EntitySet="RefFuncion" />
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoriaPresupuesto_RefUdeO" Association="Self.FK_CategoriaPresupuesto_RefUdeO">
+      <End Role="RefUdeO" EntitySet="RefUdeO" />
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departamento_Provincia" Association="Self.FK_Departamento_Provincia">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Departamento" EntitySet="Departamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_OrganizacionTurno" Association="Self.FK_Division_OrganizacionTurno">
+      <End Role="OrganizacionTurno" EntitySet="OrganizacionTurno" />
+      <End Role="Division" EntitySet="Division" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_PlanUnidad" Association="Self.FK_Division_PlanUnidad">
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+      <End Role="Division" EntitySet="Division" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EspacioAsignatura_EspacioCurricular" Association="Self.FK_EspacioAsignatura_EspacioCurricular">
+      <End Role="EspacioCurricular" EntitySet="EspacioCurricular" />
+      <End Role="EspacioAsignatura" EntitySet="EspacioAsignatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EspacioAsignatura_RefAsignatura" Association="Self.FK_EspacioAsignatura_RefAsignatura">
+      <End Role="RefAsignatura" EntitySet="RefAsignatura" />
+      <End Role="EspacioAsignatura" EntitySet="EspacioAsignatura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EspacioCurricular_RefTipoEspacioCurricular" Association="Self.FK_EspacioCurricular_RefTipoEspacioCurricular">
+      <End Role="RefTipoEspacioCurricular" EntitySet="RefTipoEspacioCurricular" />
+      <End Role="EspacioCurricular" EntitySet="EspacioCurricular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupo_Organizacion" Association="Self.FK_Grupo_Organizacion">
+      <End Role="Organizacion" EntitySet="Organizacion" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GrupoDivision_Division" Association="Self.FK_GrupoDivision_Division">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="GrupoDivision" EntitySet="GrupoDivision" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GrupoDivision_Grupo" Association="Self.FK_GrupoDivision_Grupo">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="GrupoDivision" EntitySet="GrupoDivision" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstrumentoLegal_RefTipoInstrumentoLegal" Association="Self.FK_InstrumentoLegal_RefTipoInstrumentoLegal">
+      <End Role="RefTipoInstrumentoLegal" EntitySet="RefTipoInstrumentoLegal" />
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_Departamento" Association="Self.FK_Localidad_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Localidad" EntitySet="Localidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_DetalleTabla" Association="Self.FK_Menu_DetalleTabla">
+      <End Role="DetalleTabla" EntitySet="DetalleTabla" />
+      <End Role="MenuPlaza" EntitySet="MenuPlaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_Menu" Association="Self.FK_Menu_Menu">
+      <End Role="MenuPlaza" EntitySet="MenuPlaza" />
+      <End Role="MenuPlaza1" EntitySet="MenuPlaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizacion_InstrumentoLegal" Association="Self.FK_Organizacion_InstrumentoLegal">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="Organizacion" EntitySet="Organizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizacion_InstrumentoLegal1" Association="Self.FK_Organizacion_InstrumentoLegal1">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="Organizacion" EntitySet="Organizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizacion_Localidad" Association="Self.FK_Organizacion_Localidad">
+      <End Role="Localidad" EntitySet="Localidad" />
+      <End Role="Organizacion" EntitySet="Organizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizacion_RefJornada" Association="Self.FK_Organizacion_RefJornada">
+      <End Role="RefJornada" EntitySet="RefJornada" />
+      <End Role="Organizacion" EntitySet="Organizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizacion_RefPeriodoEscolar" Association="Self.FK_Organizacion_RefPeriodoEscolar">
+      <End Role="RefPeriodoEscolar" EntitySet="RefPeriodoEscolar" />
+      <End Role="Organizacion" EntitySet="Organizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizacionTurno_Organizacion" Association="Self.FK_OrganizacionTurno_Organizacion">
+      <End Role="Organizacion" EntitySet="Organizacion" />
+      <End Role="OrganizacionTurno" EntitySet="OrganizacionTurno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizacionTurno_RefTurno" Association="Self.FK_OrganizacionTurno_RefTurno">
+      <End Role="RefTurno" EntitySet="RefTurno" />
+      <End Role="OrganizacionTurno" EntitySet="OrganizacionTurno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaquetePlaza_Plaza" Association="Self.FK_PaquetePlaza_Plaza">
+      <End Role="Plaza" EntitySet="Plaza" />
+      <End Role="PaquetePlaza" EntitySet="PaquetePlaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaquetePlaza_RefTipoPaquetePlaza" Association="Self.FK_PaquetePlaza_RefTipoPaquetePlaza">
+      <End Role="RefTipoPaquetePlaza" EntitySet="RefTipoPaquetePlaza" />
+      <End Role="PaquetePlaza" EntitySet="PaquetePlaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaquetePlazaHistorica_RefMotivoBaja" Association="Self.FK_PaquetePlazaHistorica_RefMotivoBaja">
+      <End Role="RefMotivoBaja" EntitySet="RefMotivoBaja" />
+      <End Role="PaquetePlazaHistorica" EntitySet="PaquetePlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanEspacio_EspacioCurricular" Association="Self.FK_PlanEspacio_EspacioCurricular">
+      <End Role="EspacioCurricular" EntitySet="EspacioCurricular" />
+      <End Role="PlanEspacio" EntitySet="PlanEspacio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanEspacio_PlanEstudio" Association="Self.FK_PlanEspacio_PlanEstudio">
+      <End Role="PlanEstudio" EntitySet="PlanEstudio" />
+      <End Role="PlanEspacio" EntitySet="PlanEspacio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanEstudio_InstrumentoLegal" Association="Self.FK_PlanEstudio_InstrumentoLegal">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="PlanEstudio" EntitySet="PlanEstudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanEstudio_RefEspecialidad" Association="Self.FK_PlanEstudio_RefEspecialidad">
+      <End Role="RefEspecialidad" EntitySet="RefEspecialidad" />
+      <End Role="PlanEstudio" EntitySet="PlanEstudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanUnidad_Organizacion" Association="Self.FK_PlanUnidad_Organizacion">
+      <End Role="Organizacion" EntitySet="Organizacion" />
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanUnidad_PlanEstudio" Association="Self.FK_PlanUnidad_PlanEstudio">
+      <End Role="PlanEstudio" EntitySet="PlanEstudio" />
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanUnidad_RefNivelEducativo" Association="Self.FK_PlanUnidad_RefNivelEducativo">
+      <End Role="RefNivelEducativo" EntitySet="RefNivelEducativo" />
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_CargoFuncional" Association="Self.FK_Plaza_CargoFuncional">
+      <End Role="CargoFuncional" EntitySet="CargoFuncional" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_CategoriaPresupuesto" Association="Self.FK_Plaza_CategoriaPresupuesto">
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_Division" Association="Self.FK_Plaza_Division">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_Grupo" Association="Self.FK_Plaza_Grupo">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_InstrumentoLegal" Association="Self.FK_Plaza_InstrumentoLegal">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_InstrumentoLegal1" Association="Self.FK_Plaza_InstrumentoLegal1">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_PaquetePlaza" Association="Self.FK_Plaza_PaquetePlaza">
+      <End Role="PaquetePlaza" EntitySet="PaquetePlaza" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_PlanUnidad" Association="Self.FK_Plaza_PlanUnidad">
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefAfectacion" Association="Self.FK_Plaza_RefAfectacion">
+      <End Role="RefAfectacion" EntitySet="RefAfectacion" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefAsignatura" Association="Self.FK_Plaza_RefAsignatura">
+      <End Role="RefAsignatura" EntitySet="RefAsignatura" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefFinanciamiento" Association="Self.FK_Plaza_RefFinanciamiento">
+      <End Role="RefFinanciamiento" EntitySet="RefFinanciamiento" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefMotivoBaja" Association="Self.FK_Plaza_RefMotivoBaja">
+      <End Role="RefMotivoBaja" EntitySet="RefMotivoBaja" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefMotivoCreacion" Association="Self.FK_Plaza_RefMotivoCreacion">
+      <End Role="RefMotivoCreacion" EntitySet="RefMotivoCreacion" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefRegimenLaboral" Association="Self.FK_Plaza_RefRegimenLaboral">
+      <End Role="RefRegimenLaboral" EntitySet="RefRegimenLaboral" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefRegimenSalarial" Association="Self.FK_Plaza_RefRegimenSalarial">
+      <End Role="RefRegimenSalarial" EntitySet="RefRegimenSalarial" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plaza_RefSistemaEducativo" Association="Self.FK_Plaza_RefSistemaEducativo">
+      <End Role="RefSistemaEducativo" EntitySet="RefSistemaEducativo" />
+      <End Role="Plaza" EntitySet="Plaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_CargoFuncional" Association="Self.FK_PlazaHistorica_CargoFuncional">
+      <End Role="CargoFuncional" EntitySet="CargoFuncional" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_CategoriaPresupuesto" Association="Self.FK_PlazaHistorica_CategoriaPresupuesto">
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_Division" Association="Self.FK_PlazaHistorica_Division">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_Grupo" Association="Self.FK_PlazaHistorica_Grupo">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_InstrumentoLegal" Association="Self.FK_PlazaHistorica_InstrumentoLegal">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_InstrumentoLegal1" Association="Self.FK_PlazaHistorica_InstrumentoLegal1">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_PlanUnidad" Association="Self.FK_PlazaHistorica_PlanUnidad">
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefAfectacion" Association="Self.FK_PlazaHistorica_RefAfectacion">
+      <End Role="RefAfectacion" EntitySet="RefAfectacion" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefAsignatura" Association="Self.FK_PlazaHistorica_RefAsignatura">
+      <End Role="RefAsignatura" EntitySet="RefAsignatura" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefFinanciamiento" Association="Self.FK_PlazaHistorica_RefFinanciamiento">
+      <End Role="RefFinanciamiento" EntitySet="RefFinanciamiento" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefMotivoBaja" Association="Self.FK_PlazaHistorica_RefMotivoBaja">
+      <End Role="RefMotivoBaja" EntitySet="RefMotivoBaja" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefMotivoBaja1" Association="Self.FK_PlazaHistorica_RefMotivoBaja1">
+      <End Role="RefMotivoBaja" EntitySet="RefMotivoBaja" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefMotivoCreacion" Association="Self.FK_PlazaHistorica_RefMotivoCreacion">
+      <End Role="RefMotivoCreacion" EntitySet="RefMotivoCreacion" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefRegimenLaboral" Association="Self.FK_PlazaHistorica_RefRegimenLaboral">
+      <End Role="RefRegimenLaboral" EntitySet="RefRegimenLaboral" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefRegimenSalarial" Association="Self.FK_PlazaHistorica_RefRegimenSalarial">
+      <End Role="RefRegimenSalarial" EntitySet="RefRegimenSalarial" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlazaHistorica_RefSistemaEducativo" Association="Self.FK_PlazaHistorica_RefSistemaEducativo">
+      <End Role="RefSistemaEducativo" EntitySet="RefSistemaEducativo" />
+      <End Role="PlazaHistorica" EntitySet="PlazaHistorica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Presupuesto_InstrumentoLegal" Association="Self.FK_Presupuesto_InstrumentoLegal">
+      <End Role="InstrumentoLegal" EntitySet="InstrumentoLegal" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Presupuesto_Presupuesto" Association="Self.FK_Presupuesto_Presupuesto">
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Presupuesto_RefAdicional" Association="Self.FK_Presupuesto_RefAdicional">
+      <End Role="RefAdicional" EntitySet="RefAdicional" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Provincia_RefPaisNacionalidad" Association="Self.FK_Provincia_RefPaisNacionalidad">
+      <End Role="RefPaisNacionalidad" EntitySet="RefPaisNacionalidad" />
+      <End Role="Provincia" EntitySet="Provincia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_CargoFuncional" Association="Self.FK_ReqSolicitudPrimaria_CargoFuncional">
+      <End Role="CargoFuncional" EntitySet="CargoFuncional" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_CategoriaPresupuesto" Association="Self.FK_ReqSolicitudPrimaria_CategoriaPresupuesto">
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_Division" Association="Self.FK_ReqSolicitudPrimaria_Division">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_EspacioAsignatura" Association="Self.FK_ReqSolicitudPrimaria_EspacioAsignatura">
+      <End Role="EspacioAsignatura" EntitySet="EspacioAsignatura" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_Grupo" Association="Self.FK_ReqSolicitudPrimaria_Grupo">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_PlanUnidad" Association="Self.FK_ReqSolicitudPrimaria_PlanUnidad">
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefEstadoSolicitud" Association="Self.FK_ReqSolicitudPrimaria_RefEstadoSolicitud">
+      <End Role="RefEstadoSolicitud" EntitySet="RefEstadoSolicitud" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefEstadoSolicitud1" Association="Self.FK_ReqSolicitudPrimaria_RefEstadoSolicitud1">
+      <End Role="RefEstadoSolicitud" EntitySet="RefEstadoSolicitud" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefFinanciamiento" Association="Self.FK_ReqSolicitudPrimaria_RefFinanciamiento">
+      <End Role="RefFinanciamiento" EntitySet="RefFinanciamiento" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefJornada" Association="Self.FK_ReqSolicitudPrimaria_RefJornada">
+      <End Role="RefJornada" EntitySet="RefJornada" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefRegimenLaboral" Association="Self.FK_ReqSolicitudPrimaria_RefRegimenLaboral">
+      <End Role="RefRegimenLaboral" EntitySet="RefRegimenLaboral" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefRegimenSalarial" Association="Self.FK_ReqSolicitudPrimaria_RefRegimenSalarial">
+      <End Role="RefRegimenSalarial" EntitySet="RefRegimenSalarial" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_RefSistemaEducativo" Association="Self.FK_ReqSolicitudPrimaria_RefSistemaEducativo">
+      <End Role="RefSistemaEducativo" EntitySet="RefSistemaEducativo" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudPrimaria_Solicitud" Association="Self.FK_ReqSolicitudPrimaria_Solicitud">
+      <End Role="Solicitud" EntitySet="Solicitud" />
+      <End Role="ReqSolicitudPrimaria" EntitySet="ReqSolicitudPrimaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_CargoFuncional" Association="Self.FK_ReqSolicitudSecundaria_CargoFuncional">
+      <End Role="CargoFuncional" EntitySet="CargoFuncional" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_CategoriaPresupuesto" Association="Self.FK_ReqSolicitudSecundaria_CategoriaPresupuesto">
+      <End Role="CategoriaPresupuesto" EntitySet="CategoriaPresupuesto" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_Division" Association="Self.FK_ReqSolicitudSecundaria_Division">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_EspacioAsignatura" Association="Self.FK_ReqSolicitudSecundaria_EspacioAsignatura">
+      <End Role="EspacioAsignatura" EntitySet="EspacioAsignatura" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_Grupo" Association="Self.FK_ReqSolicitudSecundaria_Grupo">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_PlanUnidad" Association="Self.FK_ReqSolicitudSecundaria_PlanUnidad">
+      <End Role="PlanUnidad" EntitySet="PlanUnidad" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_RefEstadoSolicitud" Association="Self.FK_ReqSolicitudSecundaria_RefEstadoSolicitud">
+      <End Role="RefEstadoSolicitud" EntitySet="RefEstadoSolicitud" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_RefFinanciamiento" Association="Self.FK_ReqSolicitudSecundaria_RefFinanciamiento">
+      <End Role="RefFinanciamiento" EntitySet="RefFinanciamiento" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_RefRegimenLaboral" Association="Self.FK_ReqSolicitudSecundaria_RefRegimenLaboral">
+      <End Role="RefRegimenLaboral" EntitySet="RefRegimenLaboral" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_RefRegimenSalarial" Association="Self.FK_ReqSolicitudSecundaria_RefRegimenSalarial">
+      <End Role="RefRegimenSalarial" EntitySet="RefRegimenSalarial" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_RefSistemaEducativo" Association="Self.FK_ReqSolicitudSecundaria_RefSistemaEducativo">
+      <End Role="RefSistemaEducativo" EntitySet="RefSistemaEducativo" />
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReqSolicitudSecundaria_ReqSolicitudSecundaria" Association="Self.FK_ReqSolicitudSecundaria_ReqSolicitudSecundaria">
+      <End Role="ReqSolicitudSecundaria" EntitySet="ReqSolicitudSecundaria" />
+      <End Role="ReqSolicitudSecundaria1" EntitySet="ReqSolicitudSecundaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Organizacion" Association="Self.FK_Solicitud_Organizacion">
+      <End Role="Organizacion" EntitySet="Organizacion" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_RefEstadoSolicitud" Association="Self.FK_Solicitud_RefEstadoSolicitud">
+      <End Role="RefEstadoSolicitud" EntitySet="RefEstadoSolicitud" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_RefTipoSolicitud" Association="Self.FK_Solicitud_RefTipoSolicitud">
+      <End Role="RefTipoSolicitud" EntitySet="RefTipoSolicitud" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

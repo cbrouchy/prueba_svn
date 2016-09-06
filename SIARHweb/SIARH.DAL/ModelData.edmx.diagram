@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cb1b45a66063463992c4443c8f1ceffc" Name="Diagram1">
+        <EntityTypeShape EntityType="RRHH_V2Model.Agente" Width="1.5" PointX="12" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Alumno" Width="1.5" PointX="9.75" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoAntropometria" Width="1.5" PointX="12" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoAsignatura" Width="1.5" PointX="12" PointY="101.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoDivision" Width="1.5" PointX="15" PointY="61.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoDivisonHistorial" Width="1.5" PointX="5.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoFamilia" Width="1.5" PointX="12" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoInasistencia" Width="1.5" PointX="17.25" PointY="62.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoInasistenciaSuscripcion" Width="1.5" PointX="17.25" PointY="71.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnoNota" Width="1.5" PointX="17.25" PointY="103.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.AlumnosUsuarios" Width="1.5" PointX="1.5" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.CargoFuncional" Width="1.5" PointX="3.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.CargoSalarial" Width="1.5" PointX="1.5" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.CargoSalarialFuncional" Width="1.5" PointX="5.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.CategoriaPresupuesto" Width="1.5" PointX="3.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.CircuitoSolicitud" Width="1.5" PointX="7.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Departamento" Width="1.5" PointX="1.5" PointY="90.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.DetalleTabla" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Division" Width="1.5" PointX="3.75" PointY="63.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.DivisionACrear" Width="1.5" PointX="6.75" PointY="91.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Edificio" Width="1.5" PointX="3.75" PointY="84.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.EdificioOrganizacion" Width="1.5" PointX="9" PointY="85.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.EspacioAsignatura" Width="1.5" PointX="3.75" PointY="140" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.EspacioCurricular" Width="1.5" PointX="1.5" PointY="138.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Familia" Width="1.5" PointX="9.75" PointY="78.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Grupo" Width="1.5" PointX="3.75" PointY="90.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.GrupoDivision" Width="1.5" PointX="6" PointY="77.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.InstrumentoLegal" Width="1.5" PointX="1.5" PointY="68.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Licencia" Width="1.5" PointX="14.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.LicenciaPorSituacionDeRevista" Width="1.5" PointX="16.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Localidad" Width="1.5" PointX="1.5" PointY="86.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.MenuPlaza" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.MovimientosPresupuesto" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Organizacion" Width="1.5" PointX="1.5" PointY="76.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.OrganizacionTurno" Width="1.5" PointX="1.5" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PaquetePlaza" Width="1.5" PointX="11.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PaquetePlazaHistorica" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Partida" Width="1.5" PointX="3.75" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Persona" Width="1.5" PointX="9.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PlanEspacio" Width="1.5" PointX="3.75" PointY="132.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PlanEstudio" Width="1.5" PointX="1.5" PointY="127.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PlanUnidad" Width="1.5" PointX="1.5" PointY="121.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Plaza" Width="1.5" PointX="6" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.PlazaHistorica" Width="1.5" PointX="9" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Presupuesto" Width="1.5" PointX="11.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Provincia" Width="1.5" PointX="1.5" PointY="94.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefAdicional" Width="1.5" PointX="9" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefAfectacion" Width="1.5" PointX="3.75" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefAmbito" Width="1.5" PointX="1.5" PointY="54.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefAsignatura" Width="1.5" PointX="1.5" PointY="146" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefCalendarioFeriado" Width="1.5" PointX="5.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefCargoTipo" Width="1.5" PointX="13.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefCategoriaLicencia" Width="1.5" PointX="12" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefCategoriaOrganizacion" Width="1.5" PointX="1.5" PointY="102.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefDiaDescansoAnual" Width="1.5" PointX="16.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEscalafon" Width="1.5" PointX="1.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEspecialidad" Width="1.5" PointX="1.5" PointY="132" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEstado" Width="1.5" PointX="15.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEstadoCivil" Width="1.5" PointX="7.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEstadoEdificio" Width="1.5" PointX="1.5" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefEstadoSolicitud" Width="1.5" PointX="1.5" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefFinalidad" Width="1.5" PointX="1.5" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefFinanciamiento" Width="1.5" PointX="3.75" PointY="96.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefFuncion" Width="1.5" PointX="1.5" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefJornada" Width="1.5" PointX="1.5" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefMotivoAlta" Width="1.5" PointX="12" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefMotivoBaja" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefMotivoCreacion" Width="1.5" PointX="3.75" PointY="100" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefMotivoMovimientoPres" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefMovimiento" Width="1.5" PointX="14.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefNivelEducativo" Width="1.5" PointX="1.5" PointY="135.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefPaisNacionalidad" Width="1.5" PointX="1.5" PointY="98.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefParentesco" Width="1.5" PointX="9.75" PointY="70.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefPeriodoEscolar" Width="1.5" PointX="1.5" PointY="105.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefRegimenLaboral" Width="1.5" PointX="3.75" PointY="103" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefRegimenSalarial" Width="1.5" PointX="3.75" PointY="106.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefRegion" Width="1.5" PointX="1.5" PointY="108.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefSexo" Width="1.5" PointX="7.5" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefSistemaEducativo" Width="1.5" PointX="3.75" PointY="109.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefSituacionExtraordinaria" Width="1.5" PointX="14.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefSituacionLaboral" Width="1.5" PointX="14.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefSituacionRevista" Width="1.5" PointX="12" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoAsignaturaPrevia" Width="1.5" PointX="9.75" PointY="102.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoDocumento" Width="1.5" PointX="7.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoEdificio" Width="1.5" PointX="1.5" PointY="149.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoEducacion" Width="1.5" PointX="1.5" PointY="111.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoEspacioCurricular" Width="1.5" PointX="1.5" PointY="143" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoFuncion" Width="1.5" PointX="1.5" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoGoceHaber" Width="1.5" PointX="12" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoInasistencia" Width="1.5" PointX="15" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoInstrumentoLegal" Width="1.5" PointX="1.5" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoNovedad" Width="1.5" PointX="12.75" PointY="65.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoOrganizacion" Width="1.5" PointX="1.5" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoPaquetePlaza" Width="1.5" PointX="9" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoServicio" Width="1.5" PointX="12" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoSolicitud" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTipoTenencia" Width="1.5" PointX="1.5" PointY="152.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefTurno" Width="1.5" PointX="1.5" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefUdeO" Width="1.5" PointX="1.5" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefUnidadTemporal" Width="1.5" PointX="12" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefUnidadTemporalContexto" Width="1.5" PointX="12" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.RefZona" Width="1.5" PointX="1.5" PointY="116.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.ReqSolicitudPrimaria" Width="1.5" PointX="6" PointY="80.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.ReqSolicitudSecundaria" Width="1.5" PointX="12" PointY="84.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Servicio" Width="1.5" PointX="14.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.Solicitud" Width="1.5" PointX="3.75" PointY="77.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.SubServicio" Width="1.5" PointX="16.5" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHH_V2Model.sysdiagrams" Width="1.5" PointX="16.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Agente_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_Agente" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_Localidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_Localidad1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_RefEstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_RefPaisNacionalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_RefSexo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Alumno_RefTipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoAntropometria_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoAsignatura_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoDivision_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoFamilia_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoAsignatura_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoAsignatura_RefAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoAsignatura_RefTipoAsignaturaPrevia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoDivision_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoDivision_RefTipoNovedad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoDivision_RefTipoNovedad1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoDivision_RefTipoNovedad2" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoInasistencia_AlumnoDivision" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoInasistenciaSuscripcion_AlumnoDivision" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoNota_AlumnoDivision" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoFamilia_Familia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoFamilia_RefParentesco" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoInasistencia_RefTipoInasistencia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoInasistenciaSuscripcion_Familia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_AlumnoNota_RefAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CargoFuncional_RefTipoFuncion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_CargoFuncional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_CargoFuncional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_CargoFuncional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_CargoFuncional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CargoSalarial_RefJornada" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CategoriaPresupuesto_CargoSalarial" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CategoriaPresupuesto_RefEscalafon" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CategoriaPresupuesto_RefFinalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CategoriaPresupuesto_RefFuncion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_CategoriaPresupuesto_RefUdeO" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_CategoriaPresupuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_CategoriaPresupuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Presupuesto_Presupuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_CategoriaPresupuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_CategoriaPresupuesto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Departamento_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Localidad_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Menu_DetalleTabla" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Division_OrganizacionTurno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Division_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_GrupoDivision_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_Division" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_DivisionACrear_OrganizacionTurno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_DivisionACrear_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Edificio_Localidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Edificio_RefEstadoEdificio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Edificio_RefTipoEdificio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Edificio_RefTipoTenencia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_EdificioOrganizacion_Edificio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_EdificioOrganizacion_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_EspacioAsignatura_EspacioCurricular" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_EspacioAsignatura_RefAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_EspacioAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_EspacioAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_EspacioAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_EspacioAsignatura" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_EspacioCurricular_RefTipoEspacioCurricular" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanEspacio_EspacioCurricular" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Familia_RefEstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Familia_RefNivelEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Familia_RefPaisNacionalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Familia_RefSexo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Familia_RefTipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Grupo_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_GrupoDivision_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_InstrumentoLegal_RefTipoInstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_InstrumentoLegal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanEstudio_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_InstrumentoLegal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_InstrumentoLegal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Presupuesto_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_InstrumentoLegal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_InstrumentoLegal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_InstrumentoLegal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefCategoriaLicencia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefTipoGoceHaber" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefUnidadTemporal" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefUnidadTemporal1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefUnidadTemporalContexto" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Licencia_RefUnidadTemporalContexto1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_LicenciaPorSituacionDeRevista_Licencia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_Licencia" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_LicenciaPorSituacionDeRevista_RefSituacionRevista" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_Localidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_Localidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Menu_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_MovimientosPresupuesto_RefMotivoMovimientoPres" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefAmbito" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefCategoriaOrganizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefJornada" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefPeriodoEscolar" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefTipoEducacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefTipoOrganizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Organizacion_RefZona" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_OrganizacionTurno_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanUnidad_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Solicitud_Organizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_OrganizacionTurno_RefTurno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_OrganizacionTurno" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PaquetePlaza_Plaza" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PaquetePlaza_RefTipoPaquetePlaza" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_PaquetePlaza" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PaquetePlazaHistorica_RefMotivoBaja" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Partida_RefEscalafon" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Partida_RefFinalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Partida_RefFuncion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_RefEstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_RefNivelEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_RefPaisNacionalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_RefSexo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Persona_RefTipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanEspacio_PlanEstudio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanEstudio_RefEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanUnidad_PlanEstudio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlanUnidad_RefNivelEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_PlanUnidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefAfectacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefFinanciamiento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefMotivoBaja" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefMotivoCreacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefRegimenLaboral" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefRegimenSalarial" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Plaza_RefSistemaEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_Plaza" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefAfectacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefFinanciamiento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefMotivoBaja" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefMotivoBaja1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefMotivoCreacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefRegimenLaboral" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefRegimenSalarial" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_PlazaHistorica_RefSistemaEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_PlazaHistorica" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Presupuesto_RefAdicional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Provincia_RefPaisNacionalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefAdicional" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefEstadoSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefEstadoSolicitud1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_RefEstadoSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Solicitud_RefEstadoSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefFinanciamiento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_RefFinanciamiento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefJornada" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_RefMotivoAlta" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefMotivoAlta" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_RefMotivoBaja" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefMotivoBaja" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefMovimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefRegimenLaboral" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_RefRegimenLaboral" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefRegimenSalarial" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_RefRegimenSalarial" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_RefSistemaEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_RefSistemaEducativo" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefSituacionExtraordinaria" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_RefSituacionLaboral" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_RefSituacionRevista" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Servicio_RefTipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_Solicitud_RefTipoSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudPrimaria_Solicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_ReqSolicitudSecundaria_ReqSolicitudSecundaria" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_Servicio" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.FK_SubServicio_Servicio1" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.AlumnosUsuariosOrganizaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHH_V2Model.PresupuestoPlaza" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

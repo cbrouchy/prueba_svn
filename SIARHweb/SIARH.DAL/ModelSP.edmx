@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RRHH_V2Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spInstrumentoLegalINS_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="instrumentoLegal1" Type="nvarchar" Mode="In" />
+          <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+          <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spInstrumentoLegalSELbyTexto_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="activo" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spInstrumentoLegalUPD_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+          <Parameter Name="instrumentoLegal1" Type="nvarchar" Mode="In" />
+          <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+          <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="estaActivo" Type="bit" Mode="In" />
+          <Parameter Name="fecha" Type="date" Mode="In" />
+        </Function>
+        <Function Name="spRefPaisNacionalidadINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pais" Type="nvarchar" Mode="In" />
+          <Parameter Name="nacionalidad" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spRefPaisNacionalidadSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="activo" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spRefPaisNacionalidadUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+          <Parameter Name="pais" Type="nvarchar" Mode="In" />
+          <Parameter Name="nacionalidad" Type="nvarchar" Mode="In" />
+          <Parameter Name="estaActivo" Type="bit" Mode="In" />
+          <Parameter Name="fecha" Type="date" Mode="In" />
+        </Function>
+        <EntityContainer Name="RRHH_V2Model1StoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RRHH_V2Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RRHH_V2SP" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spInstrumentoLegalINS_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalINS__Result)">
+            <Parameter Name="instrumentoLegal1" Mode="In" Type="String" />
+            <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spInstrumentoLegalSELbyTexto_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalSELbyTexto__Result1)">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spInstrumentoLegalUPD_" ReturnType="Collection(RRHH_V2Model1.spInstrumentoLegalUPD__Result)">
+            <Parameter Name="idInstrumentoLegal" Mode="In" Type="Int32" />
+            <Parameter Name="instrumentoLegal1" Mode="In" Type="String" />
+            <Parameter Name="idTipoInstrumentoLegal" Mode="In" Type="Int32" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+            <Parameter Name="estaActivo" Mode="In" Type="Boolean" />
+            <Parameter Name="fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spRefPaisNacionalidadINS" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadINS_Result)">
+            <Parameter Name="pais" Mode="In" Type="String" />
+            <Parameter Name="nacionalidad" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spRefPaisNacionalidadSEL" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadSEL_Result1)">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spRefPaisNacionalidadUPD" ReturnType="Collection(RRHH_V2Model1.spRefPaisNacionalidadUPD_Result)">
+            <Parameter Name="idPaisNacionalidad" Mode="In" Type="Int32" />
+            <Parameter Name="pais" Mode="In" Type="String" />
+            <Parameter Name="nacionalidad" Mode="In" Type="String" />
+            <Parameter Name="estaActivo" Mode="In" Type="Boolean" />
+            <Parameter Name="fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spInstrumentoLegalSELbyTexto__Result">
+          <Property Type="Int32" Name="idInstrumentoLegal" Nullable="false" />
+          <Property Type="String" Name="instrumentoLegal" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="tipoInstrumentoLegal" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spRefPaisNacionalidadSEL_Result">
+          <Property Type="Int32" Name="idPaisNacionalidad" Nullable="false" />
+          <Property Type="String" Name="pais" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="nacionalidad" Nullable="true" MaxLength="60" />
+          <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+          <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spInstrumentoLegalINS__Result">
+          <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spInstrumentoLegalSELbyTexto__Result1">
+          <Property Type="Int32" Name="idInstrumentoLegal" Nullable="false" />
+          <Property Type="String" Name="instrumentoLegal" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="tipoInstrumentoLegal" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spInstrumentoLegalUPD__Result">
+          <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spRefPaisNacionalidadINS_Result">
+          <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spRefPaisNacionalidadSEL_Result1">
+          <Property Type="Int32" Name="idPaisNacionalidad" Nullable="false" />
+          <Property Type="String" Name="pais" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="nacionalidad" Nullable="true" MaxLength="60" />
+          <Property Type="Boolean" Name="estaActivo" Nullable="false" />
+          <Property Type="DateTime" Name="fechaCaducidad" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spRefPaisNacionalidadUPD_Result">
+          <Property Type="String" Name="ERROR" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RRHH_V2Model1StoreContainer" CdmEntityContainer="RRHH_V2SP" >
+          <FunctionImportMapping FunctionImportName="spInstrumentoLegalINS_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalINS_" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalINS__Result">
+                <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spInstrumentoLegalSELbyTexto_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalSELbyTexto_">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalSELbyTexto__Result1">
+                <ScalarProperty Name="idInstrumentoLegal" ColumnName="idInstrumentoLegal" />
+                <ScalarProperty Name="instrumentoLegal" ColumnName="instrumentoLegal" />
+                <ScalarProperty Name="tipoInstrumentoLegal" ColumnName="tipoInstrumentoLegal" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spInstrumentoLegalUPD_" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalUPD_" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spInstrumentoLegalUPD__Result">
+                <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadINS" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadINS" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadINS_Result">
+                <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadSEL" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadSEL">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadSEL_Result1">
+                <ScalarProperty Name="idPaisNacionalidad" ColumnName="idPaisNacionalidad" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+                <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+                <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spRefPaisNacionalidadUPD" FunctionName="RRHH_V2Model1.Store.spRefPaisNacionalidadUPD" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefPaisNacionalidadUPD_Result">
+                <ScalarProperty Name="ERROR" ColumnName="ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

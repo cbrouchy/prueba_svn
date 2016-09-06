@@ -1,0 +1,1764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RRHH_V2Model1StoreContainer" CdmEntityContainer="RRHH_V2Entities1">
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="RRHH_V2Model1.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="RRHH_V2Model1.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="RRHH_V2Model1.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="RRHH_V2Model1.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="RRHH_V2Model1.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="RRHH_V2Model1.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="RRHH_V2Model1.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spAluMatriculaByOrgByAñoDetallada" FunctionName="RRHH_V2Model1.Store.spAluMatriculaByOrgByAñoDetallada">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAluMatriculaByOrgByAñoDetallada_Result">
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoAluFamSinDNI" FunctionName="RRHH_V2Model1.Store.spAlumnoAluFamSinDNI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoAluFamSinDNI_Result">
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="ayn" ColumnName="ayn" />
+          <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoByDivision" FunctionName="RRHH_V2Model1.Store.spAlumnoByDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoByDivision_Result">
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="noAct" ColumnName="noAct" />
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoByDivisionV2" FunctionName="RRHH_V2Model1.Store.spAlumnoByDivisionV2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoByDivisionV2_Result">
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="idTipoNovedad" ColumnName="idTipoNovedad" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="idEstadoAlumno" ColumnName="idEstadoAlumno" />
+          <ScalarProperty Name="estadoAlumno" ColumnName="estadoAlumno" />
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+          <ScalarProperty Name="motivoBaja" ColumnName="motivoBaja" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="enCurso" ColumnName="enCurso" />
+          <ScalarProperty Name="cantNovedades" ColumnName="cantNovedades" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoByOrgByAlu" FunctionName="RRHH_V2Model1.Store.spAlumnoByOrgByAlu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoByOrgByAlu_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="enCurso" ColumnName="enCurso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoCambiaUsuario" FunctionName="RRHH_V2Model1.Store.spAlumnoCambiaUsuario" />
+    <FunctionImportMapping FunctionImportName="spAlumnoControlExiste" FunctionName="RRHH_V2Model1.Store.spAlumnoControlExiste" />
+    <FunctionImportMapping FunctionImportName="spAlumnoDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionControlExiste" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionControlExiste" />
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionHistorialByOrgByAlu" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionHistorialByOrgByAlu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoDivisionHistorialByOrgByAlu_Result">
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="idTipoNovedad" ColumnName="idTipoNovedad" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="enCurso" ColumnName="enCurso" />
+          <ScalarProperty Name="roworder" ColumnName="roworder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionHistorialSEL" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionHistorialSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoDivisionHistorialSEL_Result">
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="novedad" ColumnName="novedad" />
+          <ScalarProperty Name="baja" ColumnName="baja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionNovedadesINSUPD" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionNovedadesINSUPD" />
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionNovedadesSEL" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionNovedadesSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoDivisionNovedadesSEL_Result">
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionSEL" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoDivisionSEL_Result">
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="estadoAlumno" ColumnName="estadoAlumno" />
+          <ScalarProperty Name="motivoBajaAlumno" ColumnName="motivoBajaAlumno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoDivisionSEL2" FunctionName="RRHH_V2Model1.Store.spAlumnoDivisionSEL2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoDivisionSEL2_Result">
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idEstadoAlumno" ColumnName="idEstadoAlumno" />
+          <ScalarProperty Name="idMotivoBaja" ColumnName="idMotivoBaja" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoFamiliaControlExiste" FunctionName="RRHH_V2Model1.Store.spAlumnoFamiliaControlExiste" />
+    <FunctionImportMapping FunctionImportName="spAlumnoFamiliaDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoFamiliaDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoFamiliaINS" FunctionName="RRHH_V2Model1.Store.spAlumnoFamiliaINS" />
+    <FunctionImportMapping FunctionImportName="spAlumnoFamiliaUPD" FunctionName="RRHH_V2Model1.Store.spAlumnoFamiliaUPD" />
+    <FunctionImportMapping FunctionImportName="spAlumnoInasistenciaByDivision" FunctionName="RRHH_V2Model1.Store.spAlumnoInasistenciaByDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoInasistenciaByDivision_Result">
+          <ScalarProperty Name="mnemo" ColumnName="mnemo" />
+          <ScalarProperty Name="justificada" ColumnName="justificada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idAlumnoInasistencia" ColumnName="idAlumnoInasistencia" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idTipoInasistencia" ColumnName="idTipoInasistencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoInasistenciaINSUPDDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoInasistenciaINSUPDDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoINS" FunctionName="RRHH_V2Model1.Store.spAlumnoINS" />
+    <FunctionImportMapping FunctionImportName="spAlumnoNotaByDivision" FunctionName="RRHH_V2Model1.Store.spAlumnoNotaByDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoNotaByDivision_Result">
+          <ScalarProperty Name="idAlumnoNota" ColumnName="idAlumnoNota" />
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoNotaINSUPDDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoNotaINSUPDDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoNovedadesByDivision" FunctionName="RRHH_V2Model1.Store.spAlumnoNovedadesByDivision">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoNovedadesByDivision_Result">
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="idEstadoAlumno" ColumnName="idEstadoAlumno" />
+          <ScalarProperty Name="estadoAlumno" ColumnName="estadoAlumno" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="motivoBaja" ColumnName="motivoBaja" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoOrganizacionActivoControlExiste" FunctionName="RRHH_V2Model1.Store.spAlumnoOrganizacionActivoControlExiste">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoOrganizacionActivoControlExiste_Result">
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoOrganizacionByUsuarioSEL" FunctionName="RRHH_V2Model1.Store.spAlumnoOrganizacionByUsuarioSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoOrganizacionByUsuarioSEL_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoOrganizacionControlExiste" FunctionName="RRHH_V2Model1.Store.spAlumnoOrganizacionControlExiste">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spAlumnoOrganizacionControlExiste_Result">
+          <ScalarProperty Name="anioLectivo" ColumnName="anioLectivo" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+          <ScalarProperty Name="idAlumnoDivision" ColumnName="idAlumnoDivision" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAlumnoUPD" FunctionName="RRHH_V2Model1.Store.spAlumnoUPD" />
+    <FunctionImportMapping FunctionImportName="spAlumnoUsuarioControlCambiaUsuario" FunctionName="RRHH_V2Model1.Store.spAlumnoUsuarioControlCambiaUsuario" />
+    <FunctionImportMapping FunctionImportName="spAlumnoUsuarioDEL" FunctionName="RRHH_V2Model1.Store.spAlumnoUsuarioDEL" />
+    <FunctionImportMapping FunctionImportName="spAlumnoUsuarioINS" FunctionName="RRHH_V2Model1.Store.spAlumnoUsuarioINS" />
+    <FunctionImportMapping FunctionImportName="spAlumnoUsuarioOrganizacionINS" FunctionName="RRHH_V2Model1.Store.spAlumnoUsuarioOrganizacionINS" />
+    <FunctionImportMapping FunctionImportName="spAlumnoUsuarioSEL" FunctionName="RRHH_V2Model1.Store.spAlumnoUsuarioSEL" />
+    <FunctionImportMapping FunctionImportName="spCargoFuncionalByCargoSalByNomSEL" FunctionName="RRHH_V2Model1.Store.spCargoFuncionalByCargoSalByNomSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCargoFuncionalByCargoSalByNomSEL_Result">
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="cargoFuncional" ColumnName="cargoFuncional" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCargoFuncionalByCargoSalSEL" FunctionName="RRHH_V2Model1.Store.spCargoFuncionalByCargoSalSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCargoFuncionalByCargoSalSEL_Result">
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="cargoFuncional" ColumnName="cargoFuncional" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCargoSalarialByNombreSEL" FunctionName="RRHH_V2Model1.Store.spCargoSalarialByNombreSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCargoSalarialByNombreSEL_Result">
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCargoSalarialDEL" FunctionName="RRHH_V2Model1.Store.spCargoSalarialDEL" />
+    <FunctionImportMapping FunctionImportName="spCargoSalarialINS" FunctionName="RRHH_V2Model1.Store.spCargoSalarialINS" />
+    <FunctionImportMapping FunctionImportName="spCargoSalarialSEL" FunctionName="RRHH_V2Model1.Store.spCargoSalarialSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCargoSalarialSEL_Result">
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCargoSalarialUPD" FunctionName="RRHH_V2Model1.Store.spCargoSalarialUPD" />
+    <FunctionImportMapping FunctionImportName="spCategoriaPresByUdeoByCateSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresByUdeoByCateSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresByUdeoByCateSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresByUdeoSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresByUdeoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresByUdeoSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoByCargoSalarialSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoByCargoSalarialSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoByCargoSalarialSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoByEscalafonByNomSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoByEscalafonByNomSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoByEscalafonByNomSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoByEscalafonSecSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoByEscalafonSecSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoByEscalafonSecSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoByEscalafonSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoByEscalafonSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoByEscalafonSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoByIdSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoByIdSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoByIdSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoDEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoDEL" />
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoINS" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoINS" />
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoSEL" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spCategoriaPresupuestoSEL_Result">
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCategoriaPresupuestoUPD" FunctionName="RRHH_V2Model1.Store.spCategoriaPresupuestoUPD" />
+    <FunctionImportMapping FunctionImportName="spControlAdicional" FunctionName="RRHH_V2Model1.Store.spControlAdicional" />
+    <FunctionImportMapping FunctionImportName="spControlAluFamExisteFamiliar" FunctionName="RRHH_V2Model1.Store.spControlAluFamExisteFamiliar" />
+    <FunctionImportMapping FunctionImportName="spControlAluFamExisteMadre" FunctionName="RRHH_V2Model1.Store.spControlAluFamExisteMadre" />
+    <FunctionImportMapping FunctionImportName="spControlAluFamExistePadre" FunctionName="RRHH_V2Model1.Store.spControlAluFamExistePadre" />
+    <FunctionImportMapping FunctionImportName="spControlAluFamExisteTutor" FunctionName="RRHH_V2Model1.Store.spControlAluFamExisteTutor" />
+    <FunctionImportMapping FunctionImportName="spControlAlumnoAsignaturaExisteAsignatura" FunctionName="RRHH_V2Model1.Store.spControlAlumnoAsignaturaExisteAsignatura" />
+    <FunctionImportMapping FunctionImportName="spControlAlumnoExisteAlumno" FunctionName="RRHH_V2Model1.Store.spControlAlumnoExisteAlumno" />
+    <FunctionImportMapping FunctionImportName="spControlAlumnoExisteUsuario" FunctionName="RRHH_V2Model1.Store.spControlAlumnoExisteUsuario" />
+    <FunctionImportMapping FunctionImportName="spControlCalendarioFeriado" FunctionName="RRHH_V2Model1.Store.spControlCalendarioFeriado" />
+    <FunctionImportMapping FunctionImportName="spControlCargoSalarial" FunctionName="RRHH_V2Model1.Store.spControlCargoSalarial" />
+    <FunctionImportMapping FunctionImportName="spControlCategoriaPresupuesto" FunctionName="RRHH_V2Model1.Store.spControlCategoriaPresupuesto" />
+    <FunctionImportMapping FunctionImportName="spControlCupofEnPaquetePlaza" FunctionName="RRHH_V2Model1.Store.spControlCupofEnPaquetePlaza" />
+    <FunctionImportMapping FunctionImportName="spControlDivision" FunctionName="RRHH_V2Model1.Store.spControlDivision" />
+    <FunctionImportMapping FunctionImportName="spControlEscalafon" FunctionName="RRHH_V2Model1.Store.spControlEscalafon" />
+    <FunctionImportMapping FunctionImportName="spControlEspacioAsignatura" FunctionName="RRHH_V2Model1.Store.spControlEspacioAsignatura" />
+    <FunctionImportMapping FunctionImportName="spControlFamiliaExisteFamilia" FunctionName="RRHH_V2Model1.Store.spControlFamiliaExisteFamilia" />
+    <FunctionImportMapping FunctionImportName="spControlFamiliaVinculos" FunctionName="RRHH_V2Model1.Store.spControlFamiliaVinculos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spControlFamiliaVinculos_Result">
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spControlFinalidad" FunctionName="RRHH_V2Model1.Store.spControlFinalidad" />
+    <FunctionImportMapping FunctionImportName="spControlFuncion" FunctionName="RRHH_V2Model1.Store.spControlFuncion" />
+    <FunctionImportMapping FunctionImportName="spControlOrganizacionTurno" FunctionName="RRHH_V2Model1.Store.spControlOrganizacionTurno" />
+    <FunctionImportMapping FunctionImportName="spControlPartida" FunctionName="RRHH_V2Model1.Store.spControlPartida" />
+    <FunctionImportMapping FunctionImportName="spControlPlanEspacio" FunctionName="RRHH_V2Model1.Store.spControlPlanEspacio" />
+    <FunctionImportMapping FunctionImportName="spControlPlanUnidad" FunctionName="RRHH_V2Model1.Store.spControlPlanUnidad" />
+    <FunctionImportMapping FunctionImportName="spDetalleTablaSEL" FunctionName="RRHH_V2Model1.Store.spDetalleTablaSEL" />
+    <FunctionImportMapping FunctionImportName="spDivisionByIdSEL" FunctionName="RRHH_V2Model1.Store.spDivisionByIdSEL" />
+    <FunctionImportMapping FunctionImportName="spDivisionByOrgByNEByPE" FunctionName="RRHH_V2Model1.Store.spDivisionByOrgByNEByPE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spDivisionByOrgByNEByPE_Result">
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="division" ColumnName="division" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDivisionDEL" FunctionName="RRHH_V2Model1.Store.spDivisionDEL" />
+    <FunctionImportMapping FunctionImportName="spDivisionExisteSEL" FunctionName="RRHH_V2Model1.Store.spDivisionExisteSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spDivisionExisteSEL_Result">
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDivisionINS" FunctionName="RRHH_V2Model1.Store.spDivisionINS" />
+    <FunctionImportMapping FunctionImportName="spDivisionSEL" FunctionName="RRHH_V2Model1.Store.spDivisionSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spDivisionSEL_Result">
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDivisionUPD" FunctionName="RRHH_V2Model1.Store.spDivisionUPD" />
+    <FunctionImportMapping FunctionImportName="spEspacioAsignaturaByECSEL" FunctionName="RRHH_V2Model1.Store.spEspacioAsignaturaByECSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spEspacioAsignaturaByECSEL_Result">
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEspacioAsignaturaDEL" FunctionName="RRHH_V2Model1.Store.spEspacioAsignaturaDEL" />
+    <FunctionImportMapping FunctionImportName="spEspacioAsignaturaINS" FunctionName="RRHH_V2Model1.Store.spEspacioAsignaturaINS" />
+    <FunctionImportMapping FunctionImportName="spEspacioAsignaturaSEL" FunctionName="RRHH_V2Model1.Store.spEspacioAsignaturaSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spEspacioAsignaturaSEL_Result">
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEspacioAsignaturaUPD" FunctionName="RRHH_V2Model1.Store.spEspacioAsignaturaUPD" />
+    <FunctionImportMapping FunctionImportName="spEspacioCurricularDEL" FunctionName="RRHH_V2Model1.Store.spEspacioCurricularDEL" />
+    <FunctionImportMapping FunctionImportName="spEspacioCurricularINS" FunctionName="RRHH_V2Model1.Store.spEspacioCurricularINS" />
+    <FunctionImportMapping FunctionImportName="spEspacioCurricularSEL" FunctionName="RRHH_V2Model1.Store.spEspacioCurricularSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spEspacioCurricularSEL_Result">
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="espacioCurricular" ColumnName="espacioCurricular" />
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEspacioCurricularSELByTECByPE" FunctionName="RRHH_V2Model1.Store.spEspacioCurricularSELByTECByPE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spEspacioCurricularSELByTECByPE_Result">
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="espacioCurricular" ColumnName="espacioCurricular" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEspacioCurricularUPD" FunctionName="RRHH_V2Model1.Store.spEspacioCurricularUPD" />
+    <FunctionImportMapping FunctionImportName="spFamiliaControlExiste" FunctionName="RRHH_V2Model1.Store.spFamiliaControlExiste" />
+    <FunctionImportMapping FunctionImportName="spFamiliaDEL" FunctionName="RRHH_V2Model1.Store.spFamiliaDEL" />
+    <FunctionImportMapping FunctionImportName="spFamiliaINS" FunctionName="RRHH_V2Model1.Store.spFamiliaINS" />
+    <FunctionImportMapping FunctionImportName="spFamiliaSEL" FunctionName="RRHH_V2Model1.Store.spFamiliaSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spFamiliaSEL_Result">
+          <ScalarProperty Name="idFamilia" ColumnName="idFamilia" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spFamiliaUPD" FunctionName="RRHH_V2Model1.Store.spFamiliaUPD" />
+    <FunctionImportMapping FunctionImportName="spGrupoDEL" FunctionName="RRHH_V2Model1.Store.spGrupoDEL" />
+    <FunctionImportMapping FunctionImportName="spGrupoDivisionSEL" FunctionName="RRHH_V2Model1.Store.spGrupoDivisionSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spGrupoDivisionSEL_Result">
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGrupoINS" FunctionName="RRHH_V2Model1.Store.spGrupoINS" />
+    <FunctionImportMapping FunctionImportName="spGrupoUPD" FunctionName="RRHH_V2Model1.Store.spGrupoUPD" />
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalDEL" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalDEL" />
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalINS" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalINS" />
+    <FunctionImportMapping FunctionImportName="spInstrumentoLegalUPD" FunctionName="RRHH_V2Model1.Store.spInstrumentoLegalUPD" />
+    <FunctionImportMapping FunctionImportName="spMenuPlazaDEL" FunctionName="RRHH_V2Model1.Store.spMenuPlazaDEL" />
+    <FunctionImportMapping FunctionImportName="spMenuPlazaINS" FunctionName="RRHH_V2Model1.Store.spMenuPlazaINS" />
+    <FunctionImportMapping FunctionImportName="spMenuPlazaUPD" FunctionName="RRHH_V2Model1.Store.spMenuPlazaUPD" />
+    <FunctionImportMapping FunctionImportName="spMovimientosPresupuestoINS" FunctionName="RRHH_V2Model1.Store.spMovimientosPresupuestoINS" />
+    <FunctionImportMapping FunctionImportName="spMovimientosPresupuestoSEL" FunctionName="RRHH_V2Model1.Store.spMovimientosPresupuestoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spMovimientosPresupuestoSEL_Result">
+          <ScalarProperty Name="idMovimiento" ColumnName="idMovimiento" />
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="motivoMovimiento" ColumnName="motivoMovimiento" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="instrumentoLegal" ColumnName="instrumentoLegal" />
+          <ScalarProperty Name="tipoInstrumentoLegal" ColumnName="tipoInstrumentoLegal" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="fin" ColumnName="fin" />
+          <ScalarProperty Name="fun" ColumnName="fun" />
+          <ScalarProperty Name="esc" ColumnName="esc" />
+          <ScalarProperty Name="ude" ColumnName="ude" />
+          <ScalarProperty Name="ejer" ColumnName="ejer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOrganizacionByIdDSEL" FunctionName="RRHH_V2Model1.Store.spOrganizacionByIdDSEL" />
+    <FunctionImportMapping FunctionImportName="spOrganizacionNombreMedia" FunctionName="RRHH_V2Model1.Store.spOrganizacionNombreMedia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spOrganizacionNombreMedia_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOrganizacionNombrePrimaria" FunctionName="RRHH_V2Model1.Store.spOrganizacionNombrePrimaria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spOrganizacionNombrePrimaria_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOrganizacionPrimariaCue" FunctionName="RRHH_V2Model1.Store.spOrganizacionPrimariaCue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spOrganizacionPrimariaCue_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="idInstrumentoLegalCreacion" ColumnName="idInstrumentoLegalCreacion" />
+          <ScalarProperty Name="instrumentoLegal" ColumnName="instrumentoLegal" />
+          <ScalarProperty Name="idInstrumentoLegalBaja" ColumnName="idInstrumentoLegalBaja" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="idOrganizacionDependencia" ColumnName="idOrganizacionDependencia" />
+          <ScalarProperty Name="idZona" ColumnName="idZona" />
+          <ScalarProperty Name="zona" ColumnName="zona" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
+          <ScalarProperty Name="ambito" ColumnName="ambito" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOrganizacionTurnoSEL" FunctionName="RRHH_V2Model1.Store.spOrganizacionTurnoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spOrganizacionTurnoSEL_Result">
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spPaquetePlazaDEL" FunctionName="RRHH_V2Model1.Store.spPaquetePlazaDEL" />
+    <FunctionImportMapping FunctionImportName="spPaquetePlazaINS" FunctionName="RRHH_V2Model1.Store.spPaquetePlazaINS" />
+    <FunctionImportMapping FunctionImportName="spPaquetePlazaUPD" FunctionName="RRHH_V2Model1.Store.spPaquetePlazaUPD" />
+    <FunctionImportMapping FunctionImportName="spPartidaDEL" FunctionName="RRHH_V2Model1.Store.spPartidaDEL" />
+    <FunctionImportMapping FunctionImportName="spPartidaINS" FunctionName="RRHH_V2Model1.Store.spPartidaINS" />
+    <FunctionImportMapping FunctionImportName="spPartidaUPD" FunctionName="RRHH_V2Model1.Store.spPartidaUPD" />
+    <FunctionImportMapping FunctionImportName="spPeriodoEscolarDEL" FunctionName="RRHH_V2Model1.Store.spPeriodoEscolarDEL" />
+    <FunctionImportMapping FunctionImportName="spPeriodoEscolarINS" FunctionName="RRHH_V2Model1.Store.spPeriodoEscolarINS" />
+    <FunctionImportMapping FunctionImportName="spPeriodoEscolarlUPD" FunctionName="RRHH_V2Model1.Store.spPeriodoEscolarlUPD" />
+    <FunctionImportMapping FunctionImportName="spPlanEspacioDEL" FunctionName="RRHH_V2Model1.Store.spPlanEspacioDEL" />
+    <FunctionImportMapping FunctionImportName="spPlanEspacioINS" FunctionName="RRHH_V2Model1.Store.spPlanEspacioINS" />
+    <FunctionImportMapping FunctionImportName="spPlanEspacioUPD" FunctionName="RRHH_V2Model1.Store.spPlanEspacioUPD" />
+    <FunctionImportMapping FunctionImportName="spPlanEstudioByIdSEL" FunctionName="RRHH_V2Model1.Store.spPlanEstudioByIdSEL" />
+    <FunctionImportMapping FunctionImportName="spPlanEstudioByOrgByNE" FunctionName="RRHH_V2Model1.Store.spPlanEstudioByOrgByNE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spPlanEstudioByOrgByNE_Result">
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spPlanEstudioDEL" FunctionName="RRHH_V2Model1.Store.spPlanEstudioDEL" />
+    <FunctionImportMapping FunctionImportName="spPlanEstudioINS" FunctionName="RRHH_V2Model1.Store.spPlanEstudioINS" />
+    <FunctionImportMapping FunctionImportName="spPlanEstudioUPD" FunctionName="RRHH_V2Model1.Store.spPlanEstudioUPD" />
+    <FunctionImportMapping FunctionImportName="spPlanUnidadDEL" FunctionName="RRHH_V2Model1.Store.spPlanUnidadDEL" />
+    <FunctionImportMapping FunctionImportName="spPlanUnidadINS" FunctionName="RRHH_V2Model1.Store.spPlanUnidadINS" />
+    <FunctionImportMapping FunctionImportName="spPlanUnidadSEL" FunctionName="RRHH_V2Model1.Store.spPlanUnidadSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spPlanUnidadSEL_Result">
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spPlanUnidadUPD" FunctionName="RRHH_V2Model1.Store.spPlanUnidadUPD" />
+    <FunctionImportMapping FunctionImportName="spPresupuestoDEL" FunctionName="RRHH_V2Model1.Store.spPresupuestoDEL" />
+    <FunctionImportMapping FunctionImportName="spPresupuestoINS" FunctionName="RRHH_V2Model1.Store.spPresupuestoINS" />
+    <FunctionImportMapping FunctionImportName="spPresupuestoUPD" FunctionName="RRHH_V2Model1.Store.spPresupuestoUPD" />
+    <FunctionImportMapping FunctionImportName="spRefAdicionalDEL" FunctionName="RRHH_V2Model1.Store.spRefAdicionalDEL" />
+    <FunctionImportMapping FunctionImportName="spRefAdicionalINS" FunctionName="RRHH_V2Model1.Store.spRefAdicionalINS" />
+    <FunctionImportMapping FunctionImportName="spRefAdicionalUPD" FunctionName="RRHH_V2Model1.Store.spRefAdicionalUPD" />
+    <FunctionImportMapping FunctionImportName="spRefAsignaturaByIdSEL" FunctionName="RRHH_V2Model1.Store.spRefAsignaturaByIdSEL" />
+    <FunctionImportMapping FunctionImportName="spRefAsignaturaByPlanEstudioSEL" FunctionName="RRHH_V2Model1.Store.spRefAsignaturaByPlanEstudioSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefAsignaturaByPlanEstudioSEL_Result">
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefCalendarioFeriadoDEL" FunctionName="RRHH_V2Model1.Store.spRefCalendarioFeriadoDEL" />
+    <FunctionImportMapping FunctionImportName="spRefCalendarioFeriadoINS" FunctionName="RRHH_V2Model1.Store.spRefCalendarioFeriadoINS" />
+    <FunctionImportMapping FunctionImportName="spRefCalendarioFeriadoUPD" FunctionName="RRHH_V2Model1.Store.spRefCalendarioFeriadoUPD" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaLicenciaDEL" FunctionName="RRHH_V2Model1.Store.spRefCategoriaLicenciaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaLicenciaINS" FunctionName="RRHH_V2Model1.Store.spRefCategoriaLicenciaINS" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaLicenciaUPD" FunctionName="RRHH_V2Model1.Store.spRefCategoriaLicenciaUPD" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaOrganizacionDEL" FunctionName="RRHH_V2Model1.Store.spRefCategoriaOrganizacionDEL" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaOrganizacionINS" FunctionName="RRHH_V2Model1.Store.spRefCategoriaOrganizacionINS" />
+    <FunctionImportMapping FunctionImportName="spRefCategoriaOrganizacionUPD" FunctionName="RRHH_V2Model1.Store.spRefCategoriaOrganizacionUPD" />
+    <FunctionImportMapping FunctionImportName="spRefDiaDescansoAnualDEL" FunctionName="RRHH_V2Model1.Store.spRefDiaDescansoAnualDEL" />
+    <FunctionImportMapping FunctionImportName="spRefDiaDescansoAnualINS" FunctionName="RRHH_V2Model1.Store.spRefDiaDescansoAnualINS" />
+    <FunctionImportMapping FunctionImportName="spRefDiaDescansoAnualUPD" FunctionName="RRHH_V2Model1.Store.spRefDiaDescansoAnualUPD" />
+    <FunctionImportMapping FunctionImportName="spRefEscalafonDEL" FunctionName="RRHH_V2Model1.Store.spRefEscalafonDEL" />
+    <FunctionImportMapping FunctionImportName="spRefEscalafonINS" FunctionName="RRHH_V2Model1.Store.spRefEscalafonINS" />
+    <FunctionImportMapping FunctionImportName="spRefEscalafonUPD" FunctionName="RRHH_V2Model1.Store.spRefEscalafonUPD" />
+    <FunctionImportMapping FunctionImportName="spRefEspecialidadDEL" FunctionName="RRHH_V2Model1.Store.spRefEspecialidadDEL" />
+    <FunctionImportMapping FunctionImportName="spRefEspecialidadINS" FunctionName="RRHH_V2Model1.Store.spRefEspecialidadINS" />
+    <FunctionImportMapping FunctionImportName="spRefEspecialidadUPD" FunctionName="RRHH_V2Model1.Store.spRefEspecialidadUPD" />
+    <FunctionImportMapping FunctionImportName="spRefEstadoSolicitudSEL" FunctionName="RRHH_V2Model1.Store.spRefEstadoSolicitudSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefEstadoSolicitudSEL_Result">
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefFinalidadDEL" FunctionName="RRHH_V2Model1.Store.spRefFinalidadDEL" />
+    <FunctionImportMapping FunctionImportName="spRefFinalidadINS" FunctionName="RRHH_V2Model1.Store.spRefFinalidadINS" />
+    <FunctionImportMapping FunctionImportName="spRefFinalidadUPD" FunctionName="RRHH_V2Model1.Store.spRefFinalidadUPD" />
+    <FunctionImportMapping FunctionImportName="spRefFuncionDEL" FunctionName="RRHH_V2Model1.Store.spRefFuncionDEL" />
+    <FunctionImportMapping FunctionImportName="spRefFuncionINS" FunctionName="RRHH_V2Model1.Store.spRefFuncionINS" />
+    <FunctionImportMapping FunctionImportName="spRefFuncionUPD" FunctionName="RRHH_V2Model1.Store.spRefFuncionUPD" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoAltaDEL" FunctionName="RRHH_V2Model1.Store.spRefMotivoAltaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoAltaINS" FunctionName="RRHH_V2Model1.Store.spRefMotivoAltaINS" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoAltaUPD" FunctionName="RRHH_V2Model1.Store.spRefMotivoAltaUPD" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoBajaDEL" FunctionName="RRHH_V2Model1.Store.spRefMotivoBajaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoBajaINS" FunctionName="RRHH_V2Model1.Store.spRefMotivoBajaINS" />
+    <FunctionImportMapping FunctionImportName="spRefMotivoBajaUPD" FunctionName="RRHH_V2Model1.Store.spRefMotivoBajaUPD" />
+    <FunctionImportMapping FunctionImportName="spRefNivelEducativoByIdSEL" FunctionName="RRHH_V2Model1.Store.spRefNivelEducativoByIdSEL" />
+    <FunctionImportMapping FunctionImportName="spRefNivelEducativoByOrg" FunctionName="RRHH_V2Model1.Store.spRefNivelEducativoByOrg">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefNivelEducativoByOrg_Result">
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefSexoByIdSEL" FunctionName="RRHH_V2Model1.Store.spRefSexoByIdSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefSexoByIdSEL_Result">
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="mnemo" ColumnName="mnemo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefSexoSEL" FunctionName="RRHH_V2Model1.Store.spRefSexoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefSexoSEL_Result">
+          <ScalarProperty Name="idSexo" ColumnName="idSexo" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="mnemo" ColumnName="mnemo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefSistemaEducativoDEL" FunctionName="RRHH_V2Model1.Store.spRefSistemaEducativoDEL" />
+    <FunctionImportMapping FunctionImportName="spRefSistemaEducativoINS" FunctionName="RRHH_V2Model1.Store.spRefSistemaEducativoINS" />
+    <FunctionImportMapping FunctionImportName="spRefSistemaEducativoUPD" FunctionName="RRHH_V2Model1.Store.spRefSistemaEducativoUPD" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionExtraordinariaDEL" FunctionName="RRHH_V2Model1.Store.spRefSituacionExtraordinariaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionExtraordinariaINS" FunctionName="RRHH_V2Model1.Store.spRefSituacionExtraordinariaINS" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionExtraordinariaUPD" FunctionName="RRHH_V2Model1.Store.spRefSituacionExtraordinariaUPD" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionLaboralDEL" FunctionName="RRHH_V2Model1.Store.spRefSituacionLaboralDEL" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionLaboralINS" FunctionName="RRHH_V2Model1.Store.spRefSituacionLaboralINS" />
+    <FunctionImportMapping FunctionImportName="spRefSituacionLaboralUPD" FunctionName="RRHH_V2Model1.Store.spRefSituacionLaboralUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTipoDocumentoByIdSEL" FunctionName="RRHH_V2Model1.Store.spRefTipoDocumentoByIdSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefTipoDocumentoByIdSEL_Result">
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefTipoDocumentoSEL" FunctionName="RRHH_V2Model1.Store.spRefTipoDocumentoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefTipoDocumentoSEL_Result">
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefTipoEspacioCurricularDEL" FunctionName="RRHH_V2Model1.Store.spRefTipoEspacioCurricularDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTipoEspacioCurricularINS" FunctionName="RRHH_V2Model1.Store.spRefTipoEspacioCurricularINS" />
+    <FunctionImportMapping FunctionImportName="spRefTipoEspacioCurricularSEL" FunctionName="RRHH_V2Model1.Store.spRefTipoEspacioCurricularSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefTipoEspacioCurricularSEL_Result">
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="tipoEspacioCurricular" ColumnName="tipoEspacioCurricular" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefTipoEspacioCurricularUPD" FunctionName="RRHH_V2Model1.Store.spRefTipoEspacioCurricularUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTipoFuncionDEL" FunctionName="RRHH_V2Model1.Store.spRefTipoFuncionDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTipoFuncionINS" FunctionName="RRHH_V2Model1.Store.spRefTipoFuncionINS" />
+    <FunctionImportMapping FunctionImportName="spRefTipoFuncionUPD" FunctionName="RRHH_V2Model1.Store.spRefTipoFuncionUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTipoInasistenciaSEL" FunctionName="RRHH_V2Model1.Store.spRefTipoInasistenciaSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefTipoInasistenciaSEL_Result">
+          <ScalarProperty Name="idTipoInasistencia" ColumnName="idTipoInasistencia" />
+          <ScalarProperty Name="tipoInasistencia" ColumnName="tipoInasistencia" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="mnemo" ColumnName="mnemo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefTipoNovedadSEL" FunctionName="RRHH_V2Model1.Store.spRefTipoNovedadSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spRefTipoNovedadSEL_Result">
+          <ScalarProperty Name="idTipoNovedad" ColumnName="idTipoNovedad" />
+          <ScalarProperty Name="tipoNovedad" ColumnName="tipoNovedad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRefTipoOrganizacionDEL" FunctionName="RRHH_V2Model1.Store.spRefTipoOrganizacionDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTipoOrganizacionINS" FunctionName="RRHH_V2Model1.Store.spRefTipoOrganizacionINS" />
+    <FunctionImportMapping FunctionImportName="spRefTipoOrganizacionUPD" FunctionName="RRHH_V2Model1.Store.spRefTipoOrganizacionUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTipoPaquetePlazaDEL" FunctionName="RRHH_V2Model1.Store.spRefTipoPaquetePlazaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTipoPaquetePlazaINS" FunctionName="RRHH_V2Model1.Store.spRefTipoPaquetePlazaINS" />
+    <FunctionImportMapping FunctionImportName="spRefTipoPaquetePlazaUPD" FunctionName="RRHH_V2Model1.Store.spRefTipoPaquetePlazaUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTipoServicioDEL" FunctionName="RRHH_V2Model1.Store.spRefTipoServicioDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTipoServicioINS" FunctionName="RRHH_V2Model1.Store.spRefTipoServicioINS" />
+    <FunctionImportMapping FunctionImportName="spRefTipoServicioUPD" FunctionName="RRHH_V2Model1.Store.spRefTipoServicioUPD" />
+    <FunctionImportMapping FunctionImportName="spRefTurnoDEL" FunctionName="RRHH_V2Model1.Store.spRefTurnoDEL" />
+    <FunctionImportMapping FunctionImportName="spRefTurnoINS" FunctionName="RRHH_V2Model1.Store.spRefTurnoINS" />
+    <FunctionImportMapping FunctionImportName="spRefTurnoUPD" FunctionName="RRHH_V2Model1.Store.spRefTurnoUPD" />
+    <FunctionImportMapping FunctionImportName="spRefUdeODEL" FunctionName="RRHH_V2Model1.Store.spRefUdeODEL" />
+    <FunctionImportMapping FunctionImportName="spRefUdeOINS" FunctionName="RRHH_V2Model1.Store.spRefUdeOINS" />
+    <FunctionImportMapping FunctionImportName="spRefUdeOUPD" FunctionName="RRHH_V2Model1.Store.spRefUdeOUPD" />
+    <FunctionImportMapping FunctionImportName="spRefZonaDEL" FunctionName="RRHH_V2Model1.Store.spRefZonaDEL" />
+    <FunctionImportMapping FunctionImportName="spRefZonaINS" FunctionName="RRHH_V2Model1.Store.spRefZonaINS" />
+    <FunctionImportMapping FunctionImportName="spRefZonaUPD" FunctionName="RRHH_V2Model1.Store.spRefZonaUPD" />
+    <FunctionImportMapping FunctionImportName="spReqPrimariaINS" FunctionName="RRHH_V2Model1.Store.spReqPrimariaINS" />
+    <FunctionImportMapping FunctionImportName="spReqPrimariaSEL" FunctionName="RRHH_V2Model1.Store.spReqPrimariaSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spReqPrimariaSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="idRequerimiento" ColumnName="idRequerimiento" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="idOrgCompartida" ColumnName="idOrgCompartida" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="cargaMateria" ColumnName="cargaMateria" />
+          <ScalarProperty Name="caracter" ColumnName="caracter" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="fechaHasta" ColumnName="fechaHasta" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoRequerimiento" ColumnName="idEstadoRequerimiento" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="partidaTEducacion" ColumnName="partidaTEducacion" />
+          <ScalarProperty Name="cupof" ColumnName="cupof" />
+          <ScalarProperty Name="pCupof" ColumnName="pCupof" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="cobraIncentivo" ColumnName="cobraIncentivo" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReqSecundariaINS" FunctionName="RRHH_V2Model1.Store.spReqSecundariaINS" />
+    <FunctionImportMapping FunctionImportName="spSolicitudByFechaByNivelSEL" FunctionName="RRHH_V2Model1.Store.spSolicitudByFechaByNivelSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByFechaByNivelSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByFiltro" FunctionName="RRHH_V2Model1.Store.spSolicitudByFiltro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByFiltro_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByIdByFiltro" FunctionName="RRHH_V2Model1.Store.spSolicitudByIdByFiltro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByIdByFiltro_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByIdByNivelSEL" FunctionName="RRHH_V2Model1.Store.spSolicitudByIdByNivelSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByIdByNivelSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByMultiFiltro" FunctionName="RRHH_V2Model1.Store.spSolicitudByMultiFiltro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByMultiFiltro_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByNivelByEstadoSEL" FunctionName="RRHH_V2Model1.Store.spSolicitudByNivelByEstadoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByNivelByEstadoSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudByOrganismoByNivelSEL" FunctionName="RRHH_V2Model1.Store.spSolicitudByOrganismoByNivelSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudByOrganismoByNivelSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudEstadoUPD" FunctionName="RRHH_V2Model1.Store.spSolicitudEstadoUPD" />
+    <FunctionImportMapping FunctionImportName="spSolicitudPrimariaINS" FunctionName="RRHH_V2Model1.Store.spSolicitudPrimariaINS" />
+    <FunctionImportMapping FunctionImportName="spSolicitudPrimariaUPD" FunctionName="RRHH_V2Model1.Store.spSolicitudPrimariaUPD" />
+    <FunctionImportMapping FunctionImportName="spSolicitudPriSEL" FunctionName="RRHH_V2Model1.Store.spSolicitudPriSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spSolicitudPriSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornada" ColumnName="idJornada" />
+          <ScalarProperty Name="jornada" ColumnName="jornada" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitud" ColumnName="estadoSolicitud" />
+          <ScalarProperty Name="obsEstado" ColumnName="obsEstado" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idUsuarioCreador" ColumnName="idUsuarioCreador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSolicitudSecundariaINS" FunctionName="RRHH_V2Model1.Store.spSolicitudSecundariaINS" />
+    <FunctionImportMapping FunctionImportName="spSolicitudSecundariaUPD" FunctionName="RRHH_V2Model1.Store.spSolicitudSecundariaUPD" />
+    <FunctionImportMapping FunctionImportName="spvwEstructuraEducativa" FunctionName="RRHH_V2Model1.Store.spvwEstructuraEducativa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwEstructuraEducativa_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="espacioCurricular" ColumnName="espacioCurricular" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPlanEstudioByIdOrganizacionSEL" FunctionName="RRHH_V2Model1.Store.spvwPlanEstudioByIdOrganizacionSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPlanEstudioByIdOrganizacionSEL_Result">
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPlanEstudioByOrganismoByNivelMedio" FunctionName="RRHH_V2Model1.Store.spvwPlanEstudioByOrganismoByNivelMedio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPlanEstudioByOrganismoByNivelMedio_Result">
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPOF" FunctionName="RRHH_V2Model1.Store.spvwPOF" />
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoByCargoSalarial" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoByCargoSalarial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoByCargoSalarial_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoByEjercicio" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoByEjercicio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoByEjercicio_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoById" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoById_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoByTipoEducacion" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoByTipoEducacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoByTipoEducacion_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoByUdeO" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoByUdeO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoByUdeO_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwPresupuestoSEL" FunctionName="RRHH_V2Model1.Store.spvwPresupuestoSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwPresupuestoSEL_Result">
+          <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+          <ScalarProperty Name="idUdeO" ColumnName="idUdeO" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idAdicional" ColumnName="idAdicional" />
+          <ScalarProperty Name="adicional" ColumnName="adicional" />
+          <ScalarProperty Name="cantPresupuestada" ColumnName="cantPresupuestada" />
+          <ScalarProperty Name="cantOcupada" ColumnName="cantOcupada" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="ejercicio" ColumnName="ejercicio" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="esFormal" ColumnName="esFormal" />
+          <ScalarProperty Name="cantTitulares" ColumnName="cantTitulares" />
+          <ScalarProperty Name="cantInterinos" ColumnName="cantInterinos" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="udeo" ColumnName="udeo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwSolicitudPrimariaByIdSolSEL" FunctionName="RRHH_V2Model1.Store.spvwSolicitudPrimariaByIdSolSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwSolicitudPrimariaByIdSolSEL_Result">
+          <ScalarProperty Name="idSolcitud" ColumnName="idSolcitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornadaS" ColumnName="idJornadaS" />
+          <ScalarProperty Name="jornadaS" ColumnName="jornadaS" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacionS" ColumnName="observacionS" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitudS" ColumnName="estadoSolicitudS" />
+          <ScalarProperty Name="obsEstadoS" ColumnName="obsEstadoS" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="idRequerimiento" ColumnName="idRequerimiento" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="cargoFuncional" ColumnName="cargoFuncional" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="espacioCurricular" ColumnName="espacioCurricular" />
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="tipoEspacioCurricular" ColumnName="tipoEspacioCurricular" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="idJornadaR" ColumnName="idJornadaR" />
+          <ScalarProperty Name="jornadaR" ColumnName="jornadaR" />
+          <ScalarProperty Name="cargaMateria" ColumnName="cargaMateria" />
+          <ScalarProperty Name="caracter" ColumnName="caracter" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="fechaHasta" ColumnName="fechaHasta" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="idEstadoRequerimientor" ColumnName="idEstadoRequerimientor" />
+          <ScalarProperty Name="estadoSolicitudr" ColumnName="estadoSolicitudr" />
+          <ScalarProperty Name="obsEstador" ColumnName="obsEstador" />
+          <ScalarProperty Name="partidaTEducacion" ColumnName="partidaTEducacion" />
+          <ScalarProperty Name="cupof" ColumnName="cupof" />
+          <ScalarProperty Name="pCupof" ColumnName="pCupof" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="cobraIncentivo" ColumnName="cobraIncentivo" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+          <ScalarProperty Name="idOrganizacionTurno" ColumnName="idOrganizacionTurno" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+          <ScalarProperty Name="idOrgCompartida" ColumnName="idOrgCompartida" />
+          <ScalarProperty Name="orgCompartida" ColumnName="orgCompartida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwSolicitudSecundariaByIdSolSEL" FunctionName="RRHH_V2Model1.Store.spvwSolicitudSecundariaByIdSolSEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwSolicitudSecundariaByIdSolSEL_Result">
+          <ScalarProperty Name="idSolicitud" ColumnName="idSolicitud" />
+          <ScalarProperty Name="nroExpediente" ColumnName="nroExpediente" />
+          <ScalarProperty Name="idOrganizacion" ColumnName="idOrganizacion" />
+          <ScalarProperty Name="organizacion" ColumnName="organizacion" />
+          <ScalarProperty Name="numeroOrganizacion" ColumnName="numeroOrganizacion" />
+          <ScalarProperty Name="cue" ColumnName="cue" />
+          <ScalarProperty Name="idTipoOrganizacion" ColumnName="idTipoOrganizacion" />
+          <ScalarProperty Name="tipoOrganizacion" ColumnName="tipoOrganizacion" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="idLocalidad" ColumnName="idLocalidad" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="idJornadaS" ColumnName="idJornadaS" />
+          <ScalarProperty Name="jornadaS" ColumnName="jornadaS" />
+          <ScalarProperty Name="idTipoSolicitud" ColumnName="idTipoSolicitud" />
+          <ScalarProperty Name="tipoSolicitud" ColumnName="tipoSolicitud" />
+          <ScalarProperty Name="idCategoriaOrganizacion" ColumnName="idCategoriaOrganizacion" />
+          <ScalarProperty Name="categoriaOrganizacion" ColumnName="categoriaOrganizacion" />
+          <ScalarProperty Name="estaChequeada" ColumnName="estaChequeada" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="idPeriodoEscolar" ColumnName="idPeriodoEscolar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="matriculaTotal" ColumnName="matriculaTotal" />
+          <ScalarProperty Name="cantDivisiones" ColumnName="cantDivisiones" />
+          <ScalarProperty Name="idGrupoNivel" ColumnName="idGrupoNivel" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="fundamentacion" ColumnName="fundamentacion" />
+          <ScalarProperty Name="observacionS" ColumnName="observacionS" />
+          <ScalarProperty Name="idEstadoSolicitud" ColumnName="idEstadoSolicitud" />
+          <ScalarProperty Name="estadoSolicitudS" ColumnName="estadoSolicitudS" />
+          <ScalarProperty Name="obsEstadoS" ColumnName="obsEstadoS" />
+          <ScalarProperty Name="nroResolucion" ColumnName="nroResolucion" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="fechaHabilitacion" ColumnName="fechaHabilitacion" />
+          <ScalarProperty Name="estaActivo" ColumnName="estaActivo" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="idTipoEducacion" ColumnName="idTipoEducacion" />
+          <ScalarProperty Name="tipoEducacion" ColumnName="tipoEducacion" />
+          <ScalarProperty Name="idSolicitudr" ColumnName="idSolicitudr" />
+          <ScalarProperty Name="idRequerimiento" ColumnName="idRequerimiento" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCategoriaPresupuesto" ColumnName="idCategoriaPresupuesto" />
+          <ScalarProperty Name="idCargoSalarial" ColumnName="idCargoSalarial" />
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="idFinalidad" ColumnName="idFinalidad" />
+          <ScalarProperty Name="finalidad" ColumnName="finalidad" />
+          <ScalarProperty Name="idFuncion" ColumnName="idFuncion" />
+          <ScalarProperty Name="funcion" ColumnName="funcion" />
+          <ScalarProperty Name="idEscalafon" ColumnName="idEscalafon" />
+          <ScalarProperty Name="escalafon" ColumnName="escalafon" />
+          <ScalarProperty Name="idCargoFuncional" ColumnName="idCargoFuncional" />
+          <ScalarProperty Name="cargoFuncional" ColumnName="cargoFuncional" />
+          <ScalarProperty Name="idPlanUnidad" ColumnName="idPlanUnidad" />
+          <ScalarProperty Name="idPlanEstudio" ColumnName="idPlanEstudio" />
+          <ScalarProperty Name="planEstudio" ColumnName="planEstudio" />
+          <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+          <ScalarProperty Name="nivelEducativo" ColumnName="nivelEducativo" />
+          <ScalarProperty Name="idDivision" ColumnName="idDivision" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="idGrupo" ColumnName="idGrupo" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="idEspacioAsignatura" ColumnName="idEspacioAsignatura" />
+          <ScalarProperty Name="idEspacioCurricular" ColumnName="idEspacioCurricular" />
+          <ScalarProperty Name="espacioCurricular" ColumnName="espacioCurricular" />
+          <ScalarProperty Name="idTipoEspacioCurricular" ColumnName="idTipoEspacioCurricular" />
+          <ScalarProperty Name="tipoEspacioCurricular" ColumnName="tipoEspacioCurricular" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="caracter" ColumnName="caracter" />
+          <ScalarProperty Name="fechaDesde" ColumnName="fechaDesde" />
+          <ScalarProperty Name="fechaHasta" ColumnName="fechaHasta" />
+          <ScalarProperty Name="esCargo" ColumnName="esCargo" />
+          <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="pCupof" ColumnName="pCupof" />
+          <ScalarProperty Name="cupof" ColumnName="cupof" />
+          <ScalarProperty Name="partidaTEducacion" ColumnName="partidaTEducacion" />
+          <ScalarProperty Name="admiteSuplente" ColumnName="admiteSuplente" />
+          <ScalarProperty Name="idRegimenSalarial" ColumnName="idRegimenSalarial" />
+          <ScalarProperty Name="cobraIncentivo" ColumnName="cobraIncentivo" />
+          <ScalarProperty Name="idFinanciamiento" ColumnName="idFinanciamiento" />
+          <ScalarProperty Name="idRegimenLaboral" ColumnName="idRegimenLaboral" />
+          <ScalarProperty Name="idSistemaEducativo" ColumnName="idSistemaEducativo" />
+          <ScalarProperty Name="idEstadoRequerimientor" ColumnName="idEstadoRequerimientor" />
+          <ScalarProperty Name="estadoSolicitudr" ColumnName="estadoSolicitudr" />
+          <ScalarProperty Name="obsEstador" ColumnName="obsEstador" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwSolPriResumenCargos" FunctionName="RRHH_V2Model1.Store.spvwSolPriResumenCargos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwSolPriResumenCargos_Result">
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwSolSecResumenCargos" FunctionName="RRHH_V2Model1.Store.spvwSolSecResumenCargos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwSolSecResumenCargos_Result">
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spvwSolSecResumenHoras" FunctionName="RRHH_V2Model1.Store.spvwSolSecResumenHoras">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RRHH_V2Model1.spvwSolSecResumenHoras_Result">
+          <ScalarProperty Name="cargoSalarial" ColumnName="cargoSalarial" />
+          <ScalarProperty Name="asignatura" ColumnName="asignatura" />
+          <ScalarProperty Name="cantidadHoras" ColumnName="cantidadHoras" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

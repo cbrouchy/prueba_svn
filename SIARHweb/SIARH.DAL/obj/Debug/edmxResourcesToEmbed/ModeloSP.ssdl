@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRHH_V2Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spAluMatriculaByOrgByAñoDetallada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoAluFamSinDNI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="consulta" Type="varchar" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoByDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="activos" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoByDivisionV2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="enCurso" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoByOrgByAlu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoCambiaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario_old" Type="varchar" Mode="In" />
+    <Parameter Name="usuario_new" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoDivision" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionHistorialByOrgByAlu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionHistorialSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionNovedadesINSUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoDivision" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="idTipoNovedad" Type="int" Mode="In" />
+    <Parameter Name="observacion" Type="varchar" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionNovedadesSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="idTipoNovedad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoDivisionSEL2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoFamiliaControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoFamiliaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoFamiliaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+    <Parameter Name="idParentesco" Type="int" Mode="In" />
+    <Parameter Name="esTutor" Type="bit" Mode="In" />
+    <Parameter Name="cuidaAlumno" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoFamiliaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoFamilia" Type="int" Mode="In" />
+    <Parameter Name="idParentesco" Type="int" Mode="In" />
+    <Parameter Name="esTutor" Type="bit" Mode="In" />
+    <Parameter Name="cuidaAlumno" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoInasistenciaByDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoInasistenciaINSUPDDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoInasistencia" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoDivision" Type="int" Mode="In" />
+    <Parameter Name="idTipoInasistencia" Type="int" Mode="In" />
+    <Parameter Name="justificada" Type="bit" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="observacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="preCuil" Type="int" Mode="In" />
+    <Parameter Name="sufCuil" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+    <Parameter Name="idEstadoCivil" Type="int" Mode="In" />
+    <Parameter Name="fechaNac" Type="datetime" Mode="In" />
+    <Parameter Name="idLocalidadLugarNac" Type="int" Mode="In" />
+    <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+    <Parameter Name="telefono" Type="varchar" Mode="In" />
+    <Parameter Name="fechaFallecimiento" Type="datetime" Mode="In" />
+    <Parameter Name="calle" Type="varchar" Mode="In" />
+    <Parameter Name="numero" Type="int" Mode="In" />
+    <Parameter Name="piso" Type="varchar" Mode="In" />
+    <Parameter Name="dpto" Type="varchar" Mode="In" />
+    <Parameter Name="lote" Type="varchar" Mode="In" />
+    <Parameter Name="manzana" Type="varchar" Mode="In" />
+    <Parameter Name="barrio" Type="varchar" Mode="In" />
+    <Parameter Name="idLocalidad" Type="int" Mode="In" />
+    <Parameter Name="personasACargo" Type="int" Mode="In" />
+    <Parameter Name="trabaja" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoNotaByDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idPeriodoEscolar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoNotaINSUPDDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoNota" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoDivision" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idPeriodoEscolar" Type="int" Mode="In" />
+    <Parameter Name="nota" Type="int" Mode="In" />
+    <Parameter Name="observacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoNovedadesByDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoOrganizacionActivoControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoOrganizacionByUsuarioSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoOrganizacionControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="preCuil" Type="int" Mode="In" />
+    <Parameter Name="sufCuil" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+    <Parameter Name="idEstadoCivil" Type="int" Mode="In" />
+    <Parameter Name="fechaNac" Type="datetime" Mode="In" />
+    <Parameter Name="idLocalidadLugarNac" Type="int" Mode="In" />
+    <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+    <Parameter Name="telefono" Type="varchar" Mode="In" />
+    <Parameter Name="fechaFallecimiento" Type="datetime" Mode="In" />
+    <Parameter Name="calle" Type="varchar" Mode="In" />
+    <Parameter Name="numero" Type="int" Mode="In" />
+    <Parameter Name="piso" Type="varchar" Mode="In" />
+    <Parameter Name="dpto" Type="varchar" Mode="In" />
+    <Parameter Name="lote" Type="varchar" Mode="In" />
+    <Parameter Name="manzana" Type="varchar" Mode="In" />
+    <Parameter Name="barrio" Type="varchar" Mode="In" />
+    <Parameter Name="idLocalidad" Type="int" Mode="In" />
+    <Parameter Name="personasACargo" Type="int" Mode="In" />
+    <Parameter Name="trabaja" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUsuarioControlCambiaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUsuarioDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUsuarioINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="dni" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idMembership" Type="varchar" Mode="In" />
+    <Parameter Name="TelCelular" Type="varchar" Mode="In" />
+    <Parameter Name="TelFijo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUsuarioOrganizacionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spAlumnoUsuarioSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spCargoFuncionalByCargoSalByNomSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="CargoFuncional" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spCargoFuncionalByCargoSalSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCargoSalarialByNombreSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CargoSalarial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spCargoSalarialDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCargoSalarialINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="cargoSalarial" Type="varchar" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+    <Parameter Name="equivalenciaHoraria" Type="int" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spCargoSalarialSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spCargoSalarialUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="cargoSalarial" Type="varchar" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+    <Parameter Name="equivalenciaHoraria" Type="int" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresByUdeoByCateSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresByUdeoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="CargoSalarial" Type="nvarchar" Mode="In" />
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoByCargoSalarialSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CargoSalarial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoByEscalafonByNomSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+    <Parameter Name="cargoSalarial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoByEscalafonSecSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoByEscalafonSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idEscalafon" Type="varchar" Mode="In" />
+    <Parameter Name="ultimoId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spCategoriaPresupuestoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spCategoriaPresupuestoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spControlAdicional" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdicional" Type="int" Mode="In" />
+    <Parameter Name="adicional" Type="nvarchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAluFamExisteFamiliar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoFamilia" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAluFamExisteMadre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idParentesco" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoFamilia" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAluFamExistePadre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idParentesco" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoFamilia" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAluFamExisteTutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idAlumnoFamilia" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAlumnoAsignaturaExisteAsignatura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlumnoAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idAlumno" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="anioLectivo" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAlumnoExisteAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idalumno" Type="int" Mode="In" />
+    <Parameter Name="dni" Type="int" Mode="In" />
+    <Parameter Name="sexo" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlAlumnoExisteUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlCalendarioFeriado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCalendarioFeriado" Type="int" Mode="In" />
+    <Parameter Name="fechaFeriado" Type="date" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlCargoSalarial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="cargoSalarial" Type="nvarchar" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+    <Parameter Name="equivalenciaHoraria" Type="int" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlCategoriaPresupuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="idCargoSalarial" Type="int" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlCupofEnPaquetePlaza" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPaquete" Type="int" Mode="In" />
+    <Parameter Name="idPlazaCabecera" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="curso" Type="varchar" Mode="In" />
+    <Parameter Name="division" Type="varchar" Mode="In" />
+    <Parameter Name="esGrupo" Type="bit" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+    <Parameter Name="esAgregado" Type="bit" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlEscalafon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="varchar" Mode="In" />
+    <Parameter Name="escalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlEspacioAsignatura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlFamiliaExisteFamilia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idfamilia" Type="int" Mode="In" />
+    <Parameter Name="dni" Type="int" Mode="In" />
+    <Parameter Name="sexo" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlFamiliaVinculos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spControlFinalidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="finalidad" Type="nvarchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlFuncion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="funcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlOrganizacionTurno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idTurno" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlPartida" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPartida" Type="int" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idEscalafon" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlPlanEspacio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEspacio" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="anio" Type="int" Mode="In" />
+    <Parameter Name="cargaHoraria" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spControlPlanUnidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="existe" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spDetalleTablaSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tabla" Type="nvarchar" Mode="In" />
+    <Parameter Name="Valor" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="spDivisionByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDivisionByOrgByNEByPE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDivisionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDivisionExisteSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="curso" Type="varchar" Mode="In" />
+    <Parameter Name="division" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDivisionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="curso" Type="varchar" Mode="In" />
+    <Parameter Name="division" Type="varchar" Mode="In" />
+    <Parameter Name="esGrupo" Type="bit" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+    <Parameter Name="esAgregado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spDivisionSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDivisionUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="curso" Type="varchar" Mode="In" />
+    <Parameter Name="division" Type="varchar" Mode="In" />
+    <Parameter Name="esGrupo" Type="bit" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+    <Parameter Name="esAgregado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spEspacioAsignaturaByECSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioAsignaturaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioAsignaturaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioAsignaturaSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioAsignaturaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioCurricularDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioCurricularINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="espacioCurricular" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoEspacioCurricular" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioCurricularSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spEspacioCurricularSELByTECByPE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spEspacioCurricularUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="espacioCurricular" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoEspacioCurricular" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spFamiliaControlExiste" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spFamiliaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spFamiliaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="preCuil" Type="int" Mode="In" />
+    <Parameter Name="sufCuil" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+    <Parameter Name="idEstadoCivil" Type="int" Mode="In" />
+    <Parameter Name="fechaNac" Type="datetime" Mode="In" />
+    <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="telefono" Type="varchar" Mode="In" />
+    <Parameter Name="vive" Type="bit" Mode="In" />
+    <Parameter Name="trabaja" Type="bit" Mode="In" />
+    <Parameter Name="jubilado" Type="bit" Mode="In" />
+    <Parameter Name="pensionado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spFamiliaSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spFamiliaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFamilia" Type="int" Mode="In" />
+    <Parameter Name="idTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="nroDocumento" Type="int" Mode="In" />
+    <Parameter Name="preCuil" Type="int" Mode="In" />
+    <Parameter Name="sufCuil" Type="int" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+    <Parameter Name="idEstadoCivil" Type="int" Mode="In" />
+    <Parameter Name="fechaNac" Type="datetime" Mode="In" />
+    <Parameter Name="idPaisNacionalidad" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="telefono" Type="varchar" Mode="In" />
+    <Parameter Name="vive" Type="bit" Mode="In" />
+    <Parameter Name="trabaja" Type="bit" Mode="In" />
+    <Parameter Name="jubilado" Type="bit" Mode="In" />
+    <Parameter Name="pensionado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGrupoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idGrupo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGrupoDivisionSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGrupoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="grupo" Type="nvarchar" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spGrupoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idGrupo" Type="int" Mode="In" />
+    <Parameter Name="grupo" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spInstrumentoLegalDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInstrumentoLegalINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="instrumentoLegal" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInstrumentoLegalUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="instrumentoLegal" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="idTipoInstrumentoLegal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMenuPlazaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMenu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMenuPlazaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMenuPadre" Type="int" Mode="In" />
+    <Parameter Name="menuOrden" Type="int" Mode="In" />
+    <Parameter Name="menuSeleccionable" Type="bit" Mode="In" />
+    <Parameter Name="menuUrl" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuTabla" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuImagen" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuNombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuPersonalizado" Type="bit" Mode="In" />
+    <Parameter Name="idDetalleTabla" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMenuPlazaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMenu" Type="int" Mode="In" />
+    <Parameter Name="idMenuPadre" Type="int" Mode="In" />
+    <Parameter Name="menuOrden" Type="int" Mode="In" />
+    <Parameter Name="menuSeleccionable" Type="bit" Mode="In" />
+    <Parameter Name="menuUrl" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuTabla" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuImagen" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuNombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="menuPersonalizado" Type="bit" Mode="In" />
+    <Parameter Name="idDetalleTabla" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMovimientosPresupuestoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="idMotivoMovimientoPres" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="idInstrumentoLegal" Type="smallint" Mode="In" />
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMovimientosPresupuestoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPresupuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spOrganizacionByIdDSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spOrganizacionNombreMedia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Organizacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spOrganizacionNombrePrimaria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Organizacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spOrganizacionPrimariaCue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spOrganizacionTurnoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPaquetePlazaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPaquete" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPaquetePlazaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlazaCabecera" Type="int" Mode="In" />
+    <Parameter Name="idTipoPaquetePlaza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPaquetePlazaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPaquete" Type="int" Mode="In" />
+    <Parameter Name="idPlazaCabecera" Type="int" Mode="In" />
+    <Parameter Name="idTipoPaquetePlaza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPartidaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPartida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPartidaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idEscalafon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPartidaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPartida" Type="int" Mode="In" />
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="idEscalafon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPeriodoEscolarDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPeriodoEscolar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPeriodoEscolarINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoPeriodo" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaInicio" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spPeriodoEscolarlUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPeriodoEscolar" Type="int" Mode="In" />
+    <Parameter Name="idTipoPeriodo" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaInicio" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spPlanEspacioDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEspacio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEspacioINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="anio" Type="int" Mode="In" />
+    <Parameter Name="cargaHoraria" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEspacioUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEspacio" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="anio" Type="int" Mode="In" />
+    <Parameter Name="cargaHoraria" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEstudioByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEstudioByOrgByNE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEstudioDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEstudioINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspecialidad" Type="int" Mode="In" />
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="planEstudio" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="duracion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanEstudioUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idEspecialidad" Type="int" Mode="In" />
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="planEstudio" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="duracion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanUnidadDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanUnidadINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanUnidadSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPlanUnidadUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPresupuestoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPresupuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spPresupuestoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idAdicional" Type="int" Mode="In" />
+    <Parameter Name="cantPresupuestada" Type="int" Mode="In" />
+    <Parameter Name="cantOcupada" Type="int" Mode="In" />
+    <Parameter Name="observacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="esFormal" Type="bit" Mode="In" />
+    <Parameter Name="cantTitulares" Type="int" Mode="In" />
+    <Parameter Name="cantInterinos" Type="int" Mode="In" />
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="ultimoId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spPresupuestoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idAdicional" Type="int" Mode="In" />
+    <Parameter Name="cantPresupuestada" Type="int" Mode="In" />
+    <Parameter Name="observacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="esFormal" Type="bit" Mode="In" />
+    <Parameter Name="idInstrumentoLegal" Type="int" Mode="In" />
+    <Parameter Name="modificado" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="spRefAdicionalDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdicional" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefAdicionalINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="adicional" Type="nvarchar" Mode="In" />
+    <Parameter Name="porcentaje" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefAdicionalUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdicional" Type="int" Mode="In" />
+    <Parameter Name="adicional" Type="nvarchar" Mode="In" />
+    <Parameter Name="porcentaje" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefAsignaturaByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAsignatura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefAsignaturaByPlanEstudioSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPlanEstudio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefCalendarioFeriadoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCalendarioFeriado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefCalendarioFeriadoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fechaFeriado" Type="datetime" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRefCalendarioFeriadoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCalendarioFeriado" Type="int" Mode="In" />
+    <Parameter Name="fechaFeriado" Type="datetime" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaLicenciaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaLicencia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaLicenciaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoriaLicencia" Type="varchar" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaLicenciaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaLicencia" Type="int" Mode="In" />
+    <Parameter Name="categoriaLicencia" Type="varchar" Mode="In" />
+    <Parameter Name="fechaAlta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaOrganizacionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaOrganizacionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoriaOrganizacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRefCategoriaOrganizacionUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCategoriaOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="categoriaOrganizacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRefDiaDescansoAnualDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDiaDescansoAnual" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefDiaDescansoAnualINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="anioDesde" Type="int" Mode="In" />
+    <Parameter Name="anioHasta" Type="int" Mode="In" />
+    <Parameter Name="diaDescanso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefDiaDescansoAnualUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDiaDescansoAnual" Type="int" Mode="In" />
+    <Parameter Name="anioDesde" Type="int" Mode="In" />
+    <Parameter Name="anioHasta" Type="int" Mode="In" />
+    <Parameter Name="diaDescanso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefEscalafonDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefEscalafonINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="escalafon" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefEscalafonUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEscalafon" Type="nvarchar" Mode="In" />
+    <Parameter Name="escalafon" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefEspecialidadDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspecialidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefEspecialidadINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefEspecialidadUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEspecialidad" Type="int" Mode="In" />
+    <Parameter Name="especialidad" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefEstadoSolicitudSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefFinalidadDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefFinalidadINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="finalidad" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefFinalidadUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFinalidad" Type="int" Mode="In" />
+    <Parameter Name="finalidad" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefFuncionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefFuncionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="funcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefFuncionUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFuncion" Type="int" Mode="In" />
+    <Parameter Name="funcion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoAltaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMotivoAlta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoAltaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="motivoAlta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoAltaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMotivoAlta" Type="int" Mode="In" />
+    <Parameter Name="motivoAlta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoBajaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMotivoBaja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoBajaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="motivoBaja" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefMotivoBajaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMotivoBaja" Type="int" Mode="In" />
+    <Parameter Name="motivoBaja" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefNivelEducativoByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idNivelEducativo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefNivelEducativoByOrg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefSexoByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSexo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefSexoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefSistemaEducativoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSistemaEducativo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefSistemaEducativoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sistemaEducativo" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="spRefSistemaEducativoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSistemaEducativo" Type="int" Mode="In" />
+    <Parameter Name="sistemaEducativo" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionExtraordinariaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSituacionExtraordinaria" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionExtraordinariaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="situacionExtraordinaria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionExtraordinariaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSituacionExtraordinaria" Type="int" Mode="In" />
+    <Parameter Name="situacionExtraordinaria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionLaboralDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSituacionLaboral" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionLaboralINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="situacionLaboral" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefSituacionLaboralUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSituacionLaboral" Type="int" Mode="In" />
+    <Parameter Name="situacionLaboral" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoDocumentoByIdSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipodocumento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoDocumentoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefTipoEspacioCurricularDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoEspacioCurricular" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoEspacioCurricularINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tipoEspacioCurricular" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoEspacioCurricularSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefTipoEspacioCurricularUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idtipoEspacioCurricular" Type="int" Mode="In" />
+    <Parameter Name="tipoEspacioCurricular" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoFuncionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoFuncion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoFuncionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tipoFuncion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoFuncionUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoFuncion" Type="int" Mode="In" />
+    <Parameter Name="tipoFuncion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoInasistenciaSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefTipoNovedadSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRefTipoOrganizacionDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoOrganizacionINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tipoOrganizacion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoOrganizacionUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="tipoOrganizacion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoPaquetePlazaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoPaquetePlaza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoPaquetePlazaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tipoPaquetePlaza" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoPaquetePlazaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoPaquetePlaza" Type="int" Mode="In" />
+    <Parameter Name="tipoPaquetePlaza" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoServicioDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoServicioINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tipoServicio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTipoServicioUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTipoServicio" Type="int" Mode="In" />
+    <Parameter Name="tipoServicio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTurnoDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTurno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefTurnoINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="turno" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefTurnoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTurno" Type="int" Mode="In" />
+    <Parameter Name="turno" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefUdeODEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefUdeOINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="varchar" Mode="In" />
+    <Parameter Name="udeo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefUdeOUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUdeO" Type="int" Mode="In" />
+    <Parameter Name="codigo" Type="varchar" Mode="In" />
+    <Parameter Name="udeo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefZonaDEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idZona" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRefZonaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="porcentaje" Type="int" Mode="In" />
+    <Parameter Name="zona" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spRefZonaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idZona" Type="int" Mode="In" />
+    <Parameter Name="porcentaje" Type="int" Mode="In" />
+    <Parameter Name="zona" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spReqPrimariaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+    <Parameter Name="idRequerimiento" Type="int" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idCargoFuncional" Type="int" Mode="In" />
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="idGrupo" Type="int" Mode="In" />
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+    <Parameter Name="idOrganizacionTurno" Type="int" Mode="In" />
+    <Parameter Name="idOrgCompartida" Type="int" Mode="In" />
+    <Parameter Name="idJornada" Type="int" Mode="In" />
+    <Parameter Name="cargaMateria" Type="bit" Mode="In" />
+    <Parameter Name="caracter" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="fechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="observacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="idEstadoRequerimiento" Type="int" Mode="In" />
+    <Parameter Name="obsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="cupof" Type="int" Mode="In" />
+    <Parameter Name="pCupof" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spReqPrimariaSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spReqSecundariaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+    <Parameter Name="idRequerimiento" Type="int" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="idCategoriaPresupuesto" Type="int" Mode="In" />
+    <Parameter Name="idCargoFuncional" Type="int" Mode="In" />
+    <Parameter Name="idPlanUnidad" Type="int" Mode="In" />
+    <Parameter Name="idDivision" Type="int" Mode="In" />
+    <Parameter Name="idGrupo" Type="int" Mode="In" />
+    <Parameter Name="idEspacioAsignatura" Type="int" Mode="In" />
+    <Parameter Name="caracter" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="fechaHasta" Type="datetime" Mode="In" />
+    <Parameter Name="observacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="idEstadoRequerimiento" Type="int" Mode="In" />
+    <Parameter Name="obsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="esCargo" Type="bit" Mode="In" />
+    <Parameter Name="cupof" Type="int" Mode="In" />
+    <Parameter Name="pCupof" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByFechaByNivelSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pFecha" Type="smalldatetime" Mode="In" />
+    <Parameter Name="pIdNivel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pFiltro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByIdByFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pIdSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pFiltro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByIdByNivelSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pIdSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdGrupoNivel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByMultiFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pOrganizacion" Type="varchar" Mode="In" />
+    <Parameter Name="pEstado" Type="int" Mode="In" />
+    <Parameter Name="pGrupoNivel" Type="int" Mode="In" />
+    <Parameter Name="pTipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pFiltro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByNivelByEstadoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idNivel" Type="int" Mode="In" />
+    <Parameter Name="idEstado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudByOrganismoByNivelSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pOrganizacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdNivel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudEstadoUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdEstadoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pObsEstado" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudPrimariaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pNroExpediente" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdTipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="pMatriculaTotal" Type="int" Mode="In" />
+    <Parameter Name="pCantDivisiones" Type="int" Mode="In" />
+    <Parameter Name="pIdGrupoNivel" Type="int" Mode="In" />
+    <Parameter Name="pFechaSolicitud" Type="date" Mode="In" />
+    <Parameter Name="pFundamentacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pObservacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdEstadoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pObsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="pNroResolucion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pfechaAutorizacion" Type="date" Mode="In" />
+    <Parameter Name="pFechaHabilitacion" Type="date" Mode="In" />
+    <Parameter Name="pidUsuarioCreador" Type="int" Mode="In" />
+    <Parameter Name="pUltimoId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spSolicitudPrimariaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pNroExpediente" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdTipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="pMatriculaTotal" Type="int" Mode="In" />
+    <Parameter Name="pCantDivisiones" Type="int" Mode="In" />
+    <Parameter Name="pIdGrupoNivel" Type="int" Mode="In" />
+    <Parameter Name="pFechaSolicitud" Type="date" Mode="In" />
+    <Parameter Name="pFundamentacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pObservacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdEstadoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pObsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="pNroResolucion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pfechaAutorizacion" Type="date" Mode="In" />
+    <Parameter Name="pFechaHabilitacion" Type="date" Mode="In" />
+    <Parameter Name="pidUsuarioCreador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudPriSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idNivel" Type="int" Mode="In" />
+    <Parameter Name="idEstado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSolicitudSecundariaINS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pNroExpediente" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdTipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="pMatriculaTotal" Type="int" Mode="In" />
+    <Parameter Name="pCantDivisiones" Type="int" Mode="In" />
+    <Parameter Name="pIdGrupoNivel" Type="int" Mode="In" />
+    <Parameter Name="pFechaSolicitud" Type="date" Mode="In" />
+    <Parameter Name="pFundamentacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pObservacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdEstadoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pObsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="pNroResolucion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pfechaAutorizacion" Type="date" Mode="In" />
+    <Parameter Name="pFechaHabilitacion" Type="date" Mode="In" />
+    <Parameter Name="pidUsuarioCreador" Type="int" Mode="In" />
+    <Parameter Name="pUltimoId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spSolicitudSecundariaUPD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pNroExpediente" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdTipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pIdOrganizacion" Type="int" Mode="In" />
+    <Parameter Name="pMatriculaTotal" Type="int" Mode="In" />
+    <Parameter Name="pCantDivisiones" Type="int" Mode="In" />
+    <Parameter Name="pIdGrupoNivel" Type="int" Mode="In" />
+    <Parameter Name="pFechaSolicitud" Type="date" Mode="In" />
+    <Parameter Name="pFundamentacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pObservacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pIdEstadoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="pObsEstado" Type="nvarchar" Mode="In" />
+    <Parameter Name="pNroResolucion" Type="nvarchar" Mode="In" />
+    <Parameter Name="pfechaAutorizacion" Type="date" Mode="In" />
+    <Parameter Name="pFechaHabilitacion" Type="date" Mode="In" />
+    <Parameter Name="pidUsuarioCreador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwEstructuraEducativa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPlanEstudioByIdOrganizacionSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPlanEstudioByOrganismoByNivelMedio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pOrganismo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPOF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idOrganizacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoByCargoSalarial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="cargoSal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoByEjercicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ejercicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPresupuesto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoByTipoEducacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="tipo" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoByUdeO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="udeo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwPresupuestoSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ejercicio" Type="int" Mode="In" />
+    <Parameter Name="udeo" Type="int" Mode="In" />
+    <Parameter Name="cargoSal" Type="varchar" Mode="In" />
+    <Parameter Name="esFormal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spvwSolicitudPrimariaByIdSolSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwSolicitudSecundariaByIdSolSEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwSolPriResumenCargos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwSolSecResumenCargos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spvwSolSecResumenHoras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idSolicitud" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="RRHH_V2Model1StoreContainer" />
+</Schema>
